@@ -23,3 +23,7 @@ __pycache__/
 # Temp files
 *.tmp
 .tmp/
+
+# Sed/editor backup files
+*.bak
+*.save
