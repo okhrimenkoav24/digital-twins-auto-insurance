@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" role="img" aria-labelledby="hero-svg-title hero-svg-desc">
+  <title id="hero-svg-title">The digital twin metaphor, illustrated.</title>
+  <desc id="hero-svg-desc">Two overlapping circles. The left one is hollow with an orange ring and contains scattered data points connected by dashed lines, representing the digital model. The right one is filled solid orange and contains a white car silhouette, representing the real customer. Where the circles overlap is where personalization happens.</desc>
+
+  <!-- Subtle background grid (only behind the digital model) -->
+  <g stroke="#E5E5E5" stroke-width="0.6" fill="none">
+    <line x1="40"  y1="80"  x2="380" y2="80"/>
+    <line x1="40"  y1="140" x2="380" y2="140"/>
+    <line x1="40"  y1="200" x2="380" y2="200"/>
+    <line x1="40"  y1="260" x2="380" y2="260"/>
+    <line x1="40"  y1="320" x2="380" y2="320"/>
+    <line x1="40"  y1="380" x2="380" y2="380"/>
+    <line x1="80"  y1="40"  x2="80"  y2="420"/>
+    <line x1="160" y1="40"  x2="160" y2="420"/>
+    <line x1="240" y1="40"  x2="240" y2="420"/>
+    <line x1="320" y1="40"  x2="320" y2="420"/>
+  </g>
+
+  <!-- HOLLOW CIRCLE — the digital model -->
+  <circle cx="215" cy="245" r="170" fill="#FFFFFF" stroke="#E97137" stroke-width="3"/>
+
+  <!-- Dashed connectors between data points (under the dots) -->
+  <g stroke="#E97137" stroke-width="1.2" stroke-dasharray="2 4" fill="none" opacity="0.55">
+    <line x1="155" y1="170" x2="220" y2="200"/>
+    <line x1="220" y1="200" x2="270" y2="225"/>
+    <line x1="270" y1="225" x2="280" y2="280"/>
+    <line x1="200" y1="290" x2="245" y2="305"/>
+    <line x1="120" y1="220" x2="175" y2="240"/>
+    <line x1="135" y1="295" x2="200" y2="290"/>
+    <line x1="115" y1="280" x2="160" y2="320"/>
+  </g>
+
+  <!-- Data points -->
+  <g fill="#1A1A1A">
+    <circle cx="155" cy="170" r="3"/>
+    <circle cx="220" cy="200" r="4"/>
+    <circle cx="175" cy="240" r="2.5"/>
+    <circle cx="270" cy="225" r="3.5"/>
+    <circle cx="120" cy="220" r="2.5"/>
+    <circle cx="200" cy="290" r="3"/>
+    <circle cx="245" cy="305" r="2.5"/>
+    <circle cx="280" cy="280" r="2.5"/>
+    <circle cx="160" cy="320" r="2.5"/>
+    <circle cx="115" cy="280" r="2.5"/>
+    <circle cx="135" cy="295" r="2"/>
+  </g>
+
+  <!-- SOLID CIRCLE — the real customer (drawn on top, partially covers the hollow ring) -->
+  <circle cx="395" cy="265" r="155" fill="#E97137"/>
+
+  <!-- Car silhouette inside the solid circle (white) -->
+  <g transform="translate(322, 232)">
+    <!-- shadow under car -->
+    <ellipse cx="68" cy="78" rx="58" ry="3" fill="#1A1A1A" opacity="0.18"/>
+    <!-- main body (rounded rectangle) -->
+    <rect x="6" y="38" width="124" height="22" rx="4" fill="#FFFFFF"/>
+    <!-- cabin / roof outline -->
+    <path d="M 28 38 L 42 16 Q 47 10 56 10 L 88 10 Q 97 10 102 16 L 116 38 Z" fill="#FFFFFF"/>
+    <!-- window strip (inset, orange to read against white) -->
+    <path d="M 38 34 L 47 19 Q 50 16 55 16 L 89 16 Q 94 16 97 19 L 106 34 Z" fill="#E97137"/>
+    <!-- window divider (subtle) -->
+    <line x1="72" y1="16" x2="72" y2="34" stroke="#FFFFFF" stroke-width="1.5"/>
+    <!-- wheels -->
+    <circle cx="32" cy="65" r="11" fill="#1A1A1A"/>
+    <circle cx="32" cy="65" r="4.5" fill="#FFFFFF"/>
+    <circle cx="104" cy="65" r="11" fill="#1A1A1A"/>
+    <circle cx="104" cy="65" r="4.5" fill="#FFFFFF"/>
+    <!-- headlight hint -->
+    <rect x="124" y="42" width="6" height="6" rx="1.5" fill="#FFE9DC"/>
+  </g>
+
+  <!-- Annotations (small mono labels) -->
+  <text x="55" y="60" font-family="ui-monospace, 'SF Mono', monospace" font-size="11" fill="#1A1A1A" letter-spacing="2.5">DIGITAL MODEL</text>
+  <text x="345" y="445" font-family="ui-monospace, 'SF Mono', monospace" font-size="11" fill="#1A1A1A" letter-spacing="2.5">REAL CUSTOMER</text>
+
+  <!-- subtle baseline -->
+  <line x1="40" y1="455" x2="560" y2="455" stroke="#1A1A1A" stroke-width="1" stroke-dasharray="1 4" opacity="0.25"/>
+</svg>

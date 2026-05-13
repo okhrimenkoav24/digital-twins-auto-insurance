@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Methodology · Digital Twins in Auto Insurance</title>
+  <meta name="description" content="Sample, recruitment, supervisor iterations, the limits of N=15, and the success criteria each artifact is held to.">
+  <meta name="theme-color" content="#E97137">
+  <meta property="og:title" content="Methodology · Digital Twins in Auto Insurance">
+  <meta property="og:description" content="The full methodology behind the capstone — sample, recruitment, iterations, success criteria.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <link rel="canonical" href="./methodology.html">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Digital Twins in Auto Insurance">
+  <meta name="twitter:image" content="https://okhrimenkoav24.github.io/digital-twins-auto-insurance/assets/img/og-image.png">
+  <meta property="og:url" content="https://okhrimenkoav24.github.io/digital-twins-auto-insurance/methodology.html">
+  <meta property="og:site_name" content="Digital Twins in Auto Insurance">
+  <meta property="og:locale" content="en_CA">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/methodology.html#article",
+      "headline": "Methodology",
+      "url": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/methodology.html",
+      "datePublished": "2026-05-12",
+      "dateModified": "2026-05-12",
+      "inLanguage": "en-CA",
+      "author": {
+        "@type": "Person",
+        "name": "Aleksandr Okhrimenko"
+      },
+      "publisher": {
+        "@id": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/#org"
+      },
+      "isPartOf": {
+        "@id": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/#website"
+      }
+    }
+  ]
+}</script>
+  <!-- Google Analytics 4 — gated by cookie consent. Replace "G-XXXXXXXXXX" with your real Measurement ID after creating the GA4 property. -->
+  <script>window.__GA_ID__ = "G-XXXXXXXXXX";</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" data-cc-gated></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    // default to denied; the cookie banner flips this if accepted
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', "G-XXXXXXXXXX", { anonymize_ip: true });
+  </script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a class="nav__brand" href="./index.html">
+      <img src="assets/img/logo.svg" alt="" aria-hidden="true">
+      <span class="nav__brand-text">Digital Twins in Auto Insurance<small>Capstone research hub · DMGC-699</small></span>
+    </a>
+    <ul class="nav__list">
+      <li><a class="nav__link" href="./index.html">Home</a></li>
+
+      <li class="nav__dropdown">
+        <button
+          class="nav__trigger"
+          type="button"
+          aria-expanded="false"
+          aria-haspopup="menu"
+          aria-controls="artifacts-menu">
+          Artifacts <span class="nav__caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav__menu" id="artifacts-menu" role="menu">
+          <li role="none"><a role="menuitem" href="./research.html">Survey &amp; Dashboard <small>D1 — primary survey, N = 15</small></a></li>
+          <li role="none"><a role="menuitem" href="./zine.html">Digital Zine <small>D2 — 14-page long-read</small></a></li>
+          <li role="none"><a role="menuitem" href="./simulator.html">Decision Simulator <small>D3 — Unity WebGL prototype</small></a></li>
+          <li role="none"><a role="menuitem" href="./podcast.html">Podcast Episode <small>D4 — ~20 minutes</small></a></li>
+        </ul>
+      </li>
+
+      <li><a class="nav__link" href="./cases.html">Cases</a></li>
+      <li><a class="nav__link" href="./resources.html">Resources</a></li>
+      <li><a class="nav__link" href="./methodology.html">Methodology</a></li>
+      <li><a class="nav__link" href="./about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero" style="padding-bottom: 24px;">
+    <div class="container container-narrow">
+      <span class="hero__eyebrow">Project transparency</span>
+      <h1 class="hero__title" style="font-size: clamp(2rem, 5vw, 3.5rem);">Methodology</h1>
+      <p class="hero__lead">
+        How the project was built, who answered, what changed mid-project, what
+        the data can and cannot tell you. Written in the order a peer reviewer
+        would read it.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="rq-h">
+    <div class="container container-narrow">
+      <span class="eyebrow">Research question</span>
+      <h2 id="rq-h">What this project asks</h2>
+      <blockquote class="pullquote">
+        How can a multichannel digital media campaign be used to demonstrate the
+        practical application and perceived value of digital twin technology to
+        insurance marketing professionals in Ontario, Canada, based on industry
+        data from 2022 to 2025?
+        <cite>— Locked 2026-04-17, refined from professor-approved version</cite>
+      </blockquote>
+      <p>
+        The question was narrowed in three iterations. The original framing
+        spoke to "insurance professionals," then "marketing, sales, and
+        underwriting," and finally "marketing professionals only." The final
+        scope was approved by Dr. Wael Brahim on 2026-04-15.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="sample-h">
+    <div class="container container-narrow">
+      <span class="eyebrow">Layer 2 — primary survey</span>
+      <h2 id="sample-h">Sample (N = 15)</h2>
+      <p>
+        The survey targeted insurance marketing professionals in Ontario,
+        Canada. Recruitment ran from 2026-03-25 to 2026-04-22 across four
+        channels:
+      </p>
+      <ul>
+        <li>Warm introductions (3 contacts, 6 responses).</li>
+        <li>LinkedIn DMs to first-degree connections in the industry (~20 sent, 4 responses).</li>
+        <li>Four Facebook groups: Insurance Talk Ontario Canada, Marketing for Insurance Agents, Leads Marketing and Automations, Insurance Ontario Canada (40+ direct invites, 5 responses).</li>
+        <li>Open call shared on the project's LinkedIn page (~0 attributable responses).</li>
+      </ul>
+      <p>
+        Each channel introduces a different selection bias — warm introductions
+        skew toward people who already trust the researcher; group recruitment
+        skews toward more publicly active practitioners. The dashboard reports
+        results without channel-stratification because at N = 15 the strata are
+        too small to be informative.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="success" aria-labelledby="success-h">
+    <div class="container">
+      <span class="eyebrow">Closing the Assignment 1 gap</span>
+      <h2 id="success-h">Success criteria — by artifact</h2>
+      <p style="max-width: 60ch;">
+        Assignment 1 feedback identified that the proposal stated effectiveness
+        in conceptual terms, with no measurable thresholds. The criteria below
+        are the lines below which I would accept that the artifact is not
+        working as intended. They are directional, not statistically powered.
+      </p>
+
+      <div class="grid grid--2" style="margin-top: 24px;">
+        <div class="success">
+          <h3>D1 · Survey & dashboard</h3>
+          <ol>
+            <li><strong>Capability shift:</strong> a measurable reduction in the share of respondents in the "cannot explain" tier between baseline and any follow-up wave.</li>
+            <li><strong>Engagement:</strong> ≥40% of dashboard visitors scroll to the methodology section.</li>
+            <li><strong>Trust:</strong> at least 1 substantive citation or share by a peer in the period 2026-05 to 2026-06.</li>
+          </ol>
+        </div>
+        <div class="success">
+          <h3>D2 · Digital zine</h3>
+          <ol>
+            <li><strong>Read-through:</strong> ≥60% reach 80% of zine length.</li>
+            <li><strong>Time on page:</strong> median ≥2 minutes.</li>
+            <li><strong>PDF downloads:</strong> ≥10 unique in 14 days.</li>
+            <li><strong>Comprehension:</strong> ≥70% Yes on closing question.</li>
+          </ol>
+        </div>
+        <div class="success">
+          <h3>D3 · Simulator</h3>
+          <ol>
+            <li><strong>Completion:</strong> ≥50% complete one full scenario.</li>
+            <li><strong>Time on artifact:</strong> median ≥2 minutes.</li>
+            <li><strong>Comprehension lift:</strong> ≥5 of 15 follow-ups can describe the mechanic.</li>
+          </ol>
+        </div>
+        <div class="success">
+          <h3>D4 · Podcast</h3>
+          <ol>
+            <li><strong>Listen-through:</strong> ≥40% completion rate.</li>
+            <li><strong>Reach:</strong> ≥50 unique plays in 14 days.</li>
+            <li><strong>Engagement:</strong> ≥3 substantive comments/DMs.</li>
+          </ol>
+        </div>
+        <div class="success">
+          <h3>D5 · This hub</h3>
+          <ol>
+            <li><strong>Reach:</strong> ≥150 unique visitors in 14 days.</li>
+            <li><strong>Depth:</strong> ≥3 pages per session.</li>
+            <li><strong>Conversion:</strong> ≥35% click-through to an artifact.</li>
+            <li><strong>Time:</strong> median ≥1:30 home, ≥2:30 artifacts.</li>
+          </ol>
+        </div>
+        <div class="success">
+          <h3>D6 · LinkedIn campaign</h3>
+          <ol>
+            <li><strong>Impressions:</strong> ≥1,500 across the 5 posts.</li>
+            <li><strong>Engagement rate:</strong> ≥3% (likes + comments / impressions).</li>
+            <li><strong>Inbound:</strong> ≥3 DMs from Ontario practitioners.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="iter-h">
+    <div class="container container-narrow">
+      <span class="eyebrow">Process honesty</span>
+      <h2 id="iter-h">Supervisor iterations</h2>
+      <p>
+        This project shifted shape three times in response to supervisor
+        feedback. Recording the trace because the final scope is partly a
+        product of the iterations.
+      </p>
+      <ol>
+        <li><strong>2026-04-08 — eight artifacts to six.</strong> The original plan included an infographic series and a short-form video. The infographic content was absorbed into the zine; the short-form video became the LinkedIn campaign opening posts.</li>
+        <li><strong>2026-04-13 — narrowing the audience.</strong> Original RQ addressed "marketing, sales, and underwriting." Feedback flagged this as too broad to investigate within a 10-week capstone. The audience was narrowed to marketing professionals only.</li>
+        <li><strong>2026-04-17 — refining the RQ.</strong> The professor-approved version contained an ambiguity that allowed the question to be answered without specifying the medium. The current version explicitly anchors the answer in a multichannel media campaign.</li>
+        <li><strong>2026-04-30 — measurable success criteria.</strong> Assignment 1 feedback flagged that effectiveness was conceptual, not measurable. Each artifact now has explicit thresholds (above).</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="ai-h">
+    <div class="container container-narrow">
+      <span class="eyebrow">AI use disclosure</span>
+      <h2 id="ai-h">Where AI was used</h2>
+      <p>
+        AI tools were approved by the supervisor on 2026-04-20 for narrow
+        purposes only: brainstorming literature themes, drafting prose for
+        researcher review and revision, and assistance with HTML/CSS for the
+        dashboard and this hub. All AI-generated content was reviewed,
+        edited, and verified by the researcher before publication. Survey
+        questions, interview prompts, recruitment messages, and methodological
+        decisions were authored by the researcher.
+      </p>
+      <p>
+        A separate AI scope-extension request was submitted for Assignment 2
+        artifacts (zine, simulator, podcast, this hub, LinkedIn campaign) and
+        is pending response.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="cite-h">
+    <div class="container container-narrow">
+      <span class="eyebrow">Cite this project</span>
+      <h2 id="cite-h">Citation</h2>
+      <div class="citation">
+        Okhrimenko, A. (2026). <em>Digital twins in auto insurance: A
+        multichannel research project for Ontario marketing professionals</em>
+        [Capstone deliverable, University of Niagara Falls Canada]. Retrieved
+        from this site.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__brand">Digital Twins in Auto Insurance</p>
+        <p style="color:#BBB; font-size: var(--fs-sm); max-width: 38ch;">Capstone research project, DMGC-699 Spring 2026, University of Niagara Falls Canada.</p>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <ul>
+          <li><a href="./research.html">Survey + dashboard</a></li>
+          <li><a href="./zine.html">Digital zine</a></li>
+          <li><a href="./simulator.html">Simulator</a></li>
+          <li><a href="./podcast.html">Podcast</a></li>
+          <li><a href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener">LinkedIn page ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="./cases.html">Real-world cases</a></li>
+          <li><a href="./resources.html">Reading list</a></li>
+          <li><a href="./methodology.html">Methodology</a></li>
+          <li><a href="./about.html">About the researcher</a></li>
+          <li><a href="https://github.com/" target="_blank" rel="noopener">Source on GitHub ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Aleksandr Okhrimenko. Last updated <span data-updated="2026-05-06">2026-05-06</span>.</span>
+      <span>Built with HTML/CSS/JS · GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+
+<!-- Cookie consent (minimal). Sites GA4 only after explicit accept. -->
+<div id="cc-banner" class="cc-banner" role="region" aria-label="Cookie notice" hidden>
+  <p>This site uses Google Analytics to understand how visitors find and use the research. No personal information is collected. <a href="./about.html#contact">Questions →</a></p>
+  <div class="cc-banner__btns">
+    <button type="button" class="btn btn--ghost" data-cc-deny>Decline</button>
+    <button type="button" class="btn btn--primary" data-cc-accept>Accept</button>
+  </div>
+</div>
+<script>
+  (function () {
+    var KEY = 'cc-v1';
+    var pref = null;
+    try { pref = localStorage.getItem(KEY); } catch (e) {}
+    var banner = document.getElementById('cc-banner');
+    function apply(accepted) {
+      try { localStorage.setItem(KEY, accepted ? 'accept' : 'deny'); } catch (e) {}
+      if (banner) banner.hidden = true;
+      if (accepted && window.gtag) {
+        window.gtag('consent', 'update', {
+          analytics_storage: 'granted'
+        });
+      }
+    }
+    if (pref === 'accept') {
+      if (window.gtag) window.gtag('consent', 'update', { analytics_storage: 'granted' });
+    } else if (pref === 'deny') {
+      // stays denied
+    } else if (banner) {
+      banner.hidden = false;
+    }
+    if (banner) {
+      banner.querySelector('[data-cc-accept]').addEventListener('click', function(){ apply(true); });
+      banner.querySelector('[data-cc-deny]').addEventListener('click', function(){ apply(false); });
+    }
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Twins in Auto Insurance — Research Hub</title>
+  <meta name="description" content="A multichannel research project demonstrating how digital twin technology applies to auto insurance personalization. For Ontario marketing professionals — survey, zine, simulator, podcast, real-world cases, and full reading list.">
+  <meta name="theme-color" content="#E97137">
+  <meta name="author" content="Aleksandr Okhrimenko">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Digital Twins in Auto Insurance — Research Hub">
+  <meta property="og:description" content="What digital twin technology is, how it works in auto insurance, what the data says, and where it's already being used.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/og-image.png">
+
+  <link rel="canonical" href="./index.html">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/logo_400.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Digital Twins in Auto Insurance">
+  <meta name="twitter:image" content="https://okhrimenkoav24.github.io/digital-twins-auto-insurance/assets/img/og-image.png">
+  <meta property="og:url" content="https://okhrimenkoav24.github.io/digital-twins-auto-insurance/">
+  <meta property="og:site_name" content="Digital Twins in Auto Insurance">
+  <meta property="og:locale" content="en_CA">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/#org",
+      "name": "Digital Twins in Auto Insurance",
+      "url": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/",
+      "logo": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/assets/img/logo_400.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Aleksandr Okhrimenko",
+        "email": "okhrimenkoav25@gmail.com",
+        "affiliation": {
+          "@type": "EducationalOrganization",
+          "name": "University of Niagara Falls Canada",
+          "url": "https://unfc.ca/"
+        }
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/digital-twins-in-auto-insurance/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/#website",
+      "url": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/",
+      "name": "Digital Twins in Auto Insurance — Research Hub",
+      "publisher": {
+        "@id": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/#org"
+      },
+      "inLanguage": "en-CA"
+    }
+  ]
+}</script>
+  <!-- Google Analytics 4 — gated by cookie consent. Replace "G-XXXXXXXXXX" with your real Measurement ID after creating the GA4 property. -->
+  <script>window.__GA_ID__ = "G-XXXXXXXXXX";</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" data-cc-gated></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    // default to denied; the cookie banner flips this if accepted
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', "G-XXXXXXXXXX", { anonymize_ip: true });
+  </script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ===== HEADER / NAV ===== -->
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a class="nav__brand" href="./index.html">
+      <img src="assets/img/logo.svg" alt="" aria-hidden="true">
+      <span class="nav__brand-text">
+        Digital Twins in Auto Insurance
+        <small>Capstone research hub · DMGC-699</small>
+      </span>
+    </a>
+
+    <ul class="nav__list">
+      <li><a class="nav__link" href="./index.html">Home</a></li>
+
+      <li class="nav__dropdown">
+        <button
+          class="nav__trigger"
+          type="button"
+          aria-expanded="false"
+          aria-haspopup="menu"
+          aria-controls="artifacts-menu">
+          Artifacts <span class="nav__caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav__menu" id="artifacts-menu" role="menu">
+          <li role="none"><a role="menuitem" href="./research.html">Survey &amp; Dashboard <small>D1 — primary survey, N = 15</small></a></li>
+          <li role="none"><a role="menuitem" href="./zine.html">Digital Zine <small>D2 — 14-page long-read</small></a></li>
+          <li role="none"><a role="menuitem" href="./simulator.html">Decision Simulator <small>D3 — Unity WebGL prototype</small></a></li>
+          <li role="none"><a role="menuitem" href="./podcast.html">Podcast Episode <small>D4 — ~20 minutes</small></a></li>
+        </ul>
+      </li>
+
+      <li><a class="nav__link" href="./cases.html">Cases</a></li>
+      <li><a class="nav__link" href="./resources.html">Resources</a></li>
+      <li><a class="nav__link" href="./methodology.html">Methodology</a></li>
+      <li><a class="nav__link" href="./about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <span class="hero__eyebrow">Capstone research project · 2026</span>
+          <h1 class="hero__title">
+            Digital twins in <br>
+            <span class="accent">auto insurance.</span>
+          </h1>
+          <p class="hero__lead">
+            A research hub for marketing professionals in Ontario auto insurance.
+            Six artifacts — a primary survey, a long-read zine, an interactive
+            simulator, a podcast episode, this site, and a LinkedIn campaign —
+            built around one practical use case: personalizing policy offers
+            through a digital twin of customer driving behaviour.
+          </p>
+          <div class="hero__meta">
+            <span>Ontario, Canada</span>
+            <span>Industry data 2022–2025</span>
+            <span>N = 15 marketing practitioners</span>
+            <span>APA 7</span>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="./simulator.html">Try the simulator →</a>
+            <a class="btn btn--ghost" href="./research.html">Read the survey</a>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="false">
+          <img src="assets/img/hero.svg" alt="Two overlapping circles. The left ring contains scattered data points connected by dashed lines, representing the digital model. The right solid orange circle contains a white car silhouette, representing the real customer.">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE PROBLEM ===== -->
+  <section class="section section--alt" aria-labelledby="problem-h">
+    <div class="container">
+      <span class="eyebrow">The problem</span>
+      <h2 id="problem-h">Most marketing professionals can't yet explain what digital twins do.</h2>
+      <p class="lead" style="max-width: 60ch;">
+        Between March and April 2026 I surveyed fifteen insurance marketing
+        practitioners in Ontario. The picture is consistent across all fifteen
+        responses: high curiosity, low practical understanding, and a strong
+        preference for hands-on demonstrations over written explainers.
+      </p>
+
+      <div class="stats" style="margin-top: 32px;">
+        <div class="stat" data-bg="73">
+          <p class="stat__num">73%</p>
+          <p class="stat__label">have never heard of digital twins, or cannot explain the concept (Q4).</p>
+        </div>
+        <div class="stat" data-bg="60">
+          <p class="stat__num">60%</p>
+          <p class="stat__label">name cost of implementation as the top adoption barrier (Q6).</p>
+        </div>
+        <div class="stat" data-bg="80">
+          <p class="stat__num">80%</p>
+          <p class="stat__label">prefer an interactive demo or simulator over written explainers (Q8).</p>
+        </div>
+      </div>
+
+      <p style="margin-top: 32px;">
+        <a href="./research.html" class="btn btn--ghost">See the full dashboard (industry data + survey) →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="section" aria-labelledby="how-h">
+    <div class="container">
+      <span class="eyebrow">In ninety seconds</span>
+      <h2 id="how-h">How a digital twin works in auto insurance</h2>
+      <p class="lead" style="max-width: 60ch;">
+        A digital twin is a continuously-updated virtual model of a real entity.
+        In this project, the entity is one auto insurance customer. The model
+        ingests telematics, claims history, and stated preferences; simulates
+        outcomes under different conditions; and feeds the result back into the
+        pricing, coverage, and marketing message that customer actually sees.
+      </p>
+
+      <div class="flow" style="margin-top: 24px;">
+        <div class="flow__step">
+          <span class="flow__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h12"/><circle cx="4" cy="7" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="16" cy="17" r="1.6" fill="currentColor"/></svg>
+          </span>
+          <h4>Acquire</h4>
+          <p>Telematics, app behavior, claims history, demographic and policy data.</p>
+        </div>
+        <div class="flow__step">
+          <span class="flow__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/></svg>
+          </span>
+          <h4>Model</h4>
+          <p>A virtual replica of the driver, updated near real-time.</p>
+        </div>
+        <div class="flow__step">
+          <span class="flow__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.2" fill="currentColor"/><circle cx="6" cy="19" r="2.2"/><circle cx="18" cy="19" r="2.2"/><path d="M11 7l-4 10M13 7l4 10"/></svg>
+          </span>
+          <h4>Simulate</h4>
+          <p>Run "what-if" scenarios — premium changes, coverage shifts, risk events.</p>
+        </div>
+        <div class="flow__step">
+          <span class="flow__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg>
+          </span>
+          <h4>Personalize</h4>
+          <p>Pricing, coverage and marketing messaging tailored per customer.</p>
+        </div>
+        <div class="flow__step">
+          <span class="flow__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="20" x2="6" y2="14"/><line x1="12" y1="20" x2="12" y2="8"/><line x1="18" y1="20" x2="18" y2="11"/><line x1="3" y1="20" x2="21" y2="20"/></svg>
+          </span>
+          <h4>Measure</h4>
+          <p>Engagement, retention, claim outcomes — fed back to refine the model.</p>
+        </div>
+      </div>
+
+      <blockquote class="pullquote">
+        Personalization isn't a creative problem. It's an evidence problem.
+        A digital twin is the place where the evidence accumulates and where
+        the marketing message earns the right to be specific.
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ===== ARTIFACTS ===== -->
+  <section class="section section--alt" aria-labelledby="artifacts-h">
+    <div class="container">
+      <span class="eyebrow">Six artifacts, one use case</span>
+      <h2 id="artifacts-h">Explore the project</h2>
+      <p class="lead" style="max-width: 60ch;">
+        Each artifact handles one stage of the same pipeline: research →
+        explain → demonstrate → interpret → assemble → distribute. They are
+        designed to be opened in any order, but read together they answer one
+        question — can a multichannel campaign demonstrate the practical value
+        of digital twins to a non-technical audience?
+      </p>
+
+      <div class="cards" style="margin-top: 32px;">
+
+        <a class="card" href="./research.html" data-status="ready">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="20" x2="21" y2="20"/><line x1="6" y1="20" x2="6" y2="13"/><line x1="11" y1="20" x2="11" y2="9"/><line x1="16" y1="20" x2="16" y2="15"/><line x1="20" y1="20" x2="20" y2="6"/></svg>
+          </span>
+          <span class="card__tag">D1 · Research</span>
+          <h3 class="card__title">Survey &amp; data dashboard</h3>
+          <p class="card__desc">A two-layer dashboard. Layer 1 maps Ontario auto insurance industry trends 2022–2025 from secondary sources. Layer 2 is the primary survey of 15 marketing practitioners. The empirical foundation for everything else.</p>
+          <span class="card__meta">N = 15 · Live data · Chart.js</span>
+          <span class="card__arrow">Open dashboard →</span>
+        </a>
+
+        <a class="card" href="./zine.html" data-status="upcoming">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h7v16H4zM13 4h7v16h-7z"/><line x1="7" y1="9" x2="8" y2="9"/><line x1="7" y1="13" x2="8" y2="13"/><line x1="7" y1="17" x2="8" y2="17"/><line x1="16" y1="9" x2="17" y2="9"/><line x1="16" y1="13" x2="17" y2="13"/><line x1="16" y1="17" x2="17" y2="17"/></svg>
+          </span>
+          <span class="card__tag">D2 · Explanation</span>
+          <h3 class="card__title">Digital zine (long-read)</h3>
+          <p class="card__desc">A 14-page interactive PDF and web edition that explains the use case in plain language. Three short acts: what is this thing, how does it work for one driver, what stops it from happening. With an embedded comprehension check at the end.</p>
+          <span class="card__meta">Due 2026-05-17 · PDF + web</span>
+          <span class="card__arrow">Read the zine →</span>
+        </a>
+
+        <a class="card" href="./simulator.html" data-status="upcoming">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4 L20 12 L6 20 Z"/></svg>
+          </span>
+          <span class="card__tag">D3 · Demonstration</span>
+          <h3 class="card__title">Decision simulator</h3>
+          <p class="card__desc">A Unity WebGL prototype: one personalization scenario, two outcomes. The "show, don't tell" artifact for the eighty per cent of practitioners who said they want a demo. Three minutes from launch to first insight.</p>
+          <span class="card__meta">Due 2026-05-25 · WebGL · ~3 min</span>
+          <span class="card__arrow">Launch simulator →</span>
+        </a>
+
+        <a class="card" href="./podcast.html" data-status="upcoming">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="9" x2="6" y2="15"/><line x1="9" y1="6" x2="9" y2="18"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="15" y1="6" x2="15" y2="18"/><line x1="18" y1="9" x2="18" y2="15"/></svg>
+          </span>
+          <span class="card__tag">D4 · Interpretation</span>
+          <h3 class="card__title">Podcast episode</h3>
+          <p class="card__desc">One ~20-minute episode that walks listeners from the survey finding through the simulator example to a single professional takeaway. For people who prefer to listen on a commute rather than read on a screen.</p>
+          <span class="card__meta">Due 2026-05-25 · Spotify · Apple</span>
+          <span class="card__arrow">Listen →</span>
+        </a>
+
+        <a class="card" href="./methodology.html" data-status="ready">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2.5" fill="currentColor"/><circle cx="4" cy="6" r="2"/><circle cx="20" cy="6" r="2"/><circle cx="4" cy="18" r="2"/><circle cx="20" cy="18" r="2"/><line x1="11" y1="11" x2="5.4" y2="7"/><line x1="13" y1="11" x2="18.6" y2="7"/><line x1="11" y1="13" x2="5.4" y2="17"/><line x1="13" y1="13" x2="18.6" y2="17"/></svg>
+          </span>
+          <span class="card__tag">D5 · This hub</span>
+          <h3 class="card__title">How the project fits together</h3>
+          <p class="card__desc">The site you're on. Integrates the other five artifacts and adds methodology, success criteria, real-world cases, and the full reading list. Built as plain HTML, hosted on GitHub Pages.</p>
+          <span class="card__meta">Live · Open-source</span>
+          <span class="card__arrow">Read methodology →</span>
+        </a>
+
+        <a class="card" href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener" data-status="ready">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55V14.85c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7H9.32V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.26 2.36 4.26 5.43v6.31zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </span>
+          <span class="card__tag">D6 · Distribution</span>
+          <h3 class="card__title">LinkedIn campaign</h3>
+          <p class="card__desc">Five organic B2B posts rolling out across Weeks 7–9. Where the project meets its actual audience. Each post is anchored in one finding from this hub and links back here.</p>
+          <span class="card__meta">5 posts · 2026-05 → 06</span>
+          <span class="card__arrow">Visit LinkedIn page ↗</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MORE TO EXPLORE (Cases + Resources) ===== -->
+  <section class="section" aria-labelledby="explore-h">
+    <div class="container">
+      <span class="eyebrow">More to explore</span>
+      <h2 id="explore-h">Beyond the prototype</h2>
+      <p class="lead" style="max-width: 60ch;">
+        The simulator is a research prototype, not a product. To see what
+        digital twin practice already looks like in industry — and to read the
+        sources behind every claim on this site — go here.
+      </p>
+
+      <div class="explore" style="margin-top: 24px;">
+        <a class="explore__item" href="./cases.html">
+          <span class="explore__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><line x1="3" y1="13" x2="21" y2="13"/></svg>
+          </span>
+          <small>Real-world cases</small>
+          <h3>What's already being done in industry</h3>
+          <p>Telematics and UBI programs in Canada and the United States, plus mature digital twin implementations from adjacent industries — Siemens, Microsoft, GE, Mayo Clinic, Tesla. Each entry: title, short description, what changed, sources.</p>
+          <span class="go">Browse cases →</span>
+        </a>
+        <a class="explore__item" href="./resources.html">
+          <span class="explore__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z"/><path d="M19 17H7a3 3 0 0 0-3 3"/><line x1="8" y1="9" x2="15" y2="9"/><line x1="8" y1="13" x2="13" y2="13"/></svg>
+          </span>
+          <small>Reading list</small>
+          <h3>Twenty-one sources behind this project</h3>
+          <p>Nine peer-reviewed papers, five industry reports, two regulatory documents, five professional publications. Grouped by category and theme, with direct links and one-line annotations. The literature foundation for the literature review.</p>
+          <span class="go">Open the library →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SUCCESS CRITERIA ===== -->
+  <section class="section section--alt" aria-labelledby="success-h">
+    <div class="container container-narrow">
+      <span class="eyebrow">What "working" looks like</span>
+      <h2 id="success-h">Success criteria — measurable, public, calibrated.</h2>
+      <p>
+        Assignment 1 feedback flagged that the proposal stated effectiveness in
+        conceptual terms, with no measurable thresholds. Each artifact in this
+        project is now held to four directional criteria. They are not
+        statistical claims — they are the lines below which I would accept that
+        the artifact is not working as intended.
+      </p>
+
+      <div class="success" style="margin-top: 24px;">
+        <h3>Hub-level success (this site)</h3>
+        <ol>
+          <li><strong>Reach:</strong> ≥150 unique visitors in the first 14 days post-launch (LinkedIn-driven).</li>
+          <li><strong>Depth:</strong> ≥3 pages per session for visitors who do not bounce.</li>
+          <li><strong>Conversion to artifact:</strong> ≥35% of hub visitors click through to at least one artifact page.</li>
+          <li><strong>Time on page:</strong> median ≥1:30 on the home page; ≥2:30 on artifact pages.</li>
+        </ol>
+        <p class="muted" style="margin-top: 12px; font-size: var(--fs-sm);">
+          Tracked via Plausible (privacy-first analytics, no cookies). Per-artifact thresholds are listed on each artifact page and consolidated in the
+          <a href="./methodology.html#success">methodology</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CALL TO ACTION ===== -->
+  <section class="section section--ink">
+    <div class="container container-narrow" style="text-align: center;">
+      <h2 style="color: #fff;">Curious how a digital twin would price your customer?</h2>
+      <p class="lead" style="color: #ddd;">Open the simulator. One scenario, two outcomes, three minutes.</p>
+      <p style="margin-top: 24px;">
+        <a class="btn btn--primary" href="./simulator.html">Launch the simulator →</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__brand">Digital Twins in Auto Insurance</p>
+        <p style="color:#BBB; font-size: var(--fs-sm); max-width: 38ch;">
+          Capstone research project, DMGC-699 Spring 2026, University of Niagara
+          Falls Canada. Supervised by Dr. Wael Brahim.
+        </p>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <ul>
+          <li><a href="./research.html">Survey + dashboard</a></li>
+          <li><a href="./zine.html">Digital zine</a></li>
+          <li><a href="./simulator.html">Simulator</a></li>
+          <li><a href="./podcast.html">Podcast</a></li>
+          <li><a href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener">LinkedIn page ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="./cases.html">Real-world cases</a></li>
+          <li><a href="./resources.html">Reading list</a></li>
+          <li><a href="./methodology.html">Methodology</a></li>
+          <li><a href="./about.html">About the researcher</a></li>
+          <li><a href="https://github.com/" target="_blank" rel="noopener">Source on GitHub ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Aleksandr Okhrimenko. Last updated <span data-updated="2026-05-06">2026-05-06</span>.</span>
+      <span>Built with HTML, CSS, plain JS · Hosted on GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+
+<!-- Cookie consent (minimal). Sites GA4 only after explicit accept. -->
+<div id="cc-banner" class="cc-banner" role="region" aria-label="Cookie notice" hidden>
+  <p>This site uses Google Analytics to understand how visitors find and use the research. No personal information is collected. <a href="./about.html#contact">Questions →</a></p>
+  <div class="cc-banner__btns">
+    <button type="button" class="btn btn--ghost" data-cc-deny>Decline</button>
+    <button type="button" class="btn btn--primary" data-cc-accept>Accept</button>
+  </div>
+</div>
+<script>
+  (function () {
+    var KEY = 'cc-v1';
+    var pref = null;
+    try { pref = localStorage.getItem(KEY); } catch (e) {}
+    var banner = document.getElementById('cc-banner');
+    function apply(accepted) {
+      try { localStorage.setItem(KEY, accepted ? 'accept' : 'deny'); } catch (e) {}
+      if (banner) banner.hidden = true;
+      if (accepted && window.gtag) {
+        window.gtag('consent', 'update', {
+          analytics_storage: 'granted'
+        });
+      }
+    }
+    if (pref === 'accept') {
+      if (window.gtag) window.gtag('consent', 'update', { analytics_storage: 'granted' });
+    } else if (pref === 'deny') {
+      // stays denied
+    } else if (banner) {
+      banner.hidden = false;
+    }
+    if (banner) {
+      banner.querySelector('[data-cc-accept]').addEventListener('click', function(){ apply(true); });
+      banner.querySelector('[data-cc-deny]').addEventListener('click', function(){ apply(false); });
+    }
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "Digital Twins in Auto Insurance",
+  "short_name": "DT Auto Insurance",
+  "description": "Capstone research hub on digital twin technology for Ontario auto insurance marketing professionals.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#E97137",
+  "background_color": "#FFFFFF",
+  "lang": "en-CA",
+  "icons": [
+    { "src": "assets/img/logo.svg",      "sizes": "any",        "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/img/logo_400.png",  "sizes": "400x400",    "type": "image/png",     "purpose": "any" }
+  ]
+}

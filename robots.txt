@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+# Replace the host below with your final deployed URL after first push.
+Sitemap: https://okhrimenkoav24.github.io/digital-twins-auto-insurance/sitemap.xml

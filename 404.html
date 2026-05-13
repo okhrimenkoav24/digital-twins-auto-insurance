@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found · Digital Twins in Auto Insurance</title>
+  <meta name="theme-color" content="#E97137">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Digital Twins in Auto Insurance">
+  <meta name="twitter:image" content="https://okhrimenkoav24.github.io/digital-twins-auto-insurance/assets/img/og-image.png">
+  <meta property="og:url" content="https://okhrimenkoav24.github.io/digital-twins-auto-insurance/404.html">
+  <meta property="og:site_name" content="Digital Twins in Auto Insurance">
+  <meta property="og:locale" content="en_CA">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <!-- Google Analytics 4 — gated by cookie consent. Replace "G-XXXXXXXXXX" with your real Measurement ID after creating the GA4 property. -->
+  <script>window.__GA_ID__ = "G-XXXXXXXXXX";</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" data-cc-gated></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    // default to denied; the cookie banner flips this if accepted
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', "G-XXXXXXXXXX", { anonymize_ip: true });
+  </script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a class="nav__brand" href="./index.html">
+      <img src="assets/img/logo.svg" alt="" aria-hidden="true">
+      <span class="nav__brand-text">Digital Twins in Auto Insurance<small>Capstone research hub</small></span>
+    </a>
+    <ul class="nav__list">
+      <li><a class="nav__link" href="./index.html">Home</a></li>
+
+      <li class="nav__dropdown">
+        <button
+          class="nav__trigger"
+          type="button"
+          aria-expanded="false"
+          aria-haspopup="menu"
+          aria-controls="artifacts-menu">
+          Artifacts <span class="nav__caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav__menu" id="artifacts-menu" role="menu">
+          <li role="none"><a role="menuitem" href="./research.html">Survey &amp; Dashboard <small>D1 — primary survey, N = 15</small></a></li>
+          <li role="none"><a role="menuitem" href="./zine.html">Digital Zine <small>D2 — 14-page long-read</small></a></li>
+          <li role="none"><a role="menuitem" href="./simulator.html">Decision Simulator <small>D3 — Unity WebGL prototype</small></a></li>
+          <li role="none"><a role="menuitem" href="./podcast.html">Podcast Episode <small>D4 — ~20 minutes</small></a></li>
+        </ul>
+      </li>
+
+      <li><a class="nav__link" href="./cases.html">Cases</a></li>
+      <li><a class="nav__link" href="./resources.html">Resources</a></li>
+      <li><a class="nav__link" href="./methodology.html">Methodology</a></li>
+      <li><a class="nav__link" href="./about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="container container-narrow" style="text-align: center;">
+      <span class="hero__eyebrow">404 · Page not found</span>
+      <h1 class="hero__title" style="font-size: clamp(2.5rem, 7vw, 5rem);">
+        That page doesn't <span class="accent">exist</span>.
+      </h1>
+      <p class="hero__lead">
+        The link you followed is broken, the artifact hasn't been published yet,
+        or the URL was mistyped. Try one of these:
+      </p>
+      <div class="btn-row" style="justify-content: center;">
+        <a class="btn btn--primary" href="./index.html">Go home</a>
+        <a class="btn btn--ghost" href="./research.html">Survey & dashboard</a>
+        <a class="btn btn--ghost" href="./methodology.html">Methodology</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer footer">
+  <div class="container">
+    <div class="footer__bottom" style="border-top: none;">
+      <span>© 2026 Aleksandr Okhrimenko. Capstone research project · DMGC-699.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+
+<!-- Cookie consent (minimal). Sites GA4 only after explicit accept. -->
+<div id="cc-banner" class="cc-banner" role="region" aria-label="Cookie notice" hidden>
+  <p>This site uses Google Analytics to understand how visitors find and use the research. No personal information is collected. <a href="./about.html#contact">Questions →</a></p>
+  <div class="cc-banner__btns">
+    <button type="button" class="btn btn--ghost" data-cc-deny>Decline</button>
+    <button type="button" class="btn btn--primary" data-cc-accept>Accept</button>
+  </div>
+</div>
+<script>
+  (function () {
+    var KEY = 'cc-v1';
+    var pref = null;
+    try { pref = localStorage.getItem(KEY); } catch (e) {}
+    var banner = document.getElementById('cc-banner');
+    function apply(accepted) {
+      try { localStorage.setItem(KEY, accepted ? 'accept' : 'deny'); } catch (e) {}
+      if (banner) banner.hidden = true;
+      if (accepted && window.gtag) {
+        window.gtag('consent', 'update', {
+          analytics_storage: 'granted'
+        });
+      }
+    }
+    if (pref === 'accept') {
+      if (window.gtag) window.gtag('consent', 'update', { analytics_storage: 'granted' });
+    } else if (pref === 'deny') {
+      // stays denied
+    } else if (banner) {
+      banner.hidden = false;
+    }
+    if (banner) {
+      banner.querySelector('[data-cc-accept]').addEventListener('click', function(){ apply(true); });
+      banner.querySelector('[data-cc-deny]').addEventListener('click', function(){ apply(false); });
+    }
+  })();
+</script>
+
+</body>
+</html>

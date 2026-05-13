@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cases · Digital Twins in Auto Insurance</title>
+  <meta name="description" content="Real-world cases of telematics, usage-based insurance, and digital twin technology — from Progressive and Intact in auto insurance to Siemens, GE, and Tesla in adjacent industries. Each case: title, description, result, sources.">
+  <meta name="theme-color" content="#E97137">
+  <meta property="og:title" content="Cases · Digital Twins in Auto Insurance">
+  <meta property="og:description" content="What's already being done in industry — documented practice, with sources.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <link rel="canonical" href="./cases.html">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Digital Twins in Auto Insurance">
+  <meta name="twitter:image" content="https://okhrimenkoav24.github.io/digital-twins-auto-insurance/assets/img/og-image.png">
+  <meta property="og:url" content="https://okhrimenkoav24.github.io/digital-twins-auto-insurance/cases.html">
+  <meta property="og:site_name" content="Digital Twins in Auto Insurance">
+  <meta property="og:locale" content="en_CA">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/cases.html#page",
+      "name": "Cases — real-world digital twin and UBI implementations",
+      "url": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/cases.html",
+      "isPartOf": {
+        "@id": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/#website"
+      },
+      "inLanguage": "en-CA",
+      "author": {
+        "@type": "Person",
+        "name": "Aleksandr Okhrimenko"
+      }
+    }
+  ]
+}</script>
+  <!-- Google Analytics 4 — gated by cookie consent. Replace "G-XXXXXXXXXX" with your real Measurement ID after creating the GA4 property. -->
+  <script>window.__GA_ID__ = "G-XXXXXXXXXX";</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" data-cc-gated></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    // default to denied; the cookie banner flips this if accepted
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', "G-XXXXXXXXXX", { anonymize_ip: true });
+  </script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a class="nav__brand" href="./index.html">
+      <img src="assets/img/logo.svg" alt="" aria-hidden="true">
+      <span class="nav__brand-text">Digital Twins in Auto Insurance<small>Capstone research hub · DMGC-699</small></span>
+    </a>
+    <ul class="nav__list">
+      <li><a class="nav__link" href="./index.html">Home</a></li>
+
+      <li class="nav__dropdown">
+        <button
+          class="nav__trigger"
+          type="button"
+          aria-expanded="false"
+          aria-haspopup="menu"
+          aria-controls="artifacts-menu">
+          Artifacts <span class="nav__caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav__menu" id="artifacts-menu" role="menu">
+          <li role="none"><a role="menuitem" href="./research.html">Survey &amp; Dashboard <small>D1 — primary survey, N = 15</small></a></li>
+          <li role="none"><a role="menuitem" href="./zine.html">Digital Zine <small>D2 — 14-page long-read</small></a></li>
+          <li role="none"><a role="menuitem" href="./simulator.html">Decision Simulator <small>D3 — Unity WebGL prototype</small></a></li>
+          <li role="none"><a role="menuitem" href="./podcast.html">Podcast Episode <small>D4 — ~20 minutes</small></a></li>
+        </ul>
+      </li>
+
+      <li><a class="nav__link" href="./cases.html">Cases</a></li>
+      <li><a class="nav__link" href="./resources.html">Resources</a></li>
+      <li><a class="nav__link" href="./methodology.html">Methodology</a></li>
+      <li><a class="nav__link" href="./about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" style="padding-bottom: 32px;">
+    <div class="container">
+      <span class="hero__eyebrow">Real-world cases · Documented practice</span>
+      <h1 class="hero__title" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">
+        What's <span class="accent">already</span> being done.
+      </h1>
+      <p class="hero__lead" style="max-width: 60ch;">
+        Eight cases, two contexts. The first four are the closest practical
+        precursor to a customer digital twin in auto insurance: telematics-driven
+        usage-based insurance (UBI) programs that have been live in Canada and
+        the United States for over a decade. The next four are mature digital
+        twin implementations in industries where the technology is no longer
+        emerging — manufacturing, energy, smart buildings, automotive
+        engineering. Read the caveat at the end.
+      </p>
+      <div class="hero__meta">
+        <span>4 auto insurance cases</span>
+        <span>4 adjacent-industry cases</span>
+        <span>All sources cited</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 1: AUTO INSURANCE TELEMATICS / UBI ===== -->
+  <section class="section section--alt" aria-labelledby="auto-h">
+    <div class="container">
+      <span class="eyebrow">Auto insurance · telematics &amp; UBI in North America</span>
+      <h2 id="auto-h">The closest precursor — and what it tells us</h2>
+      <p class="lead" style="max-width: 60ch;">
+        Telematics-based UBI is not a digital twin in the strict sense. A UBI
+        program collects driving signals and applies them to a discount formula;
+        a digital twin maintains a continuously-updated virtual model of the
+        customer that simulates outcomes under different conditions. But UBI is
+        the most data-rich, customer-personalized practice that exists in this
+        market today, and it is what any future digital-twin offering will be
+        compared against.
+      </p>
+
+      <div class="cards" style="margin-top: 32px;">
+
+        <div class="card">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg>
+          </span>
+          <span class="card__tag">United States · launched 2010s</span>
+          <h3 class="card__title">Progressive Snapshot</h3>
+          <p class="card__desc">A telematics program that tracks braking, acceleration, night driving, miles driven, and phone use through a smartphone app or plug-in device. Discounts apply at signup and at renewal based on observed behavior.</p>
+          <p class="card__desc"><strong>Result:</strong> Approximately four out of five customers earn a discount; about half earn a double-digit discount. About 20% see an increased premium. Progressive reports more than $1.2 billion in cumulative Snapshot discounts and an average $322/year saving for renewing customers. Roughly 20% of drivers see a premium increase.</p>
+          <p class="card__meta">
+            Sources:
+            <a href="https://www.progressive.com/auto/discounts/snapshot/" target="_blank" rel="noopener">Progressive ↗</a> ·
+            <a href="https://www.cio.com/article/288907/how-progressive-uses-telematics-and-analytics-to-price-car-insuranc.html" target="_blank" rel="noopener">CIO interview ↗</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l4-4m0 0l4 4m-4-4v9" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12l-4 4m0 0l-4-4m4 4V7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="card__tag">United States · Drivewise</span>
+          <h3 class="card__title">Allstate Drivewise</h3>
+          <p class="card__desc">App-based UBI program with a one-way discount structure: rates can stay flat or go down, but never increase based on the data. Allstate advertises potential savings up to 40%.</p>
+          <p class="card__desc"><strong>Result:</strong> Realistic savings cluster between 7–15% for typical drivers; Consumer Reports' median is around $324/year. Allstate's own April 2024 data: Drivewise customers were 25% less likely to be involved in a serious collision than non-participants — an externality worth noting.</p>
+          <p class="card__meta">
+            Sources:
+            <a href="https://www.allstate.com/drivewise" target="_blank" rel="noopener">Allstate ↗</a> ·
+            <a href="https://www.bankrate.com/insurance/car/allstate-drivewise/" target="_blank" rel="noopener">Bankrate review ↗</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7" stroke-linecap="round"/><path d="M3 7l9-4 9 4" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 11l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="card__tag">Canada · Ontario, NS, NB, QC</span>
+          <h3 class="card__title">Intact Insurance — my Drive</h3>
+          <p class="card__desc">Canada's largest P&amp;C insurer launched its smartphone-based UBI program in Ontario in 2013. Three behavioral inputs: speed, focus (phone distraction), and smoothness (acceleration / braking). The app is built on Cambridge Mobile Telematics technology.</p>
+          <p class="card__desc"><strong>Result:</strong> 10% enrolment discount on signup; up to 25–30% off at renewal for safe driving. Premium can adjust up or down at the end of the initial 6-month observation period. Available in Ontario, Nova Scotia, New Brunswick, and Quebec — directly applicable to this project's geography.</p>
+          <p class="card__meta">
+            Sources:
+            <a href="https://www.intact.ca/en/personal-insurance/online-services/my-drive/faq-mydrive-v2" target="_blank" rel="noopener">Intact ↗</a> ·
+            <a href="https://www.thinkinsure.ca/car-insurance/intact-my-driving-discount.php" target="_blank" rel="noopener">ThinkInsure review ↗</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+          </span>
+          <span class="card__tag">Canada · QC, ON</span>
+          <h3 class="card__title">Desjardins — Ajusto</h3>
+          <p class="card__desc">Launched 2013 in Ontario and Quebec. Among the earliest 100% mobile-only UBI programs in Canada (no plug-in device required). Tracks driving habits (speed, acceleration, hard braking, phone distraction) and behavior (distance, time of day, destinations).</p>
+          <p class="card__desc"><strong>Result:</strong> 10% sign-up discount for the first 180 days; thereafter, safe driving can lower premiums by up to 25%, while riskier driving can increase them by up to 20%. The bidirectional structure (unlike Allstate's) is more honest about how a real digital twin would operate — and is what generated the most public privacy debate (CBC News coverage, 2015).</p>
+          <p class="card__meta">
+            Sources:
+            <a href="https://www.desjardins.com/ca/personal/insurance/car-insurance/ajusto/index.jsp" target="_blank" rel="noopener">Desjardins ↗</a> ·
+            <a href="https://www.cbc.ca/news/business/ajusto-app-that-watches-your-driving-habits-leads-to-privacy-concerns-1.3019787" target="_blank" rel="noopener">CBC News ↗</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2: ADJACENT INDUSTRIES (mature DT) ===== -->
+  <section class="section" aria-labelledby="adjacent-h">
+    <div class="container">
+      <span class="eyebrow">Adjacent industries · mature digital twins</span>
+      <h2 id="adjacent-h">Where the technology is no longer emerging</h2>
+      <p class="lead" style="max-width: 60ch;">
+        Outside of insurance, digital twins have a decade of operational
+        evidence. The four cases below were chosen because they have public
+        performance data, not because they are the most-cited in vendor
+        marketing. Each illustrates a different facet of the technology that
+        will eventually transfer to customer-side modelling in financial
+        services.
+      </p>
+
+      <div class="cards" style="margin-top: 32px;">
+
+        <div class="card">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21V13h6v8"/><path d="M3 21h18"/></svg>
+          </span>
+          <span class="card__tag">Manufacturing · Germany</span>
+          <h3 class="card__title">Siemens — Electronics Works Amberg</h3>
+          <p class="card__desc">A digital twin of an entire production line, in operation for over a decade. Engineers test what-if scenarios virtually without halting production. The plant produces over 1,000 SIMATIC controller variants per day, one product per second.</p>
+          <p class="card__desc"><strong>Result:</strong> 99.9% quality level maintained. Defect rate reduced by over 60%. Production volume increased 13× since 1990 with no expansion of the 10,000 m² floor and almost no change in headcount. Energy use down 20%. The reference case in industrial DT literature.</p>
+          <p class="card__meta">
+            Sources:
+            <a href="https://www.siemens.com/global/en/company/stories/industry/electronics-digitalenterprise-futuretechnologies.html" target="_blank" rel="noopener">Siemens (Amberg) ↗</a> ·
+            <a href="https://www.siemens.com/en-us/company/insights/digital-twin/" target="_blank" rel="noopener">Siemens Insights ↗</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5V4M12 14.5V20M9.5 12H4M14.5 12H20"/><circle cx="12" cy="12" r="9"/></svg>
+          </span>
+          <span class="card__tag">Energy · global</span>
+          <h3 class="card__title">GE — Digital Wind Farm</h3>
+          <p class="card__desc">Per-turbine digital twins built on GE's Predix platform. Each twin runs up to 20 different operating configurations to find the optimal pad-level setup for that specific turbine, then keeps learning from real-time sensor data.</p>
+          <p class="card__desc"><strong>Result:</strong> GE reports up to 20% boost in wind farm energy production, with per-turbine MWh output gains in the 5–7% range and turbine profitability up to 20% higher per unit. Estimated industry-wide value at $50 billion. The most cited operational-DT case outside manufacturing.</p>
+          <p class="card__meta">
+            Sources:
+            <a href="https://www.ge.com/news/press-releases/ge-launches-next-evolution-wind-energy-making-renewables-more-efficient-economic" target="_blank" rel="noopener">GE press release ↗</a> ·
+            <a href="https://hbr.org/sponsored/2015/07/how-the-digital-wind-farm-will-make-wind-power-20-more-efficient" target="_blank" rel="noopener">HBR (sponsor content) ↗</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </span>
+          <span class="card__tag">Smart buildings · platform</span>
+          <h3 class="card__title">Microsoft — Azure Digital Twins</h3>
+          <p class="card__desc">A platform-as-a-service offering for modelling physical environments and assets. Used internally by Microsoft for its own smart-building experiences (pathfinding, hot-desking) and externally by partners including Willow, Johnson Controls, Bosch, Bentley Systems, Ansys and Samsung.</p>
+          <p class="card__desc"><strong>Result:</strong> Most relevant signal for this project: the platform generalizes the digital-twin metaphor beyond a single use case. The same primitives (DTDL ontology, twin graph, change feed) that model a building can model a customer relationship.</p>
+          <p class="card__meta">
+            Sources:
+            <a href="https://azure.microsoft.com/en-us/products/digital-twins" target="_blank" rel="noopener">Azure Digital Twins ↗</a> ·
+            <a href="https://www.microsoft.com/insidetrack/blog/powering-microsoft-smart-buildings-with-microsoft-azure-digital-twins/" target="_blank" rel="noopener">Microsoft Inside Track ↗</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M7 17V8h10v9M9 8V6a3 3 0 016 0v2"/><circle cx="8" cy="20" r="1.5"/><circle cx="16" cy="20" r="1.5"/></svg>
+          </span>
+          <span class="card__tag">Automotive · United States</span>
+          <h3 class="card__title">Tesla — vehicle &amp; battery twins</h3>
+          <p class="card__desc">Tesla maintains a digital twin of every vehicle it has sold. Sensor data uploads continuously to the cloud, feeding models of battery state, motor function, and Autopilot behavior. Software updates are pre-validated against the population of twins before being pushed.</p>
+          <p class="card__desc"><strong>Result:</strong> Battery digital twins enable real-time charging-cycle optimization and health monitoring. Published research suggests battery efficiency gains of up to 30% and a 20% per-kWh cell cost reduction with mature twin implementations. The clearest current example of a per-customer (per-vehicle) operational twin at scale.</p>
+          <p class="card__meta">
+            Sources:
+            <a href="https://www.cloudflight.io/en/blog/learnings-from-the-digital-twins-data-architecture-of-tesla/" target="_blank" rel="noopener">Cloudflight analysis ↗</a> ·
+            <a href="https://arxiv.org/abs/2206.08080" target="_blank" rel="noopener">arXiv 2206.08080 (battery DT) ↗</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HONEST CAVEAT ===== -->
+  <section class="section section--alt" aria-labelledby="caveat-h">
+    <div class="container container-narrow">
+      <span class="eyebrow">Read this honestly</span>
+      <h2 id="caveat-h">A true customer digital twin in auto insurance does not yet exist at scale.</h2>
+      <p>
+        Every auto insurance case above is a usage-based insurance program, not
+        a digital twin in the literature's sense. UBI feeds a discount formula;
+        a digital twin maintains a continuously-updated model of the individual
+        and simulates outcomes under counterfactual conditions. The two share
+        plumbing — telematics, behavioral data, smartphone apps — but they
+        differ in what the model is for.
+      </p>
+      <p>
+        Every adjacent-industry case is mature, but not customer-side. Siemens
+        models a factory; GE models a turbine; Microsoft models a building;
+        Tesla models a vehicle. None of them models a person whose insurance
+        premium depends on the model's output, with the latter knowing it.
+        Bringing the technology over the line into customer twins surfaces
+        questions the industrial cases have not had to answer: meaningful
+        consent, the right to inspect one's own twin, the right to challenge
+        what the twin says.
+      </p>
+      <p>
+        Which is why the simulator in this project is a research prototype. It
+        is built deliberately to make those questions visible — what changes
+        when a twin replaces a segment, what the customer sees, what the
+        marketing message can honestly say. <a href="./simulator.html">Try it</a>,
+        then read the <a href="./methodology.html">methodology</a> for what it
+        does and does not claim.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section section--ink">
+    <div class="container container-narrow" style="text-align: center;">
+      <h2 style="color: #fff;">Want the literature behind these cases?</h2>
+      <p class="lead" style="color: #ddd;">
+        Twenty-one annotated sources organized by category and theme. Every
+        claim on this page traces back there.
+      </p>
+      <p style="margin-top: 24px;">
+        <a class="btn btn--primary" href="./resources.html">Open the reading list →</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__brand">Digital Twins in Auto Insurance</p>
+        <p style="color:#BBB; font-size: var(--fs-sm); max-width: 38ch;">Capstone research project, DMGC-699 Spring 2026, University of Niagara Falls Canada.</p>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <ul>
+          <li><a href="./research.html">Survey + dashboard</a></li>
+          <li><a href="./zine.html">Digital zine</a></li>
+          <li><a href="./simulator.html">Simulator</a></li>
+          <li><a href="./podcast.html">Podcast</a></li>
+          <li><a href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener">LinkedIn page ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="./cases.html">Real-world cases</a></li>
+          <li><a href="./resources.html">Reading list</a></li>
+          <li><a href="./methodology.html">Methodology</a></li>
+          <li><a href="./about.html">About the researcher</a></li>
+          <li><a href="https://github.com/" target="_blank" rel="noopener">Source on GitHub ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Aleksandr Okhrimenko. Last updated <span data-updated="2026-05-06">2026-05-06</span>.</span>
+      <span>Built with HTML/CSS/JS · GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+
+<!-- Cookie consent (minimal). Sites GA4 only after explicit accept. -->
+<div id="cc-banner" class="cc-banner" role="region" aria-label="Cookie notice" hidden>
+  <p>This site uses Google Analytics to understand how visitors find and use the research. No personal information is collected. <a href="./about.html#contact">Questions →</a></p>
+  <div class="cc-banner__btns">
+    <button type="button" class="btn btn--ghost" data-cc-deny>Decline</button>
+    <button type="button" class="btn btn--primary" data-cc-accept>Accept</button>
+  </div>
+</div>
+<script>
+  (function () {
+    var KEY = 'cc-v1';
+    var pref = null;
+    try { pref = localStorage.getItem(KEY); } catch (e) {}
+    var banner = document.getElementById('cc-banner');
+    function apply(accepted) {
+      try { localStorage.setItem(KEY, accepted ? 'accept' : 'deny'); } catch (e) {}
+      if (banner) banner.hidden = true;
+      if (accepted && window.gtag) {
+        window.gtag('consent', 'update', {
+          analytics_storage: 'granted'
+        });
+      }
+    }
+    if (pref === 'accept') {
+      if (window.gtag) window.gtag('consent', 'update', { analytics_storage: 'granted' });
+    } else if (pref === 'deny') {
+      // stays denied
+    } else if (banner) {
+      banner.hidden = false;
+    }
+    if (banner) {
+      banner.querySelector('[data-cc-accept]').addEventListener('click', function(){ apply(true); });
+      banner.querySelector('[data-cc-deny]').addEventListener('click', function(){ apply(false); });
+    }
+  })();
+</script>
+
+</body>
+</html>

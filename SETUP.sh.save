@@ -1,0 +1,68 @@
+cd "/Users/alexohr/Documents/Claude/Projects/Capstone (1)/Deliverable_05_Microsite"cd "/Users/alexohr/Documents/Claude/Projects/Capstone (1)/Deliverable_05_Microsite"cd "/Users/alexohr/Documents/Claude/Projects/Capstone (1)/Deliverable_05_Microsite"
+#!/usr/bin/env bash
+# One-shot setup for first GitHub deploy.
+# Run from inside the Deliverable_05_Microsite folder:
+#   bash SETUP.sh
+#
+# What this does:
+#   1. Removes any partial .git folder (left over from the sandbox init).
+#   2. Initializes a fresh git repo on `main`.
+#   3. Configures local user identity (uses the values below — edit if needed).
+#   4. Stages everything and makes the initial commit.
+#   5. Prints the exact commands for the GitHub push step.
+
+set -e
+
+GIT_NAME="Aleksandr Okhrimenko"
+GIT_EMAIL="okhrimenkoav25@gmail.com"
+GITHUB_USER="alexokhr74"           # your GitHub username — change if different
+REPO_NAME="digital-twins-auto-insurance"
+
+echo "→ Cleaning any leftover .git…"
+if [ -d .git ]; then
+  rm -rf .git
+  # if sandbox-locked files remain, escalate
+  if [ -d .git ]; then
+    echo "  (some files were locked — using sudo to clear them)"
+    sudo rm -rf .git
+  fi
+fi
+
+echo "→ Initializing fresh repository…"
+git init -q -b main
+git config user.name  "$GIT_NAME"
+git config user.email "$GIT_EMAIL"
+
+echo "→ Staging files…"
+git add .
+
+echo "→ Initial commit…"
+git commit -q -m "Initial commit — D5 research hub: 9 pages, brand-aligned design, SEO baseline (sitemap + JSON-LD + OG), GA4 (cookie-gated), GitHub Pages-ready"
+
+echo ""
+echo "==========================================================="
+echo "✓ Repo initialized."
+echo ""
+echo "Next steps:"
+echo ""
+echo "  1. Create the repo on GitHub:"
+echo "     https://github.com/new"
+echo "     Name: $REPO_NAME"
+echo "     Visibility: Public (required for free GitHub Pages)"
+echo "     Do NOT initialize with README / .gitignore / license."
+echo ""
+echo "  2. Push:"
+echo ""
+echo "     git remote add origin https://github.com/$GITHUB_USER/$REPO_NAME.git"
+echo "     git push -u origin main"
+echo ""
+echo "  3. Enable GitHub Pages:"
+echo "     https://github.com/$GITHUB_USER/$REPO_NAME/settings/pages"
+echo "     Source: Deploy from a branch → Branch: main / (root) → Save"
+echo ""
+echo "  4. Wait ~60s. Site will be live at:"
+echo "     https://$GITHUB_USER.github.io/$REPO_NAME/"
+echo ""
+echo "  5. Once URL is confirmed, tell Claude in chat:"
+echo "     \"replace canonical host with the actual GitHub Pages URL\""
+echo "==========================================================="

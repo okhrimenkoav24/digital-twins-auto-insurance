@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Decision Simulator · Digital Twins in Auto Insurance</title>
+  <meta name="description" content="A Unity WebGL prototype: see how a digital twin personalizes an auto insurance offer for one Ontario driver. One scenario, two outcomes, three minutes.">
+  <meta name="theme-color" content="#E97137">
+  <meta property="og:title" content="The Decision Simulator — Digital Twins in Auto Insurance">
+  <meta property="og:description" content="Show, don't tell. A Unity WebGL prototype demonstrating digital twin personalization for auto insurance.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <link rel="canonical" href="./simulator.html">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Digital Twins in Auto Insurance">
+  <meta name="twitter:image" content="https://okhrimenkoav24.github.io/digital-twins-auto-insurance/assets/img/og-image.png">
+  <meta property="og:url" content="https://okhrimenkoav24.github.io/digital-twins-auto-insurance/simulator.html">
+  <meta property="og:site_name" content="Digital Twins in Auto Insurance">
+  <meta property="og:locale" content="en_CA">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/simulator.html#article",
+      "headline": "The decision simulator",
+      "url": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/simulator.html",
+      "datePublished": "2026-05-12",
+      "dateModified": "2026-05-12",
+      "inLanguage": "en-CA",
+      "author": {
+        "@type": "Person",
+        "name": "Aleksandr Okhrimenko"
+      },
+      "publisher": {
+        "@id": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/#org"
+      },
+      "isPartOf": {
+        "@id": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/#website"
+      }
+    }
+  ]
+}</script>
+  <!-- Google Analytics 4 — gated by cookie consent. Replace "G-XXXXXXXXXX" with your real Measurement ID after creating the GA4 property. -->
+  <script>window.__GA_ID__ = "G-XXXXXXXXXX";</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" data-cc-gated></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    // default to denied; the cookie banner flips this if accepted
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', "G-XXXXXXXXXX", { anonymize_ip: true });
+  </script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a class="nav__brand" href="./index.html">
+      <img src="assets/img/logo.svg" alt="" aria-hidden="true">
+      <span class="nav__brand-text">Digital Twins in Auto Insurance<small>Capstone research hub · DMGC-699</small></span>
+    </a>
+    <ul class="nav__list">
+      <li><a class="nav__link" href="./index.html">Home</a></li>
+
+      <li class="nav__dropdown">
+        <button
+          class="nav__trigger"
+          type="button"
+          aria-expanded="false"
+          aria-haspopup="menu"
+          aria-controls="artifacts-menu">
+          Artifacts <span class="nav__caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="nav__menu" id="artifacts-menu" role="menu">
+          <li role="none"><a role="menuitem" href="./research.html">Survey &amp; Dashboard <small>D1 — primary survey, N = 15</small></a></li>
+          <li role="none"><a role="menuitem" href="./zine.html">Digital Zine <small>D2 — 14-page long-read</small></a></li>
+          <li role="none"><a role="menuitem" href="./simulator.html">Decision Simulator <small>D3 — Unity WebGL prototype</small></a></li>
+          <li role="none"><a role="menuitem" href="./podcast.html">Podcast Episode <small>D4 — ~20 minutes</small></a></li>
+        </ul>
+      </li>
+
+      <li><a class="nav__link" href="./cases.html">Cases</a></li>
+      <li><a class="nav__link" href="./resources.html">Resources</a></li>
+      <li><a class="nav__link" href="./methodology.html">Methodology</a></li>
+      <li><a class="nav__link" href="./about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero" style="padding-bottom: 32px;">
+    <div class="container">
+      <span class="hero__eyebrow">Deliverable 3 · Demonstration</span>
+      <h1 class="hero__title" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">The decision simulator</h1>
+      <p class="hero__lead">
+        Eighty per cent of marketing practitioners told the survey they would
+        rather see a digital twin in action than read another whitepaper. This
+        is that. One scenario, two outcomes, three minutes. Built in Unity,
+        deployed as WebGL.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#play">Launch simulator ↓</a>
+        <a class="btn btn--ghost" href="#how">How to read it</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== UNITY EMBED ===== -->
+  <section class="section section--alt" id="play" aria-labelledby="play-h">
+    <div class="container">
+      <span class="eyebrow">Play</span>
+      <h2 id="play-h">Launch the simulator</h2>
+      <p style="max-width: 60ch;">
+        Best on desktop. Mobile works but is cropped. The simulator runs entirely
+        in your browser — nothing is sent to a server. It will load roughly
+        15–30 MB of WebGL assets the first time.
+      </p>
+
+      <!-- TODO: replace this iframe src with the published Unity WebGL build URL.
+           Common deploy targets: itch.io, simmer.io, GitHub Pages subfolder, or
+           a /simulator/ folder of static Unity build files in this repo. -->
+      <div class="embed" role="region" aria-label="Decision simulator">
+        <iframe
+          title="Decision simulator (Unity WebGL)"
+          src="about:blank"
+          allow="autoplay; gamepad *; fullscreen *"
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <p class="muted" style="margin-top: 12px; font-size: var(--fs-sm);">
+        Browser does not load WebGL? <a href="#fallback">See the fallback</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== HOW TO READ ===== -->
+  <section class="section" id="how" aria-labelledby="how-h">
+    <div class="container">
+      <span class="eyebrow">A reading guide</span>
+      <h2 id="how-h">What you are looking at</h2>
+      <p>
+        Meet "Maria," a 34-year-old Ontario driver. Her digital twin ingests
+        three things: telematics from a connected app, two years of claims
+        history, and her stated preferences (deductible, optional coverage,
+        payment cadence). The simulator lets you change one input and watch the
+        offer change.
+      </p>
+
+      <div class="flow" style="margin-top: 24px;">
+        <div class="flow__step">
+          <h4>Pick an input</h4>
+          <p>Driving style, claim history, or preference shift.</p>
+        </div>
+        <div class="flow__step">
+          <h4>Run the twin</h4>
+          <p>Behind the curtain: a parameterized model, not magic.</p>
+        </div>
+        <div class="flow__step">
+          <h4>See two offers</h4>
+          <p>Old (segment-based) vs new (twin-personalized).</p>
+        </div>
+        <div class="flow__step">
+          <h4>Read the why</h4>
+          <p>The simulator explains, in plain language, what changed and why.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FALLBACK ===== -->
+  <section class="section section--alt" id="fallback" aria-labelledby="fallback-h">
+    <div class="container container-narrow">
+      <span class="eyebrow">For accessibility / no-WebGL</span>
+      <h2 id="fallback-h">Plain-text walkthrough</h2>
+      <p>
+        Not every reader can or wants to load a Unity build. A static walkthrough
+        of the same scenario, with screenshots and the same plain-language
+        explanations, is provided as an accessibility alternative.
+      </p>
+      <div class="btn-row">
+        <!-- TODO: replace with actual walkthrough page or PDF link -->
+        <a class="btn btn--ghost" href="#" aria-disabled="true">Read the plain-text walkthrough (pending)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SUCCESS CRITERIA ===== -->
+  <section class="section" aria-labelledby="success-h">
+    <div class="container container-narrow">
+      <span class="eyebrow">What "working" looks like</span>
+      <h2 id="success-h">Success criteria for the simulator</h2>
+      <div class="success">
+        <h3>The simulator works if…</h3>
+        <ol>
+          <li><strong>Completion:</strong> ≥50% of visitors who launch the build complete at least one full scenario run.</li>
+          <li><strong>Time on artifact:</strong> median ≥2 minutes from load to exit.</li>
+          <li><strong>Comprehension lift (qualitative):</strong> at least 5 of 15 follow-up survey contacts can describe the personalization mechanic in their own words.</li>
+          <li><strong>Accessibility:</strong> the plain-text fallback is rated "clear" by at least 80% of fallback users.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__brand">Digital Twins in Auto Insurance</p>
+        <p style="color:#BBB; font-size: var(--fs-sm); max-width: 38ch;">Capstone research project, DMGC-699 Spring 2026, University of Niagara Falls Canada.</p>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <ul>
+          <li><a href="./research.html">Survey + dashboard</a></li>
+          <li><a href="./zine.html">Digital zine</a></li>
+          <li><a href="./simulator.html">Simulator</a></li>
+          <li><a href="./podcast.html">Podcast</a></li>
+          <li><a href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener">LinkedIn page ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="./cases.html">Real-world cases</a></li>
+          <li><a href="./resources.html">Reading list</a></li>
+          <li><a href="./methodology.html">Methodology</a></li>
+          <li><a href="./about.html">About the researcher</a></li>
+          <li><a href="https://github.com/" target="_blank" rel="noopener">Source on GitHub ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Aleksandr Okhrimenko. Last updated <span data-updated="2026-05-06">2026-05-06</span>.</span>
+      <span>Built with HTML/CSS/JS · GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+
+<!-- Cookie consent (minimal). Sites GA4 only after explicit accept. -->
+<div id="cc-banner" class="cc-banner" role="region" aria-label="Cookie notice" hidden>
+  <p>This site uses Google Analytics to understand how visitors find and use the research. No personal information is collected. <a href="./about.html#contact">Questions →</a></p>
+  <div class="cc-banner__btns">
+    <button type="button" class="btn btn--ghost" data-cc-deny>Decline</button>
+    <button type="button" class="btn btn--primary" data-cc-accept>Accept</button>
+  </div>
+</div>
+<script>
+  (function () {
+    var KEY = 'cc-v1';
+    var pref = null;
+    try { pref = localStorage.getItem(KEY); } catch (e) {}
+    var banner = document.getElementById('cc-banner');
+    function apply(accepted) {
+      try { localStorage.setItem(KEY, accepted ? 'accept' : 'deny'); } catch (e) {}
+      if (banner) banner.hidden = true;
+      if (accepted && window.gtag) {
+        window.gtag('consent', 'update', {
+          analytics_storage: 'granted'
+        });
+      }
+    }
+    if (pref === 'accept') {
+      if (window.gtag) window.gtag('consent', 'update', { analytics_storage: 'granted' });
+    } else if (pref === 'deny') {
+      // stays denied
+    } else if (banner) {
+      banner.hidden = false;
+    }
+    if (banner) {
+      banner.querySelector('[data-cc-accept]').addEventListener('click', function(){ apply(true); });
+      banner.querySelector('[data-cc-deny]').addEventListener('click', function(){ apply(false); });
+    }
+  })();
+</script>
+
+</body>
+</html>
