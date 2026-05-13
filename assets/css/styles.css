@@ -309,20 +309,8 @@ code {
   padding: clamp(48px, 7vw, 104px) 0 clamp(40px, 5vw, 72px);
   position: relative; overflow: hidden;
 }
-.hero::before {
-  content: ""; position: absolute; right: -8%; top: -10%;
-  width: 36vw; height: 36vw; max-width: 520px; max-height: 520px;
-  background: radial-gradient(circle at 50% 50%, var(--c-orange-soft) 0%, rgba(252,230,217,0) 70%);
-  pointer-events: none; z-index: 0;
-  animation: floaty 14s ease-in-out infinite alternate;
-}
-.hero::after {
-  content: ""; position: absolute; left: -10%; bottom: -10%;
-  width: 28vw; height: 28vw; max-width: 380px; max-height: 380px;
-  background: radial-gradient(circle at 50% 50%, rgba(252,230,217,0.65) 0%, rgba(252,230,217,0) 70%);
-  pointer-events: none; z-index: 0;
-  animation: floaty 18s ease-in-out infinite alternate-reverse;
-}
+/* hero kept on pure white so the photo dissolves into the page;
+   subtle accent is delegated to .divider-wave below the section */
 @keyframes floaty {
   from { transform: translate3d(0, 0, 0) scale(1); }
   to   { transform: translate3d(2vw, -1.5vw, 0) scale(1.08); }
@@ -382,88 +370,54 @@ code {
   padding: 24px;
 }
 
-/* ===== hero photo variant with micro-animations ===== */
+/* ===== hero photo variant — blends into page, no card frame ===== */
 .hero__visual--photo {
   position: relative;
   isolation: isolate;
-  padding: clamp(8px, 1.6vw, 20px);
+  padding: 0;
+  background: transparent;
 }
 .hero__visual--photo img.hero-photo {
   position: relative;
   z-index: 2;
   width: 100%;
   height: auto;
+  display: block;
   animation: heroFloat 8s ease-in-out infinite alternate;
-  filter: drop-shadow(0 22px 36px rgba(233, 113, 55, 0.10));
+  /* soft grounding shadow tinted with brand orange */
+  filter:
+    drop-shadow(0 30px 28px rgba(233, 113, 55, 0.12))
+    drop-shadow(0 12px 18px rgba(0, 0, 0, 0.05));
 }
 @keyframes heroFloat {
-  from { transform: translateY(0)   scale(1); }
+  from { transform: translateY(0)    scale(1);     }
   to   { transform: translateY(-10px) scale(1.012); }
 }
 
-/* soft radial backdrop that breathes */
-.hero__visual--photo::before {
-  content: ""; position: absolute; inset: 6% 8% 8% 6%;
-  background: radial-gradient(circle at 50% 60%,
-              rgba(233,113,55,0.18) 0%,
-              rgba(233,113,55,0.06) 38%,
-              rgba(233,113,55,0)    72%);
-  border-radius: 50%;
-  z-index: 0;
-  animation: heroGlow 5s ease-in-out infinite alternate;
-  pointer-events: none;
-}
-@keyframes heroGlow {
-  from { opacity: 0.72; transform: scale(1); }
-  to   { opacity: 1;     transform: scale(1.05); }
-}
-
-/* pulsing data point — sits on the leftmost orbital ring of the photo */
-.hero__visual--photo::after {
-  content: ""; position: absolute;
-  width: 12px; height: 12px;
-  left: 23%; top: 78%;
-  background: var(--c-orange);
-  border-radius: 50%;
-  z-index: 3;
-  box-shadow:
-    0 0 0 0 rgba(233,113,55,0.55),
-    0 0 12px rgba(233,113,55,0.7);
-  animation: heroSignal 2.6s ease-out infinite;
-  pointer-events: none;
-}
-@keyframes heroSignal {
-  0%   { box-shadow: 0 0 0 0 rgba(233,113,55,0.55), 0 0 12px rgba(233,113,55,0.7); transform: scale(1); }
-  70%  { box-shadow: 0 0 0 22px rgba(233,113,55,0),  0 0 12px rgba(233,113,55,0);   transform: scale(1.2); }
-  100% { box-shadow: 0 0 0 0 rgba(233,113,55,0),    0 0 12px rgba(233,113,55,0);   transform: scale(1); }
-}
-
-/* wireframe-side "scan" shimmer — a soft orange band that drifts across the orange half */
+/* gentle scan-sweep band drifts across the wireframe side */
 .hero__visual--photo .hero-scan {
   position: absolute; inset: 0;
   z-index: 4; pointer-events: none;
   background: linear-gradient(115deg,
-              transparent 0%, transparent 52%,
-              rgba(255,255,255,0.0) 56%,
-              rgba(255,200,160,0.22) 60%,
-              rgba(255,255,255,0.0) 64%,
+              transparent 0%, transparent 50%,
+              rgba(255, 220, 190, 0.0)  54%,
+              rgba(255, 200, 150, 0.28) 60%,
+              rgba(255, 220, 190, 0.0)  66%,
               transparent 100%);
   mix-blend-mode: screen;
-  background-size: 220% 100%;
+  background-size: 240% 100%;
+  background-repeat: no-repeat;
   animation: heroScan 7.5s ease-in-out infinite;
-  opacity: 0.9;
-  border-radius: inherit;
+  opacity: 0.85;
 }
 @keyframes heroScan {
-  0%, 18%  { background-position: 100% 0; }
-  62%      { background-position: -8%  0; }
-  100%     { background-position: -8%  0; }
+  0%, 22%  { background-position: 110% 0; }
+  68%      { background-position: -10% 0; }
+  100%     { background-position: -10% 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .hero__visual--photo img.hero-photo,
-  .hero__visual--photo::before,
-  .hero__visual--photo::after,
   .hero__visual--photo .hero-scan { animation: none !important; }
 }
 
