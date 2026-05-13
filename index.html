@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4">
   <link rel="manifest" href="manifest.json">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Digital Twins in Auto Insurance">
@@ -128,18 +128,18 @@
 
 <main id="main">
 
-  <!-- ===== HERO ===== -->
+  <!-- ===== HERO — what is this site ===== -->
   <section class="hero">
     <div class="container">
       <div class="hero__grid">
         <div class="hero__copy">
-          <span class="hero__eyebrow">Capstone research project · 2026</span>
+          <span class="hero__eyebrow">Capstone research hub · 2026</span>
           <h1 class="hero__title">
             Digital twins in <br>
             <span class="accent">auto insurance.</span>
           </h1>
           <p class="hero__lead">
-            A research hub for marketing professionals in Ontario auto
+            A research project for marketing professionals in Ontario auto
             insurance. Six artifacts — a primary survey, a long-read zine, an
             interactive simulator, a podcast, this site, and a LinkedIn
             campaign — built around one practical use case: personalizing
@@ -164,63 +164,33 @@
     </div>
   </section>
 
-  <!-- ===== THE PROBLEM / SIGNAL ===== -->
-  <section class="section section--alt" aria-labelledby="problem-h">
-    <div class="container">
-      <span class="eyebrow" data-reveal>The problem</span>
-      <h2 id="problem-h" data-reveal data-delay="1">Most marketing professionals can't yet explain what digital twins do.</h2>
-      <p class="lead" data-reveal data-delay="2" style="max-width: 60ch;">
-        Between March and April 2026 I surveyed fifteen insurance marketing
-        practitioners in Ontario. The picture is consistent across all fifteen
-        responses: high curiosity, low practical understanding, and a strong
-        preference for hands-on demonstrations over written explainers.
-      </p>
-
-      <div class="stats" style="margin-top: 36px;">
-        <div class="stat" data-bg="73" data-reveal data-delay="1">
-          <p class="stat__num">73%</p>
-          <p class="stat__label">have never heard of digital twins, or cannot explain the concept (Q4).</p>
-        </div>
-        <div class="stat" data-bg="60" data-reveal data-delay="2">
-          <p class="stat__num">60%</p>
-          <p class="stat__label">name cost of implementation as the top adoption barrier (Q6).</p>
-        </div>
-        <div class="stat" data-bg="80" data-reveal data-delay="3">
-          <p class="stat__num">80%</p>
-          <p class="stat__label">prefer an interactive demo or simulator over written explainers (Q8).</p>
-        </div>
-      </div>
-
-      <p style="margin-top: 32px;" data-reveal>
-        <a href="https://jade-salamander-5559d4.netlify.app" target="_blank" rel="noopener" class="btn btn--ghost">See the full dashboard ↗</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- decorative divider -->
+  <!-- decorative wave -->
   <div aria-hidden="true" style="margin: 0 auto; max-width: 1200px;">
     <img src="assets/img/divider-wave.svg" alt="" class="illus illus--bleed" style="height: 60px; opacity: 0.85;">
   </div>
 
-  <!-- ===== HOW IT WORKS ===== -->
-  <section class="section" aria-labelledby="how-h">
+  <!-- =====================================================
+       SECTION 1 — WHAT (what is a digital twin in auto?)
+       ===================================================== -->
+  <section class="section" aria-labelledby="what-h">
     <div class="container">
-      <span class="eyebrow" data-reveal>In ninety seconds</span>
-      <h2 id="how-h" data-reveal data-delay="1">How a digital twin works in auto insurance</h2>
-      <p class="lead" data-reveal data-delay="2" style="max-width: 60ch;">
-        A digital twin is a continuously-updated virtual model of a real entity.
-        In this project, the entity is one auto insurance customer. The model
-        ingests telematics, claims history, and stated preferences; simulates
-        outcomes under different conditions; and feeds the result back into the
-        pricing, coverage, and marketing message that customer actually sees.
+      <span class="eyebrow" data-reveal>① What is this about</span>
+      <h2 id="what-h" data-reveal data-delay="1">A digital twin is a virtual model of a real customer.</h2>
+      <p class="lead" data-reveal data-delay="2" style="max-width: 64ch;">
+        It ingests telematics, claims history, and stated preferences;
+        simulates outcomes under different conditions; and feeds the result
+        back into the pricing, coverage, and marketing message that customer
+        actually sees. The model is continuously updated — the customer
+        drives, the twin learns, the offer adjusts.
       </p>
 
-      <!-- new data-flow illustration -->
       <figure data-reveal data-delay="3" style="margin: 36px 0 8px;">
-        <img src="assets/img/data-flow.svg" alt="Schematic flow showing a real driver, the digital twin model, and a personalized policy offer, with a feedback arrow looping back to refine the model." class="illus illus--bleed">
+        <img src="assets/img/concept.svg"
+             alt="A diagram with two large circles. The left circle, labelled Physical, contains a car on a road and a small driver icon. The right circle, labelled Virtual, contains a network of data points around a central node labelled Twin. Three dashed arrows in the middle send telematics, claims, and preferences from left to right; one curved arrow sends a personalized offer from right to left."
+             class="illus illus--bleed">
       </figure>
 
-      <div class="flow" style="margin-top: 24px;">
+      <div class="flow" style="margin-top: 36px;">
         <div class="flow__step" data-reveal data-delay="1">
           <span class="flow__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h12"/><circle cx="4" cy="7" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="16" cy="17" r="1.6" fill="currentColor"/></svg>
@@ -257,26 +227,55 @@
           <p>Engagement, retention, claim outcomes — fed back to refine the model.</p>
         </div>
       </div>
-
-      <blockquote class="pullquote" data-reveal>
-        Personalization isn't a creative problem. It's an evidence problem.
-        A digital twin is the place where the evidence accumulates and where
-        the marketing message earns the right to be specific.
-      </blockquote>
     </div>
   </section>
 
-  <!-- ===== ARTIFACTS ===== -->
-  <section class="section section--alt" aria-labelledby="artifacts-h">
+  <!-- =====================================================
+       SECTION 2 — PROBLEM (what's the gap?)
+       ===================================================== -->
+  <section class="section section--alt" aria-labelledby="problem-h">
     <div class="container">
-      <span class="eyebrow" data-reveal>Six artifacts, one use case</span>
-      <h2 id="artifacts-h" data-reveal data-delay="1">Explore the project</h2>
+      <span class="eyebrow" data-reveal>② What's the problem</span>
+      <h2 id="problem-h" data-reveal data-delay="1">Most marketing professionals can't yet explain what digital twins do.</h2>
       <p class="lead" data-reveal data-delay="2" style="max-width: 60ch;">
-        Each artifact handles one stage of the same pipeline: research →
-        explain → demonstrate → interpret → assemble → distribute. They are
-        designed to be opened in any order, but read together they answer one
-        question — can a multichannel campaign demonstrate the practical value
-        of digital twins to a non-technical audience?
+        Between March and April 2026, fifteen insurance marketing
+        practitioners in Ontario completed a structured survey. The picture
+        is consistent across all fifteen responses: high curiosity, low
+        practical understanding, and a strong preference for hands-on
+        demonstrations over written explainers.
+      </p>
+
+      <figure data-reveal data-delay="3" style="margin: 36px 0 8px;">
+        <img src="assets/img/problem.svg"
+             alt="A chart titled High curiosity, low understanding, wants a demo. Three horizontal orange bars show Q4 73 percent cannot explain digital twins, Q6 60 percent name cost as the top barrier, Q8 80 percent prefer an interactive demo over written explainers. A small pill at the bottom right reads SHOW · DON'T TELL."
+             class="illus illus--bleed">
+      </figure>
+
+      <blockquote class="pullquote" data-reveal>
+        Personalization is not a creative problem. It is an evidence problem.
+        A digital twin is the place where the evidence accumulates and where
+        the marketing message earns the right to be specific.
+      </blockquote>
+
+      <p style="margin-top: 16px;" data-reveal>
+        <a href="https://jade-salamander-5559d4.netlify.app" target="_blank" rel="noopener" class="btn btn--ghost">See the full dashboard ↗</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       SECTION 3 — SOLUTIONS (six artifacts)
+       ===================================================== -->
+  <section class="section" aria-labelledby="solutions-h">
+    <div class="container">
+      <span class="eyebrow" data-reveal>③ What the solutions are</span>
+      <h2 id="solutions-h" data-reveal data-delay="1">Six artifacts answer one question.</h2>
+      <p class="lead" data-reveal data-delay="2" style="max-width: 64ch;">
+        Each artifact handles one stage of the same pipeline:
+        <strong>research → explain → demonstrate → interpret → assemble → distribute</strong>.
+        Designed to be opened in any order, but read together they answer
+        one question — can a multichannel campaign demonstrate the practical
+        value of digital twins to a non-technical audience?
       </p>
 
       <div class="cards" style="margin-top: 36px;">
@@ -290,7 +289,7 @@
           </div>
           <span class="card__tag">Research</span>
           <h3 class="card__title">Survey &amp; data dashboard</h3>
-          <p class="card__desc">A two-layer dashboard. Layer 1 maps Ontario auto insurance industry trends 2022–2025 from secondary sources. Layer 2 is the primary survey of 15 marketing practitioners. The empirical foundation for everything else.</p>
+          <p class="card__desc">A two-layer dashboard. Layer 1 maps Ontario auto insurance industry trends 2022–2025 from secondary sources. Layer 2 reports the primary survey of 15 marketing practitioners — the empirical foundation for everything else.</p>
           <div class="card__meta">
             <span>N=15</span><span>Flourish</span><span>Netlify-hosted</span>
           </div>
@@ -306,7 +305,7 @@
           </div>
           <span class="card__tag">Explanation</span>
           <h3 class="card__title">Digital zine (long-read)</h3>
-          <p class="card__desc">A 14-page interactive long-read. Three short acts: what is this thing, how does it work for one driver, what stops it from happening. With an embedded comprehension check at the end.</p>
+          <p class="card__desc">A 14-page interactive long-read. Three short acts: what is this thing, how does it work for one driver, what stops it from happening. Includes an embedded comprehension check at the end.</p>
           <div class="card__meta">
             <span>14 pages</span><span>~12 min</span><span>Netlify-hosted</span>
           </div>
@@ -322,7 +321,7 @@
           </div>
           <span class="card__tag">Demonstration</span>
           <h3 class="card__title">Decision simulator</h3>
-          <p class="card__desc">A Unity WebGL prototype: one personalization scenario, two outcomes. The "show, don't tell" artifact for the 80% of practitioners who said they want a demo. Three minutes from launch to first insight.</p>
+          <p class="card__desc">A Unity WebGL prototype: one personalization scenario, two outcomes. The "show, don't tell" artifact for the 80% of practitioners who asked for a demo. Three minutes from launch to first insight.</p>
           <div class="card__meta">
             <span>Due 2026-05-25</span><span>Unity WebGL</span><span>~3 min</span>
           </div>
@@ -354,7 +353,7 @@
           </div>
           <span class="card__tag">This hub</span>
           <h3 class="card__title">How the project fits together</h3>
-          <p class="card__desc">The site you're on. Integrates the other five artifacts and adds methodology, success criteria, real-world cases, and the full reading list. Built as plain HTML, hosted on GitHub Pages.</p>
+          <p class="card__desc">This site. Integrates the other five artifacts and adds methodology, success criteria, real-world cases, and the full reading list. Built as plain HTML, hosted on GitHub Pages.</p>
           <div class="card__meta">
             <span>Live</span><span>Open-source</span>
           </div>
@@ -381,6 +380,11 @@
     </div>
   </section>
 
+  <!-- decorative wave -->
+  <div aria-hidden="true" style="margin: 0 auto; max-width: 1200px;">
+    <img src="assets/img/divider-wave.svg" alt="" class="illus illus--bleed" style="height: 60px; opacity: 0.85;">
+  </div>
+
   <!-- ===== MORE TO EXPLORE ===== -->
   <section class="section" aria-labelledby="explore-h">
     <div class="container">
@@ -389,7 +393,7 @@
       <p class="lead" data-reveal data-delay="2" style="max-width: 60ch;">
         The simulator is a research prototype, not a product. To see what
         digital twin practice already looks like in industry — and to read the
-        sources behind every claim on this site — go here.
+        sources behind every claim on this site — open these.
       </p>
 
       <div class="explore" style="margin-top: 28px;">
@@ -398,8 +402,8 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><line x1="3" y1="13" x2="21" y2="13"/></svg>
           </span>
           <small>Real-world cases</small>
-          <h3>What's already being done in industry</h3>
-          <p>Telematics and UBI programs in Canada and the United States, plus mature digital twin implementations from adjacent industries — Siemens, Microsoft, GE, Mayo Clinic, Tesla. Each entry: title, short description, what changed, sources.</p>
+          <h3>What is already being done in industry</h3>
+          <p>Telematics and UBI programs in Canada and the United States, plus mature digital twin implementations in adjacent industries — Siemens, Microsoft, GE, Tesla. Each entry: title, short description, what changed, sources.</p>
           <span class="go">Browse cases →</span>
         </a>
         <a class="explore__item" href="./resources.html" data-reveal data-delay="2">
@@ -407,8 +411,8 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h12a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z"/><path d="M19 17H7a3 3 0 0 0-3 3"/><line x1="8" y1="9" x2="15" y2="9"/><line x1="8" y1="13" x2="13" y2="13"/></svg>
           </span>
           <small>Reading list</small>
-          <h3>Twenty-one sources behind this project</h3>
-          <p>Nine peer-reviewed papers, five industry reports, two regulatory documents, five professional publications. Grouped by category and theme, with direct links and one-line annotations. The literature foundation for the literature review.</p>
+          <h3>Twenty-one sources behind the project</h3>
+          <p>Nine peer-reviewed papers, five industry reports, two regulatory documents, five professional publications. Grouped by category and theme, with direct links and one-line annotations.</p>
           <span class="go">Open the library →</span>
         </a>
       </div>
@@ -421,11 +425,11 @@
       <span class="eyebrow" data-reveal>What "working" looks like</span>
       <h2 id="success-h" data-reveal data-delay="1">Success criteria — measurable, public, calibrated.</h2>
       <p data-reveal data-delay="2">
-        Assignment 1 feedback flagged that the proposal stated effectiveness in
-        conceptual terms, with no measurable thresholds. Each artifact in this
-        project is now held to four directional criteria. They are not
-        statistical claims — they are the lines below which I would accept that
-        the artifact is not working as intended.
+        Assignment 1 feedback flagged that the proposal stated effectiveness
+        in conceptual terms, with no measurable thresholds. Each artifact is
+        now held to four directional criteria. These are not statistical
+        claims — they are the lines below which an artifact would be
+        considered not working as intended.
       </p>
 
       <div class="success" style="margin-top: 24px;" data-reveal data-delay="3">
@@ -444,10 +448,10 @@
     </div>
   </section>
 
-  <!-- ===== CTA ===== -->
+  <!-- ===== FINAL CTA ===== -->
   <section class="section section--ink">
     <div class="container container-narrow" style="text-align: center;">
-      <h2 data-reveal>Curious how a digital twin would price your customer?</h2>
+      <h2 data-reveal>Curious how a digital twin would price a real customer?</h2>
       <p class="lead" data-reveal data-delay="1" style="margin: 0 auto 24px;">Open the dashboard, then the zine — five minutes total.</p>
       <p style="margin-top: 24px;" data-reveal data-delay="2">
         <a class="btn btn--primary" href="https://jade-salamander-5559d4.netlify.app" target="_blank" rel="noopener">Open the dashboard ↗</a>
@@ -503,7 +507,7 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js" defer></script>
+<script src="assets/js/main.js?v=4" defer></script>
 
 <!-- Cookie consent (minimal). Sites GA4 only after explicit accept. -->
 <div id="cc-banner" class="cc-banner" role="region" aria-label="Cookie notice" hidden>

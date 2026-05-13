@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 480" role="img" aria-labelledby="cn-t cn-d">
+  <title id="cn-t">Digital twin concept — physical driver mirrored by a virtual model</title>
+  <desc id="cn-d">A diagram showing a physical car/driver on the left connected by signals to a virtual model on the right, with arrows representing data flow between them.</desc>
+
+  <defs>
+    <linearGradient id="cn-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#FCE6D9" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FCE6D9" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="cn-soft" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#FCE6D9" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FCE6D9" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="cn-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#E97137"/>
+    </marker>
+  </defs>
+
+  <!-- background blobs -->
+  <ellipse cx="140" cy="240" rx="180" ry="180" fill="url(#cn-soft)"/>
+  <ellipse cx="420" cy="240" rx="180" ry="180" fill="url(#cn-soft)"/>
+
+  <!-- ============ LEFT: physical world ============ -->
+  <g transform="translate(140,240)">
+    <circle r="120" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.5"/>
+    <text x="0" y="-92" text-anchor="middle"
+      font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.18em"
+      fill="#B85522" font-weight="600">PHYSICAL · REAL</text>
+
+    <!-- road -->
+    <ellipse cx="0" cy="40" rx="84" ry="16" fill="#FAF8F5" stroke="#E5E5E5" stroke-width="1"/>
+    <line x1="-60" y1="40" x2="-30" y2="40" stroke="#1A1A1A" stroke-width="2" stroke-dasharray="6 6"/>
+    <line x1="-15" y1="40" x2="15" y2="40" stroke="#1A1A1A" stroke-width="2" stroke-dasharray="6 6"/>
+    <line x1="30" y1="40" x2="60" y2="40" stroke="#1A1A1A" stroke-width="2" stroke-dasharray="6 6"/>
+
+    <!-- car (orange) -->
+    <g transform="translate(-36,-8)">
+      <path d="M4 22 L10 8 C13 4 18 3 23 3 L49 3 C54 3 59 4 62 8 L68 22 L68 30 C68 31 67 32 66 32 L60 32 C60 33 59 34 58 34 L52 34 C51 34 50 33 50 32 L22 32 C22 33 21 34 20 34 L14 34 C13 34 12 33 12 32 L6 32 C5 32 4 31 4 30 z" fill="#E97137"/>
+      <!-- windows -->
+      <path d="M14 18 L16 10 C17 8 19 7 21 7 L51 7 C53 7 55 8 56 10 L58 18 z" fill="#FFFFFF" opacity="0.85"/>
+      <line x1="36" y1="8" x2="36" y2="18" stroke="#E97137" stroke-width="1.2"/>
+      <!-- wheels -->
+      <circle cx="16" cy="32" r="5" fill="#1A1A1A"/>
+      <circle cx="16" cy="32" r="2" fill="#FFFFFF"/>
+      <circle cx="56" cy="32" r="5" fill="#1A1A1A"/>
+      <circle cx="56" cy="32" r="2" fill="#FFFFFF"/>
+      <!-- headlight glow -->
+      <circle cx="68" cy="22" r="3" fill="#FBE2C8"/>
+    </g>
+
+    <!-- signal waves coming off the car -->
+    <g stroke="#E97137" stroke-width="1.4" fill="none" opacity="0.7">
+      <path d="M 38 -10 Q 50 -22 56 -38"/>
+      <path d="M 48 -8 Q 64 -18 76 -32"/>
+      <path d="M 56 0 Q 76 0 90 -10"/>
+    </g>
+    <!-- driver profile silhouette icon, small -->
+    <g transform="translate(0,84)" fill="#1A1A1A">
+      <circle cx="0" cy="-6" r="5"/>
+      <path d="M-8 6 C-8 0 8 0 8 6 L8 10 L-8 10 z"/>
+    </g>
+    <text x="0" y="108" text-anchor="middle"
+      font-family="Inter, system-ui, sans-serif" font-size="13"
+      fill="#7A7A7A">one driver · one car</text>
+  </g>
+
+  <!-- ============ MIDDLE: signal channel ============ -->
+  <g>
+    <!-- left → right signals -->
+    <line x1="260" y1="200" x2="300" y2="200" stroke="#E97137" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#cn-arr)"/>
+    <line x1="260" y1="240" x2="300" y2="240" stroke="#E97137" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#cn-arr)"/>
+    <line x1="260" y1="280" x2="300" y2="280" stroke="#E97137" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#cn-arr)"/>
+
+    <text x="280" y="188" text-anchor="middle"
+      font-family="JetBrains Mono, monospace" font-size="9" fill="#B85522"
+      letter-spacing="0.08em">telematics</text>
+    <text x="280" y="228" text-anchor="middle"
+      font-family="JetBrains Mono, monospace" font-size="9" fill="#B85522"
+      letter-spacing="0.08em">claims</text>
+    <text x="280" y="268" text-anchor="middle"
+      font-family="JetBrains Mono, monospace" font-size="9" fill="#B85522"
+      letter-spacing="0.08em">preferences</text>
+
+    <!-- right → left feedback -->
+    <path d="M 300 320 Q 280 360 260 320" fill="none" stroke="#1A1A1A" stroke-width="1.4" stroke-dasharray="3 4" marker-end="url(#cn-arr)" opacity="0.7"/>
+    <text x="280" y="362" text-anchor="middle"
+      font-family="JetBrains Mono, monospace" font-size="10" fill="#1A1A1A" letter-spacing="0.06em">personalized offer</text>
+  </g>
+
+  <!-- ============ RIGHT: virtual twin ============ -->
+  <g transform="translate(420,240)">
+    <circle r="120" fill="#FCE6D9" stroke="#E97137" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text x="0" y="-92" text-anchor="middle"
+      font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.18em"
+      fill="#B85522" font-weight="600">VIRTUAL · MODEL</text>
+
+    <!-- network of data points representing the model -->
+    <g>
+      <!-- data nodes -->
+      <g fill="#E97137">
+        <circle cx="-44" cy="-44" r="4"/>
+        <circle cx="32" cy="-58" r="4"/>
+        <circle cx="58" cy="-12" r="4"/>
+        <circle cx="44" cy="34" r="4"/>
+        <circle cx="-8" cy="58" r="4"/>
+        <circle cx="-56" cy="14" r="4"/>
+        <circle cx="-24" cy="-12" r="4"/>
+        <circle cx="20" cy="14" r="4"/>
+      </g>
+      <!-- network edges -->
+      <g stroke="#E97137" stroke-width="1" stroke-opacity="0.55">
+        <line x1="-44" y1="-44" x2="-24" y2="-12"/>
+        <line x1="32"  y1="-58" x2="20"  y2="14"/>
+        <line x1="58"  y1="-12" x2="20"  y2="14"/>
+        <line x1="58"  y1="-12" x2="-24" y2="-12"/>
+        <line x1="44"  y1="34"  x2="20"  y2="14"/>
+        <line x1="-8"  y1="58"  x2="20"  y2="14"/>
+        <line x1="-56" y1="14"  x2="-24" y2="-12"/>
+        <line x1="-24" y1="-12" x2="20"  y2="14"/>
+      </g>
+    </g>
+
+    <!-- core -->
+    <circle r="26" fill="#FFFFFF" stroke="#1A1A1A" stroke-width="1.6"/>
+    <text x="0" y="-1" text-anchor="middle"
+      font-family="JetBrains Mono, monospace" font-size="11" font-weight="700"
+      fill="#1A1A1A">TWIN</text>
+    <text x="0" y="12" text-anchor="middle"
+      font-family="JetBrains Mono, monospace" font-size="7" fill="#7A7A7A" letter-spacing="0.1em">v1.0</text>
+
+    <!-- micro chart lines on the lower part of model -->
+    <g transform="translate(0,86)">
+      <polyline points="-30,8 -20,4 -10,10 0,2 10,7 20,3 30,5"
+                stroke="#E97137" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    </g>
+    <text x="0" y="108" text-anchor="middle"
+      font-family="Inter, system-ui, sans-serif" font-size="13"
+      fill="#7A7A7A">continuously updated</text>
+  </g>
+
+  <!-- caption strip across the bottom -->
+  <g transform="translate(280,432)">
+    <text x="0" y="0" text-anchor="middle"
+      font-family="Inter, system-ui, sans-serif" font-size="12" fill="#1A1A1A">
+      <tspan font-weight="600">A digital twin</tspan>
+      <tspan fill="#7A7A7A"> is the model — fed by the driver, feeding the offer.</tspan>
+    </text>
+  </g>
+</svg>

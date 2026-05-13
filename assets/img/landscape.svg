@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="ls-t ls-d">
+  <title id="ls-t">Industry landscape — UBI programs, adjacent digital twins, and the gap</title>
+  <desc id="ls-d">A horizontal comparison: four telematics-based UBI programs in auto insurance, four mature digital-twin implementations in adjacent industries, and zero true customer digital twins in auto insurance — the gap.</desc>
+
+  <defs>
+    <pattern id="ls-dash" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#E5E5E5" stroke-width="2"/>
+    </pattern>
+  </defs>
+
+  <!-- title row -->
+  <g>
+    <text x="36" y="38" font-family="JetBrains Mono, monospace" font-size="11"
+      letter-spacing="0.18em" fill="#B85522" font-weight="600">INVENTORY · DOCUMENTED CASES</text>
+    <text x="36" y="64" font-family="Inter, system-ui, sans-serif" font-size="20"
+      font-weight="700" fill="#1A1A1A">Where the evidence sits.</text>
+  </g>
+
+  <!-- ============== Column 1: UBI in Canada/US ============== -->
+  <g transform="translate(36,100)">
+    <!-- column header -->
+    <text x="0" y="0" font-family="JetBrains Mono, monospace" font-size="10"
+      letter-spacing="0.14em" fill="#7A7A7A">CA / US · UBI</text>
+    <text x="0" y="22" font-family="Inter, system-ui, sans-serif" font-size="16"
+      font-weight="600" fill="#1A1A1A">Telematics programs</text>
+    <line x1="0" y1="34" x2="200" y2="34" stroke="#E97137" stroke-width="2"/>
+
+    <!-- 4 program tiles -->
+    <g transform="translate(0,52)">
+      <g>
+        <rect x="0" y="0" width="200" height="44" rx="4" fill="#FFFFFF" stroke="#E5E5E5"/>
+        <circle cx="22" cy="22" r="6" fill="#E97137"/>
+        <text x="42" y="20" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#1A1A1A">Progressive Snapshot</text>
+        <text x="42" y="34" font-family="JetBrains Mono, monospace" font-size="10" fill="#7A7A7A">US · 2010s</text>
+      </g>
+      <g transform="translate(0,52)">
+        <rect x="0" y="0" width="200" height="44" rx="4" fill="#FFFFFF" stroke="#E5E5E5"/>
+        <circle cx="22" cy="22" r="6" fill="#E97137"/>
+        <text x="42" y="20" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#1A1A1A">Allstate Drivewise</text>
+        <text x="42" y="34" font-family="JetBrains Mono, monospace" font-size="10" fill="#7A7A7A">US · 2010s</text>
+      </g>
+      <g transform="translate(0,104)">
+        <rect x="0" y="0" width="200" height="44" rx="4" fill="#FFFFFF" stroke="#E5E5E5"/>
+        <circle cx="22" cy="22" r="6" fill="#E97137"/>
+        <text x="42" y="20" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#1A1A1A">Intact my Drive</text>
+        <text x="42" y="34" font-family="JetBrains Mono, monospace" font-size="10" fill="#7A7A7A">CA · 2013+</text>
+      </g>
+      <g transform="translate(0,156)">
+        <rect x="0" y="0" width="200" height="44" rx="4" fill="#FFFFFF" stroke="#E5E5E5"/>
+        <circle cx="22" cy="22" r="6" fill="#E97137"/>
+        <text x="42" y="20" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#1A1A1A">Desjardins Ajusto</text>
+        <text x="42" y="34" font-family="JetBrains Mono, monospace" font-size="10" fill="#7A7A7A">CA · 2015+</text>
+      </g>
+    </g>
+
+    <text x="100" y="244" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#B85522">discount formula</text>
+    <text x="100" y="260" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#7A7A7A">not a continuously-updated model</text>
+  </g>
+
+  <!-- ============== Column 2: adjacent industries ============== -->
+  <g transform="translate(266,100)">
+    <text x="0" y="0" font-family="JetBrains Mono, monospace" font-size="10"
+      letter-spacing="0.14em" fill="#7A7A7A">ADJACENT · MATURE DT</text>
+    <text x="0" y="22" font-family="Inter, system-ui, sans-serif" font-size="16"
+      font-weight="600" fill="#1A1A1A">Real digital twins</text>
+    <line x1="0" y1="34" x2="200" y2="34" stroke="#1A1A1A" stroke-width="2"/>
+
+    <g transform="translate(0,52)">
+      <g>
+        <rect x="0" y="0" width="200" height="44" rx="4" fill="#1A1A1A"/>
+        <circle cx="22" cy="22" r="6" fill="#FFFFFF"/>
+        <text x="42" y="20" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Siemens · Amberg</text>
+        <text x="42" y="34" font-family="JetBrains Mono, monospace" font-size="10" fill="#BBBBBB">Manufacturing</text>
+      </g>
+      <g transform="translate(0,52)">
+        <rect x="0" y="0" width="200" height="44" rx="4" fill="#1A1A1A"/>
+        <circle cx="22" cy="22" r="6" fill="#FFFFFF"/>
+        <text x="42" y="20" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">GE · Wind Farm</text>
+        <text x="42" y="34" font-family="JetBrains Mono, monospace" font-size="10" fill="#BBBBBB">Energy</text>
+      </g>
+      <g transform="translate(0,104)">
+        <rect x="0" y="0" width="200" height="44" rx="4" fill="#1A1A1A"/>
+        <circle cx="22" cy="22" r="6" fill="#FFFFFF"/>
+        <text x="42" y="20" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Microsoft Azure DT</text>
+        <text x="42" y="34" font-family="JetBrains Mono, monospace" font-size="10" fill="#BBBBBB">Smart buildings</text>
+      </g>
+      <g transform="translate(0,156)">
+        <rect x="0" y="0" width="200" height="44" rx="4" fill="#1A1A1A"/>
+        <circle cx="22" cy="22" r="6" fill="#FFFFFF"/>
+        <text x="42" y="20" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Tesla · Vehicle / Battery</text>
+        <text x="42" y="34" font-family="JetBrains Mono, monospace" font-size="10" fill="#BBBBBB">Automotive</text>
+      </g>
+    </g>
+
+    <text x="100" y="244" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" fill="#1A1A1A">continuous model</text>
+    <text x="100" y="260" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#7A7A7A">but not on customers</text>
+  </g>
+
+  <!-- ============== Column 3: the gap ============== -->
+  <g transform="translate(496,100)">
+    <text x="0" y="0" font-family="JetBrains Mono, monospace" font-size="10"
+      letter-spacing="0.14em" fill="#7A7A7A">CUSTOMER DT · AUTO</text>
+    <text x="0" y="22" font-family="Inter, system-ui, sans-serif" font-size="16"
+      font-weight="600" fill="#1A1A1A">The gap</text>
+    <line x1="0" y1="34" x2="200" y2="34" stroke="#E97137" stroke-width="2" stroke-dasharray="4 4"/>
+
+    <!-- big "0" -->
+    <g transform="translate(0,52)">
+      <rect x="0" y="0" width="200" height="200" rx="6" fill="url(#ls-dash)" stroke="#E97137" stroke-width="1.5" stroke-dasharray="6 5"/>
+      <text x="100" y="120" text-anchor="middle"
+        font-family="Inter, system-ui, sans-serif" font-size="120" font-weight="800"
+        fill="#E97137" letter-spacing="-0.04em">0</text>
+      <text x="100" y="160" text-anchor="middle"
+        font-family="JetBrains Mono, monospace" font-size="11"
+        fill="#1A1A1A" letter-spacing="0.1em">documented programs</text>
+      <text x="100" y="180" text-anchor="middle"
+        font-family="JetBrains Mono, monospace" font-size="11"
+        fill="#1A1A1A" letter-spacing="0.1em">at scale</text>
+    </g>
+
+    <text x="100" y="282" text-anchor="middle"
+      font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600"
+      fill="#1A1A1A">Zero true customer twins</text>
+    <text x="100" y="298" text-anchor="middle"
+      font-family="Inter, system-ui, sans-serif" font-size="11"
+      fill="#7A7A7A">in auto insurance · this project's frame</text>
+  </g>
+
+  <!-- bottom caveat strip -->
+  <g transform="translate(36,396)">
+    <text x="0" y="0" font-family="JetBrains Mono, monospace" font-size="10" fill="#7A7A7A"
+      letter-spacing="0.06em">8 cases · 16+ sources cited inline · CA · US · global</text>
+  </g>
+</svg>

@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4">
   <link rel="manifest" href="manifest.json">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cases · Digital Twins in Auto Insurance">
@@ -134,45 +134,24 @@
     </div>
   </section>
 
-  <!-- ===== KPI ROW ===== -->
-  <section class="section section--deep" aria-labelledby="kpi-h">
+  <!-- ===== LANDSCAPE — visual inventory ===== -->
+  <section class="section section--alt" aria-labelledby="kpi-h">
     <div class="container">
       <span class="eyebrow" data-reveal>Inventory · documented cases · 2026-05</span>
       <h2 id="kpi-h" data-reveal data-delay="1">What this page covers, at a glance.</h2>
-      <p class="lead" data-reveal data-delay="2">
-        A directional count of where the evidence sits. The auto-insurance
-        cases share plumbing with a digital twin — telematics, smartphone apps,
-        behavioral signals — but feed a discount formula rather than a
-        continuously-updated model. The adjacent cases run mature twins, but
-        not on customers. Read the caveat at the end.
+      <p class="lead" data-reveal data-delay="2" style="max-width: 64ch;">
+        The auto-insurance cases share plumbing with a digital twin — telematics,
+        smartphone apps, behavioural signals — but feed a discount formula
+        rather than a continuously-updated model. The adjacent cases run
+        mature twins, but not on customers. Zero true customer twins in auto
+        insurance at scale — the honest gap this project addresses.
       </p>
 
-      <div class="kpi-grid" role="list">
-        <div class="kpi" role="listitem" data-reveal data-delay="1">
-          <p class="kpi__label"><span class="dot dot--live"></span> Canada · UBI</p>
-          <p class="kpi__num kpi__num--orange">2<span class="unit">/4</span></p>
-          <p class="kpi__desc">Canadian UBI programs documented: Intact <code>my Drive</code> and Desjardins <code>Ajusto</code>.</p>
-          <span class="kpi__bar" style="--w: 50%;"></span>
-        </div>
-        <div class="kpi" role="listitem" data-reveal data-delay="2">
-          <p class="kpi__label"><span class="dot dot--live"></span> United States · UBI</p>
-          <p class="kpi__num kpi__num--orange">2<span class="unit">/4</span></p>
-          <p class="kpi__desc">US UBI programs documented: Progressive <code>Snapshot</code> and Allstate <code>Drivewise</code>.</p>
-          <span class="kpi__bar" style="--w: 50%;"></span>
-        </div>
-        <div class="kpi" role="listitem" data-reveal data-delay="3">
-          <p class="kpi__label"><span class="dot dot--build"></span> Adjacent · mature DT</p>
-          <p class="kpi__num kpi__num--orange">4<span class="unit">/4</span></p>
-          <p class="kpi__desc">Siemens, GE, Microsoft, Tesla — all with public performance data.</p>
-          <span class="kpi__bar" style="--w: 100%;"></span>
-        </div>
-        <div class="kpi" role="listitem" data-reveal data-delay="4">
-          <p class="kpi__label"><span class="dot dot--off"></span> Customer DT · auto</p>
-          <p class="kpi__num">0<span class="unit">/8</span></p>
-          <p class="kpi__desc">Zero true customer digital twins in auto insurance at scale. The honest gap this project addresses.</p>
-          <span class="kpi__bar" style="--w: 0%;"></span>
-        </div>
-      </div>
+      <figure data-reveal data-delay="3" style="margin: 36px 0 8px;">
+        <img src="assets/img/landscape.svg"
+             alt="An inventory of three columns. Column one — Canada and US UBI — lists four telematics programs in white orange-dotted cards: Progressive Snapshot, Allstate Drivewise, Intact my Drive, Desjardins Ajusto. Column two — Adjacent mature digital twins — lists Siemens, GE, Microsoft, and Tesla as four dark cards. Column three — Customer digital twins in auto — shows a large dashed orange zero with the caption Zero true customer twins."
+             class="illus illus--bleed">
+      </figure>
     </div>
   </section>
 
@@ -448,7 +427,7 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js" defer></script>
+<script src="assets/js/main.js?v=4" defer></script>
 
 <!-- Cookie consent (minimal). Sites GA4 only after explicit accept. -->
 <div id="cc-banner" class="cc-banner" role="region" aria-label="Cookie notice" hidden>

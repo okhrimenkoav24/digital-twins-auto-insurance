@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="pr-t pr-d">
+  <title id="pr-t">The problem — survey of fifteen Ontario marketing practitioners</title>
+  <desc id="pr-d">Three stacked horizontal bars showing survey findings: 73 percent cannot explain digital twins, 60 percent name cost as the top adoption barrier, 80 percent prefer an interactive demonstration over written explainers.</desc>
+
+  <defs>
+    <pattern id="pr-grid" patternUnits="userSpaceOnUse" width="40" height="40">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#F0F0F0" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- subtle grid backdrop -->
+  <rect x="220" y="40" width="460" height="280" fill="url(#pr-grid)" opacity="0.6"/>
+
+  <!-- title block -->
+  <g transform="translate(36,52)">
+    <text x="0" y="0" font-family="JetBrains Mono, monospace" font-size="11"
+      letter-spacing="0.18em" fill="#B85522" font-weight="600">PRIMARY SURVEY · N = 15</text>
+    <text x="0" y="26" font-family="Inter, system-ui, sans-serif" font-size="20"
+      font-weight="700" fill="#1A1A1A">High curiosity.</text>
+    <text x="0" y="50" font-family="Inter, system-ui, sans-serif" font-size="20"
+      font-weight="700" fill="#1A1A1A">Low understanding.</text>
+    <text x="0" y="74" font-family="Inter, system-ui, sans-serif" font-size="20"
+      font-weight="700" fill="#E97137">Wants a demo.</text>
+    <text x="0" y="116" font-family="Inter, system-ui, sans-serif" font-size="12"
+      fill="#7A7A7A">Ontario · Mar–Apr 2026</text>
+    <text x="0" y="132" font-family="Inter, system-ui, sans-serif" font-size="12"
+      fill="#7A7A7A">All fifteen practitioners completed</text>
+    <text x="0" y="148" font-family="Inter, system-ui, sans-serif" font-size="12"
+      fill="#7A7A7A">the full instrument.</text>
+  </g>
+
+  <!-- ============ BAR 1: Q4 — awareness 73% ============ -->
+  <g transform="translate(220,90)">
+    <text x="0" y="0" font-family="JetBrains Mono, monospace" font-size="10"
+      letter-spacing="0.1em" fill="#7A7A7A">Q4 · AWARENESS</text>
+    <text x="0" y="20" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#1A1A1A">
+      <tspan font-weight="600">Cannot explain</tspan>
+      <tspan fill="#7A7A7A"> what a digital twin does</tspan>
+    </text>
+    <!-- bar track -->
+    <rect x="0" y="32" width="440" height="18" rx="2" fill="#FAF8F5" stroke="#E5E5E5"/>
+    <!-- bar fill -->
+    <rect x="0" y="32" width="321.2" height="18" rx="2" fill="#E97137"/>
+    <!-- value -->
+    <text x="450" y="46" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="800" fill="#1A1A1A" letter-spacing="-0.02em">73%</text>
+  </g>
+
+  <!-- ============ BAR 2: Q6 — cost barrier 60% ============ -->
+  <g transform="translate(220,176)">
+    <text x="0" y="0" font-family="JetBrains Mono, monospace" font-size="10"
+      letter-spacing="0.1em" fill="#7A7A7A">Q6 · TOP ADOPTION BARRIER</text>
+    <text x="0" y="20" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#1A1A1A">
+      <tspan font-weight="600">Cost of implementation</tspan>
+      <tspan fill="#7A7A7A"> is the #1 blocker</tspan>
+    </text>
+    <rect x="0" y="32" width="440" height="18" rx="2" fill="#FAF8F5" stroke="#E5E5E5"/>
+    <rect x="0" y="32" width="264" height="18" rx="2" fill="#E97137" opacity="0.85"/>
+    <text x="450" y="46" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="800" fill="#1A1A1A" letter-spacing="-0.02em">60%</text>
+  </g>
+
+  <!-- ============ BAR 3: Q8 — demo preferred 80% ============ -->
+  <g transform="translate(220,262)">
+    <text x="0" y="0" font-family="JetBrains Mono, monospace" font-size="10"
+      letter-spacing="0.1em" fill="#7A7A7A">Q8 · FORMAT PREFERENCE</text>
+    <text x="0" y="20" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#1A1A1A">
+      <tspan font-weight="600">Prefers an interactive demo</tspan>
+      <tspan fill="#7A7A7A"> over written explainers</tspan>
+    </text>
+    <rect x="0" y="32" width="440" height="18" rx="2" fill="#FAF8F5" stroke="#E5E5E5"/>
+    <rect x="0" y="32" width="352" height="18" rx="2" fill="#1A1A1A"/>
+    <text x="450" y="46" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="800" fill="#E97137" letter-spacing="-0.02em">80%</text>
+  </g>
+
+  <!-- key takeaway tag -->
+  <g transform="translate(560,330)">
+    <rect x="-90" y="-14" width="180" height="22" rx="11" fill="#FCE6D9"/>
+    <text x="0" y="2" text-anchor="middle"
+      font-family="JetBrains Mono, monospace" font-size="10"
+      fill="#B85522" font-weight="600" letter-spacing="0.08em">SHOW · DON'T TELL</text>
+  </g>
+</svg>
