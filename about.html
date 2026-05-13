@@ -6,11 +6,17 @@
   <title>About · Digital Twins in Auto Insurance</title>
   <meta name="description" content="About the researcher behind this capstone project. Aleksandr Okhrimenko, MA student in Digital Media & Global Communications, University of Niagara Falls Canada.">
   <meta name="theme-color" content="#E97137">
+  <meta name="color-scheme" content="light">
+  <meta name="author" content="Aleksandr Okhrimenko">
   <meta property="og:title" content="About · Digital Twins in Auto Insurance">
   <meta property="og:type" content="profile">
   <meta property="og:image" content="assets/img/og-image.png">
   <link rel="canonical" href="./about.html">
   <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/logo_400.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="manifest" href="manifest.json">
   <meta name="twitter:card" content="summary_large_image">
@@ -62,14 +68,20 @@
   </script>
 </head>
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
 
+<!-- ===== HEADER / NAV ===== -->
 <header class="site-header">
   <nav class="nav" aria-label="Primary">
     <a class="nav__brand" href="./index.html">
       <img src="assets/img/logo.svg" alt="" aria-hidden="true">
-      <span class="nav__brand-text">Digital Twins in Auto Insurance<small>Capstone research hub · DMGC-699</small></span>
+      <span class="nav__brand-text">
+        Digital Twins in Auto Insurance
+        <small>Capstone research hub · DMGC-699</small>
+      </span>
     </a>
+
     <ul class="nav__list">
       <li><a class="nav__link" href="./index.html">Home</a></li>
 
@@ -83,87 +95,139 @@
           Artifacts <span class="nav__caret" aria-hidden="true">▾</span>
         </button>
         <ul class="nav__menu" id="artifacts-menu" role="menu">
-          <li role="none"><a role="menuitem" href="./research.html">Survey &amp; Dashboard <small>D1 — primary survey, N = 15</small></a></li>
-          <li role="none"><a role="menuitem" href="./zine.html">Digital Zine <small>D2 — 14-page long-read</small></a></li>
-          <li role="none"><a role="menuitem" href="./simulator.html">Decision Simulator <small>D3 — Unity WebGL prototype</small></a></li>
-          <li role="none"><a role="menuitem" href="./podcast.html">Podcast Episode <small>D4 — ~20 minutes</small></a></li>
+          <li role="none"><a role="menuitem" href="./research.html">Survey &amp; Dashboard <small>D1 — primary survey, N=15 · live</small></a></li>
+          <li role="none"><a role="menuitem" href="./zine.html">Digital Zine <small>D2 — 14-page long-read · live</small></a></li>
+          <li role="none"><a role="menuitem" href="./simulator.html">Decision Simulator <small>D3 — Unity WebGL · upcoming</small></a></li>
+          <li role="none"><a role="menuitem" href="./podcast.html">Podcast Episode <small>D4 — ~20 min · upcoming</small></a></li>
         </ul>
       </li>
 
       <li><a class="nav__link" href="./cases.html">Cases</a></li>
       <li><a class="nav__link" href="./resources.html">Resources</a></li>
       <li><a class="nav__link" href="./methodology.html">Methodology</a></li>
-      <li><a class="nav__link" href="./about.html">About</a></li>
+      <li><a class="nav__link" href="./about.html" aria-current="page">About</a></li>
     </ul>
   </nav>
 </header>
 
 <main id="main">
 
-  <section class="hero" style="padding-bottom: 24px;">
+  <!-- ===== HERO ===== -->
+  <section class="hero">
     <div class="container container-narrow">
-      <span class="hero__eyebrow">About</span>
-      <h1 class="hero__title" style="font-size: clamp(2rem, 5vw, 3.5rem);">Hello — I'm Aleks.</h1>
+      <span class="hero__eyebrow">About · The researcher</span>
+      <h1 class="hero__title">Aleksandr Okhrimenko.</h1>
       <p class="hero__lead">
-        Marketing practitioner, MA student, and the person behind this hub.
-        Below: who I am, why this project, how to reach me.
+        Marketing practitioner, MA student, and the person behind this hub —
+        a multichannel research project on digital twins in auto insurance.
       </p>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="bio-h">
+  <!-- ===== BACKGROUND ===== -->
+  <section class="section" aria-labelledby="bg-h">
     <div class="container container-narrow">
-      <span class="eyebrow">The short version</span>
-      <h2 id="bio-h">Who's writing this</h2>
-      <p>
-        I'm a marketing professional with over ten years of work across
-        performance and brand campaigns. I'm currently completing a Master's
-        in Digital Media and Global Communications at the University of
-        Niagara Falls Canada. This site is the central artifact of my
-        capstone (DMGC-699 Spring 2026), supervised by Dr. Wael Brahim.
+      <span class="eyebrow" data-reveal>Background</span>
+      <h2 id="bg-h" data-reveal data-delay="1">Who's writing this.</h2>
+      <p data-reveal data-delay="2">
+        Over ten years across performance and brand campaigns. Currently
+        completing a Master's in Digital Media and Global Communications at
+        the University of Niagara Falls Canada. This site is the central
+        artifact (Deliverable&nbsp;5) of my capstone <code>DMGC-699</code>,
+        Spring&nbsp;2026, supervised by Dr.&nbsp;Wael&nbsp;Brahim.
       </p>
       <p>
-        The reason for the topic is plain: digital twin technology is
+        The reason for the topic is plain. <code>Digital twin</code> is
         increasingly mentioned in industry trade press, vendor decks, and
-        consultancy reports, but it is rarely defined in a way that lets a
-        practitioner act on it. Marketing teams in auto insurance — a
-        sector with strong telematics and policy-personalization potential
-        — are being asked to evaluate technology vendors without a clear
-        practical framework. This project is one attempt to provide that
-        framework, anchored in primary survey evidence and a working
-        prototype.
+        consultancy reports — but it is rarely defined in a way that lets a
+        practitioner act on it. Marketing teams in auto insurance are being
+        asked to evaluate vendors without a clear framework. This project
+        is one attempt to provide that framework, anchored in primary
+        survey evidence and a working prototype.
       </p>
     </div>
   </section>
 
-  <section class="section section--alt" aria-labelledby="contact-h">
+  <!-- ===== PROJECT CONTEXT ===== -->
+  <section class="section section--alt" aria-labelledby="ctx-h">
     <div class="container container-narrow">
-      <span class="eyebrow">Get in touch</span>
-      <h2 id="contact-h">Contact</h2>
-      <p>
-        If you're a marketing practitioner in Ontario auto insurance, an
-        academic working in adjacent territory, or someone with feedback on
-        any artifact: I'd genuinely like to hear from you.
-      </p>
-      <ul style="list-style: none; padding: 0;">
-        <li style="margin-bottom: 8px;"><strong>Email:</strong> <a href="mailto:okhrimenkoav25@gmail.com">okhrimenkoav25@gmail.com</a></li>
-        <li style="margin-bottom: 8px;"><strong>Project LinkedIn page:</strong> <a href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener">Digital Twins in Auto Insurance ↗</a></li>
-        <li style="margin-bottom: 8px;"><strong>Source code:</strong> <a href="https://github.com/" target="_blank" rel="noopener">GitHub repository ↗</a> (link to be replaced with actual repo)</li>
+      <span class="eyebrow" data-reveal>Project context</span>
+      <h2 id="ctx-h" data-reveal data-delay="1">Where this work lives.</h2>
+      <table class="meta-table" data-reveal data-delay="2">
+        <tbody>
+          <tr><th scope="row">Course</th><td>DMGC-699 · Capstone (9 credits, 10 weeks)</td></tr>
+          <tr><th scope="row">Term</th><td>Spring 2026</td></tr>
+          <tr><th scope="row">Supervisor</th><td>Dr. Wael Brahim</td></tr>
+          <tr><th scope="row">Region</th><td>Ontario, Canada</td></tr>
+          <tr><th scope="row">Audience</th><td>Marketing professionals in Ontario auto insurance</td></tr>
+          <tr><th scope="row">Citation style</th><td>APA 7</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== WHY THIS TOPIC ===== -->
+  <section class="section" aria-labelledby="why-h">
+    <div class="container container-narrow">
+      <span class="eyebrow" data-reveal>Why this topic</span>
+      <h2 id="why-h" data-reveal data-delay="1">The frame in one sentence.</h2>
+      <blockquote class="pullquote" data-reveal data-delay="2">
+        Marketing teams in auto insurance are being asked to evaluate
+        digital-twin vendors without a practitioner-grade definition of the
+        technology — this project tries to supply one, anchored in primary
+        survey evidence and a working prototype.
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ===== STACK / TOOLING ===== -->
+  <section class="section section--alt" aria-labelledby="stack-h">
+    <div class="container container-narrow">
+      <span class="eyebrow" data-reveal>Stack / tooling</span>
+      <h2 id="stack-h" data-reveal data-delay="1">Built with.</h2>
+      <ul class="list-clean" data-reveal data-delay="2">
+        <li><strong>HTML, CSS, vanilla JS</strong> — the hub you're on, hand-written, no framework. Live now.</li>
+        <li><strong>Flourish</strong> — data visualization powering the D1 survey dashboard, live at <a href="https://jade-salamander-5559d4.netlify.app" target="_blank" rel="noopener">jade-salamander-5559d4.netlify.app ↗</a>.</li>
+        <li><strong>Netlify</strong> — hosting for the D1 dashboard and the D2 long-read zine at <a href="https://digitaltwinszeen.netlify.app" target="_blank" rel="noopener">digitaltwinszeen.netlify.app ↗</a>.</li>
+        <li><strong>Unity (WebGL)</strong> — the D3 decision simulator, upcoming.</li>
+        <li><strong>Figma</strong> — layout, type, and the D2 zine artwork.</li>
+        <li><strong>GitHub Pages</strong> — static hosting for this hub, open-source repo.</li>
+        <li><strong>GA4</strong> — analytics, gated behind a consent banner.</li>
+        <li><strong>APA 7</strong> — citation style across all artifacts.</li>
       </ul>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="institution-h">
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact" aria-labelledby="contact-h">
     <div class="container container-narrow">
-      <span class="eyebrow">Institutional context</span>
-      <h2 id="institution-h">University of Niagara Falls Canada</h2>
-      <p>
-        DMGC-699 (Capstone) is a 9-credit, 10-week course in the Master's
-        program in Digital Media and Global Communications. The capstone
-        requires three integrated assignments: a proposal with literature
-        synthesis, six multimedia deliverables, and a reflective report
-        with public showcase. This research hub is Deliverable 5 in that
-        sequence.
+      <span class="eyebrow" data-reveal>Contact</span>
+      <h2 id="contact-h" data-reveal data-delay="1">Get in touch.</h2>
+      <p data-reveal data-delay="2">
+        If you're a marketing practitioner in Ontario auto insurance, an
+        academic in adjacent territory, or someone with feedback on any
+        artifact — I'd like to hear from you.
+      </p>
+
+      <ul class="list-clean" data-reveal data-delay="3" style="margin-top: 16px;">
+        <li><strong>Email:</strong> <a href="mailto:okhrimenkoav25@gmail.com">okhrimenkoav25@gmail.com</a></li>
+        <li><strong>LinkedIn page:</strong> <a href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener">linkedin.com/company/digital-twins-in-auto-insurance ↗</a></li>
+        <li><strong>Source repo:</strong> <a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a> (link replaced at publish)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== INSTITUTIONAL CONTEXT ===== -->
+  <section class="section section--alt" aria-labelledby="inst-h">
+    <div class="container container-narrow">
+      <span class="eyebrow" data-reveal>Institutional context</span>
+      <h2 id="inst-h" data-reveal data-delay="1">University of Niagara Falls Canada.</h2>
+      <p data-reveal data-delay="2">
+        <code>DMGC-699</code> is a 9-credit, 10-week capstone in the MA
+        Digital Media &amp; Global Communications program. It requires
+        three integrated assignments: a proposal with literature synthesis,
+        six multimedia deliverables, and a reflective report with a public
+        showcase. This research hub is Deliverable&nbsp;5 in that sequence.
       </p>
       <p>
         Course information: <a href="https://unfc.ca/" target="_blank" rel="noopener">unfc.ca ↗</a>
@@ -171,50 +235,75 @@
     </div>
   </section>
 
-  <section class="section section--ink">
+  <!-- ===== CITATION ===== -->
+  <section class="section" aria-labelledby="cite-h">
+    <div class="container container-narrow">
+      <span class="eyebrow" data-reveal>How to cite</span>
+      <h2 id="cite-h" data-reveal data-delay="1">Self-citation (APA 7).</h2>
+      <ol class="cite-list" data-reveal data-delay="2">
+        <li class="citation">
+          Okhrimenko, A. (2026). <em>Digital twins in auto insurance: A multichannel research project for Ontario marketing professionals</em> [MA capstone, University of Niagara Falls Canada]. Retrieved from <a href="https://okhrimenkoav24.github.io/digital-twins-auto-insurance/">https://okhrimenkoav24.github.io/digital-twins-auto-insurance/</a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section">
     <div class="container container-narrow" style="text-align: center;">
-      <h2 style="color: #fff;">Done reading? Try the simulator.</h2>
-      <p style="color: #ddd; max-width: 50ch; margin: 0 auto 24px;">
-        The fastest way to understand what a digital twin actually does is to
-        change one input and watch one offer change.
+      <blockquote class="pullquote" data-reveal>
+        Curious what a digital twin actually does for one Ontario driver?
+        Open the simulator — it's three minutes from launch to first insight.
+      </blockquote>
+      <p style="margin-top: 28px;" data-reveal data-delay="1">
+        <a class="btn btn--primary" href="./simulator.html">Launch the simulator →</a>
       </p>
-      <a class="btn btn--primary" href="./simulator.html">Launch the simulator →</a>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer footer">
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
   <div class="container">
     <div class="footer__grid">
       <div>
         <p class="footer__brand">Digital Twins in Auto Insurance</p>
-        <p style="color:#BBB; font-size: var(--fs-sm); max-width: 38ch;">Capstone research project, DMGC-699 Spring 2026, University of Niagara Falls Canada.</p>
+        <p style="color:#BBB; font-size: var(--fs-sm); max-width: 38ch;">
+          Capstone research project, DMGC-699 Spring 2026, University of Niagara
+          Falls Canada. Supervised by Dr. Wael Brahim.
+        </p>
+      </div>
+      <div>
+        <h4>Artifacts</h4>
+        <ul>
+          <li><a href="https://jade-salamander-5559d4.netlify.app" target="_blank" rel="noopener">D1 · Survey dashboard ↗</a></li>
+          <li><a href="https://digitaltwinszeen.netlify.app" target="_blank" rel="noopener">D2 · Digital zine ↗</a></li>
+          <li><a href="./simulator.html">D3 · Simulator</a></li>
+          <li><a href="./podcast.html">D4 · Podcast</a></li>
+          <li><a href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener">D6 · LinkedIn ↗</a></li>
+        </ul>
       </div>
       <div>
         <h4>Project</h4>
         <ul>
-          <li><a href="./research.html">Survey + dashboard</a></li>
-          <li><a href="./zine.html">Digital zine</a></li>
-          <li><a href="./simulator.html">Simulator</a></li>
-          <li><a href="./podcast.html">Podcast</a></li>
-          <li><a href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener">LinkedIn page ↗</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>More</h4>
-        <ul>
           <li><a href="./cases.html">Real-world cases</a></li>
           <li><a href="./resources.html">Reading list</a></li>
           <li><a href="./methodology.html">Methodology</a></li>
-          <li><a href="./about.html">About the researcher</a></li>
-          <li><a href="https://github.com/" target="_blank" rel="noopener">Source on GitHub ↗</a></li>
+          <li><a href="./about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Meta</h4>
+        <ul>
+          <li><a href="https://github.com/" target="_blank" rel="noopener">Source ↗</a></li>
+          <li><a href="./about.html#contact">Contact</a></li>
         </ul>
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© 2026 Aleksandr Okhrimenko. Last updated <span data-updated="2026-05-06">2026-05-06</span>.</span>
-      <span>Built with HTML/CSS/JS · GitHub Pages</span>
+      <span>© 2026 Aleksandr Okhrimenko · Last updated <span data-updated="2026-05-13">2026-05-13</span></span>
+      <span>HTML · CSS · vanilla JS · GitHub Pages</span>
     </div>
   </div>
 </footer>
@@ -247,7 +336,7 @@
     if (pref === 'accept') {
       if (window.gtag) window.gtag('consent', 'update', { analytics_storage: 'granted' });
     } else if (pref === 'deny') {
-      // stays denied
+      /* stays denied */
     } else if (banner) {
       banner.hidden = false;
     }

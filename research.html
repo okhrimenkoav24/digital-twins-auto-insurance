@@ -3,15 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Research & Survey · Digital Twins in Auto Insurance</title>
-  <meta name="description" content="A two-layer dashboard combining Ontario auto insurance industry trends 2022–2025 with a primary survey of 15 marketing practitioners.">
+  <title>Survey &amp; Dashboard — Digital Twins in Auto Insurance</title>
+  <meta name="description" content="D1 · A live two-layer dashboard. Industry data 2022–2025 paired with a primary survey of fifteen Ontario marketing practitioners on digital twin awareness, barriers, and format preferences.">
   <meta name="theme-color" content="#E97137">
-  <meta property="og:title" content="Survey & Dashboard · Digital Twins in Auto Insurance">
-  <meta property="og:description" content="Industry data + practitioner survey, fully sourced and APA 7 cited.">
+  <meta name="color-scheme" content="light">
+  <meta name="author" content="Aleksandr Okhrimenko">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Survey &amp; Dashboard · Digital Twins in Auto Insurance">
+  <meta property="og:description" content="Industry data + practitioner survey (N=15), fully sourced, APA 7 cited.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="assets/img/og-image.png">
+
   <link rel="canonical" href="./research.html">
   <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/logo_400.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="manifest" href="manifest.json">
   <meta name="twitter:card" content="summary_large_image">
@@ -30,7 +39,7 @@
       "headline": "Survey & data dashboard",
       "url": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/research.html",
       "datePublished": "2026-05-12",
-      "dateModified": "2026-05-12",
+      "dateModified": "2026-05-13",
       "inLanguage": "en-CA",
       "author": {
         "@type": "Person",
@@ -51,7 +60,6 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     window.gtag = function(){ dataLayer.push(arguments); };
-    // default to denied; the cookie banner flips this if accepted
     gtag('consent', 'default', {
       ad_storage: 'denied',
       ad_user_data: 'denied',
@@ -63,14 +71,20 @@
   </script>
 </head>
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
 
+<!-- ===== HEADER / NAV ===== -->
 <header class="site-header">
   <nav class="nav" aria-label="Primary">
     <a class="nav__brand" href="./index.html">
       <img src="assets/img/logo.svg" alt="" aria-hidden="true">
-      <span class="nav__brand-text">Digital Twins in Auto Insurance<small>Capstone research hub · DMGC-699</small></span>
+      <span class="nav__brand-text">
+        Digital Twins in Auto Insurance
+        <small>Capstone research hub · DMGC-699</small>
+      </span>
     </a>
+
     <ul class="nav__list">
       <li><a class="nav__link" href="./index.html">Home</a></li>
 
@@ -80,14 +94,15 @@
           type="button"
           aria-expanded="false"
           aria-haspopup="menu"
-          aria-controls="artifacts-menu">
+          aria-controls="artifacts-menu"
+          data-active="true">
           Artifacts <span class="nav__caret" aria-hidden="true">▾</span>
         </button>
         <ul class="nav__menu" id="artifacts-menu" role="menu">
-          <li role="none"><a role="menuitem" href="./research.html">Survey &amp; Dashboard <small>D1 — primary survey, N = 15</small></a></li>
-          <li role="none"><a role="menuitem" href="./zine.html">Digital Zine <small>D2 — 14-page long-read</small></a></li>
-          <li role="none"><a role="menuitem" href="./simulator.html">Decision Simulator <small>D3 — Unity WebGL prototype</small></a></li>
-          <li role="none"><a role="menuitem" href="./podcast.html">Podcast Episode <small>D4 — ~20 minutes</small></a></li>
+          <li role="none"><a role="menuitem" href="./research.html" aria-current="page">Survey &amp; Dashboard <small>D1 — primary survey, N=15 · live</small></a></li>
+          <li role="none"><a role="menuitem" href="./zine.html">Digital Zine <small>D2 — 14-page long-read · live</small></a></li>
+          <li role="none"><a role="menuitem" href="./simulator.html">Decision Simulator <small>D3 — Unity WebGL · upcoming</small></a></li>
+          <li role="none"><a role="menuitem" href="./podcast.html">Podcast Episode <small>D4 — ~20 min · upcoming</small></a></li>
         </ul>
       </li>
 
@@ -101,152 +116,378 @@
 
 <main id="main">
 
-  <section class="hero" style="padding-bottom: 32px;">
+  <!-- ===== HERO ===== -->
+  <section class="hero" style="padding-bottom: clamp(28px, 4vw, 56px);">
     <div class="container">
-      <span class="hero__eyebrow">Deliverable 1 · Research</span>
-      <h1 class="hero__title" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">Survey & data dashboard</h1>
+      <span class="hero__eyebrow">D1 · Survey + Dashboard</span>
+      <h1 class="hero__title" style="font-size: clamp(2.25rem, 5.5vw, 4.25rem);">
+        What fifteen marketing<br>
+        practitioners <span class="accent">told&nbsp;us</span>.
+      </h1>
       <p class="hero__lead">
-        Two layers of evidence on one page. Layer 1 maps Ontario auto insurance
-        industry trends 2022–2025 from secondary sources. Layer 2 reports a
-        primary survey of marketing practitioners (N = 15) on familiarity,
-        barriers, format preferences, and privacy concerns around digital twin
-        technology.
+        A two-layer evidence base for the project. Layer 1 maps Ontario auto
+        insurance industry trends 2022–2025 from secondary sources. Layer 2
+        reports a primary survey of marketing practitioners — familiarity,
+        barriers, format preferences, privacy concerns, and outlook.
       </p>
+      <div class="hero__meta">
+        <span>Ontario, Canada</span>
+        <span>N = 15</span>
+        <span>Mar–Apr 2026</span>
+        <span>APA 7</span>
+      </div>
       <div class="btn-row">
-        <a class="btn btn--primary" href="./Deliverable_01_Survey_Visualization/landing.html">Open the live dashboard →</a>
+        <a class="btn btn--primary" href="https://jade-salamander-5559d4.netlify.app" target="_blank" rel="noopener">Open the live dashboard ↗</a>
         <a class="btn btn--ghost" href="./methodology.html">How the survey was built</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== KEY FINDINGS ===== -->
-  <section class="section section--alt" aria-labelledby="findings-h">
+  <!-- ===== EMBEDDED DASHBOARD (top of page, right after hero) ===== -->
+  <section class="section section--accent" aria-labelledby="dash-h">
     <div class="container">
-      <span class="eyebrow">Layer 2 · Primary survey</span>
-      <h2 id="findings-h">Six findings worth your time</h2>
-
-      <div class="stats" style="margin-top: 32px;">
-        <div class="stat">
-          <p class="stat__num">73%</p>
-          <p class="stat__label">have never heard of digital twins, or cannot explain the concept (Q4).</p>
-        </div>
-        <div class="stat">
-          <p class="stat__num">67%</p>
-          <p class="stat__label">are not, or only slightly, confident they could explain a digital twin to a colleague (Q7).</p>
-        </div>
-        <div class="stat">
-          <p class="stat__num">60%</p>
-          <p class="stat__label">name cost of implementation as the top adoption barrier (Q6).</p>
-        </div>
-        <div class="stat">
-          <p class="stat__num">53%</p>
-          <p class="stat__label">flag unclear ROI as a barrier (Q6).</p>
-        </div>
-        <div class="stat">
-          <p class="stat__num">80%</p>
-          <p class="stat__label">prefer an interactive demo or simulator format over written explainers (Q8).</p>
-        </div>
-        <div class="stat">
-          <p class="stat__num">73%</p>
-          <p class="stat__label">say privacy is "very important" or "critical" to engagement (Q9).</p>
-        </div>
+      <span class="eyebrow" data-reveal>Live</span>
+      <h2 id="dash-h" data-reveal data-delay="1">The two-layer dashboard</h2>
+      <p class="lead" data-reveal data-delay="2">Layer 1 — Ontario industry data 2022–2025. Layer 2 — primary survey, N=15. Hosted on Netlify; opens in a new tab below or embedded here.</p>
+      <div class="embed embed--tall" data-reveal data-delay="3" style="margin-top: 28px;">
+        <iframe src="https://jade-salamander-5559d4.netlify.app" title="Digital Twins survey dashboard — D1" loading="lazy" referrerpolicy="no-referrer"></iframe>
       </div>
-
-      <p class="muted" style="margin-top: 32px; font-size: var(--fs-sm);">
-        All percentages on N = 15. Raw responses are publicly viewable as a
-        read-only Google Sheet — link is in the live dashboard methodology card.
+      <p style="margin-top: 16px;" data-reveal data-delay="4">
+        <a class="btn btn--ghost" href="https://jade-salamander-5559d4.netlify.app" target="_blank" rel="noopener">Open dashboard in new tab ↗</a>
       </p>
     </div>
   </section>
 
-  <!-- ===== EMBEDDED DASHBOARD ===== -->
-  <section class="section" aria-labelledby="embed-h">
+  <!-- ===== KPI ROW ===== -->
+  <section class="section section--alt" aria-labelledby="kpi-h">
     <div class="container">
-      <span class="eyebrow">Live dashboard</span>
-      <h2 id="embed-h">Open in full screen for the best experience</h2>
-      <p>
-        The dashboard is a single self-contained HTML page with eleven Chart.js
-        visualizations, full source annotations, and an APA 7 citation block at
-        the bottom. It also serves as the methodology appendix for this entire
-        project.
+      <span class="eyebrow" data-reveal>Primary survey · N=15 · Ontario · 2026</span>
+      <h2 id="kpi-h" data-reveal data-delay="1">Headline numbers.</h2>
+      <p class="lead" data-reveal data-delay="2">
+        Four indicators that frame everything else on this page. Curiosity is
+        high, practical understanding is low, and the preferred format for
+        learning more is hands-on, not written.
       </p>
 
-      <div class="embed embed--placeholder" role="img" aria-label="Live dashboard preview placeholder">
-        <div>
-          <strong>Dashboard preview placeholder</strong>
-          The dashboard lives at <code>/Deliverable_01_Survey_Visualization/landing.html</code>.<br>
-          Once the site is deployed, this will be a live iframe or a thumbnail link.
+      <div class="kpi-grid" role="list" style="margin-top: 32px;">
+        <div class="kpi" role="listitem" data-reveal data-delay="1">
+          <p class="kpi__label"><span class="dot dot--build"></span> Q4 · awareness</p>
+          <p class="kpi__num kpi__num--orange">73<span class="unit">%</span></p>
+          <p class="kpi__desc">Have never heard of digital twins, or cannot explain the concept.</p>
+          <span class="kpi__bar" style="--w: 73%;"></span>
+        </div>
+        <div class="kpi" role="listitem" data-reveal data-delay="2">
+          <p class="kpi__label"><span class="dot dot--build"></span> Q6 · top barrier</p>
+          <p class="kpi__num kpi__num--orange">60<span class="unit">%</span></p>
+          <p class="kpi__desc">Name cost of implementation as the #1 adoption barrier.</p>
+          <span class="kpi__bar" style="--w: 60%;"></span>
+        </div>
+        <div class="kpi" role="listitem" data-reveal data-delay="3">
+          <p class="kpi__label"><span class="dot dot--build"></span> Q8 · format</p>
+          <p class="kpi__num kpi__num--orange">80<span class="unit">%</span></p>
+          <p class="kpi__desc">Prefer an interactive demo or simulator over written explainers.</p>
+          <span class="kpi__bar" style="--w: 80%;"></span>
+        </div>
+        <div class="kpi" role="listitem" data-reveal data-delay="4">
+          <p class="kpi__label"><span class="dot dot--live"></span> coverage</p>
+          <p class="kpi__num">15<span class="unit">/15</span></p>
+          <p class="kpi__desc">All practitioners completed the full instrument. Zero partial responses.</p>
+          <span class="kpi__bar" style="--w: 100%;"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BREAKDOWNS — bar rows per question ===== -->
+  <section class="section" aria-labelledby="break-h">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Question-by-question</span>
+      <h2 id="break-h" data-reveal data-delay="1">The seven questions, decoded.</h2>
+      <p class="lead" data-reveal data-delay="2">
+        Each block below is one survey question with a one-line interpretation
+        and the response distribution as a bar row. Percentages are based on
+        <code>N=15</code>; rows under 7% are omitted.
+      </p>
+
+      <!-- Q4 -->
+      <article style="margin-top: 36px;">
+        <h3>Q4 · Have you heard of digital twin technology?</h3>
+        <p>Awareness is shallow. Nearly three-quarters of respondents sit in the bottom two tiers — never heard of it, or heard the term but cannot explain it.</p>
+        <div class="bar-row">
+          <div class="bar" style="--w: 47%;">
+            <span class="bar__label">Heard the term but cannot explain</span>
+            <span class="bar__value">47%</span>
+          </div>
+          <div class="bar" style="--w: 27%;">
+            <span class="bar__label">Have never heard of digital twins</span>
+            <span class="bar__value">27%</span>
+          </div>
+          <div class="bar" style="--w: 20%;">
+            <span class="bar__label">Can explain at a basic level</span>
+            <span class="bar__value">20%</span>
+          </div>
+          <div class="bar" style="--w: 7%;">
+            <span class="bar__label">Can explain in detail / have used in work</span>
+            <span class="bar__value">7%</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q6 -->
+      <article style="margin-top: 48px;">
+        <h3>Q6 · Barriers to adoption (multi-select)</h3>
+        <p>Cost is the runaway #1. Two of the next three barriers are also commercial — unclear ROI and lack of talent — suggesting the conversation needs to move from "what is it" to "what does it pay back" before adoption gets serious.</p>
+        <div class="bar-row">
+          <div class="bar" style="--w: 60%;">
+            <span class="bar__label">Cost of implementation</span>
+            <span class="bar__value">60%</span>
+          </div>
+          <div class="bar" style="--w: 53%;">
+            <span class="bar__label">Unclear ROI</span>
+            <span class="bar__value">53%</span>
+          </div>
+          <div class="bar" style="--w: 47%;">
+            <span class="bar__label">Lack of in-house talent / skills</span>
+            <span class="bar__value">47%</span>
+          </div>
+          <div class="bar" style="--w: 40%;">
+            <span class="bar__label">Data privacy &amp; regulatory concerns</span>
+            <span class="bar__value">40%</span>
+          </div>
+          <div class="bar" style="--w: 33%;">
+            <span class="bar__label">Integration with legacy systems</span>
+            <span class="bar__value">33%</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q7 -->
+      <article style="margin-top: 48px;">
+        <h3>Q7 · Confidence explaining digital twins to a colleague</h3>
+        <p>Two-thirds report they are not, or only slightly, confident they could explain a digital twin to a colleague. This is the gap a long-read or simulator is meant to close.</p>
+        <div class="bar-row">
+          <div class="bar" style="--w: 40%;">
+            <span class="bar__label">Slightly confident</span>
+            <span class="bar__value">40%</span>
+          </div>
+          <div class="bar" style="--w: 27%;">
+            <span class="bar__label">Not at all confident</span>
+            <span class="bar__value">27%</span>
+          </div>
+          <div class="bar" style="--w: 20%;">
+            <span class="bar__label">Moderately confident</span>
+            <span class="bar__value">20%</span>
+          </div>
+          <div class="bar" style="--w: 13%;">
+            <span class="bar__label">Very / extremely confident</span>
+            <span class="bar__value">13%</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q8 -->
+      <article style="margin-top: 48px;">
+        <h3>Q8 · Preferred format for learning about the technology</h3>
+        <p>Demonstrations beat documentation. Eighty percent picked an interactive demo or simulator — the strongest single signal in the dataset, and the direct rationale for D3.</p>
+        <div class="bar-row">
+          <div class="bar" style="--w: 80%;">
+            <span class="bar__label">Interactive demo / simulator</span>
+            <span class="bar__value">80%</span>
+          </div>
+          <div class="bar" style="--w: 47%;">
+            <span class="bar__label">Short video / podcast</span>
+            <span class="bar__value">47%</span>
+          </div>
+          <div class="bar" style="--w: 33%;">
+            <span class="bar__label">Long-read article / zine</span>
+            <span class="bar__value">33%</span>
+          </div>
+          <div class="bar" style="--w: 27%;">
+            <span class="bar__label">Slide deck / one-pager</span>
+            <span class="bar__value">27%</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Q9 -->
+      <article style="margin-top: 48px;">
+        <h3>Q9 · Importance of data privacy to engagement</h3>
+        <p>Privacy is not a soft preference — it is a precondition. Nearly three-quarters rate it "very important" or "critical." Any artifact that demos personalization must address consent and data scope up front.</p>
+        <div class="bar-row">
+          <div class="bar" style="--w: 47%;">
+            <span class="bar__label">Very important</span>
+            <span class="bar__value">47%</span>
+          </div>
+          <div class="bar" style="--w: 27%;">
+            <span class="bar__label">Critical / dealbreaker if mishandled</span>
+            <span class="bar__value">27%</span>
+          </div>
+          <div class="bar" style="--w: 20%;">
+            <span class="bar__label">Moderately important</span>
+            <span class="bar__value">20%</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== LAYER 1 — industry data ===== -->
+  <section class="section section--alt" aria-labelledby="layer1-h">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Layer 1 · Industry context</span>
+      <h2 id="layer1-h" data-reveal data-delay="1">What the secondary record says.</h2>
+      <p class="lead" data-reveal data-delay="2">
+        The practitioner survey sits on top of an industry layer drawn from
+        regulatory filings, telematics vendor reports, and trade publications
+        2022–2025. The directional reading: telematics-adjacent
+        personalization is moving from pilot to platform, but published
+        Canadian numbers remain sparse and methodologically uneven.
+      </p>
+
+      <table class="meta-table" style="margin-top: 24px;">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Indicator</th>
+            <th>Source category</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">2022</td>
+            <td>Telematics / UBI offered by at least one major Ontario insurer; voluntary opt-in only.</td>
+            <td>FSRA / regulatory documents</td>
+          </tr>
+          <tr>
+            <td class="mono">2023</td>
+            <td>Digital-twin terminology enters North American insurance trade press; framed mostly via underwriting use cases.</td>
+            <td>Industry trade publications</td>
+          </tr>
+          <tr>
+            <td class="mono">2024</td>
+            <td>Mature digital-twin practice documented in adjacent industries (Siemens, GE, Microsoft, Mayo Clinic, Tesla) — referenced as the analog for insurance personalization.</td>
+            <td>Peer-reviewed papers + vendor reports</td>
+          </tr>
+          <tr>
+            <td class="mono">2025</td>
+            <td>Personalization framed as the wedge use case for insurance, but published Canadian deployment numbers remain sparse.</td>
+            <td>Professional publications</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="muted" style="margin-top: 18px; font-size: var(--fs-sm);">
+        Full source list with one-line annotations on the <a href="./resources.html">reading list</a>. Real-world deployment cases on the <a href="./cases.html">cases page</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== READ THE RAW DATA — softened note ===== -->
+  <section class="section" aria-labelledby="query-h">
+    <div class="container container-narrow">
+      <span class="eyebrow" data-reveal>Reading the raw data</span>
+      <h2 id="query-h" data-reveal data-delay="1">A note on what the numbers do and don't say.</h2>
+
+      <div class="terminal">
+        <div class="terminal__head">Sample readings · D1</div>
+        <div class="terminal__body">
+          <p>Filtering Q4 responses for the "cannot explain" tier returns 11 of 15 records, or 73.3% of the sample.</p>
+          <p>Filtering Q8 responses for "interactive demo / simulator" as the preferred format returns 12 of 15 records, or 80.0%.</p>
+          <p>The raw responses sheet is read-only and linked from the methodology card inside the dashboard.</p>
         </div>
       </div>
 
-      <p style="margin-top: 24px;">
-        <a class="btn btn--primary" href="./Deliverable_01_Survey_Visualization/landing.html">Open the dashboard in full →</a>
+      <blockquote class="pullquote">
+        N=15 is too small to generalize to "Ontario insurance marketing" as a
+        population. The percentages are descriptive of who answered, not
+        predictive of who didn't.
+      </blockquote>
+      <p>
+        Recruitment was multi-channel (warm introductions, LinkedIn DMs, four
+        Facebook groups), so each channel likely brings a different selection
+        bias. The cost-of-implementation finding (60%) is the result that
+        appears most stable at this sample size; the others may shift with a
+        larger sample. See the <a href="./methodology.html">methodology page</a>
+        for the supervisor-iteration trace and full limitations.
       </p>
+    </div>
+  </section>
+
+  <!-- ===== SUCCESS CRITERIA ===== -->
+  <section class="section section--alt" aria-labelledby="d1-success-h">
+    <div class="container container-narrow">
+      <span class="eyebrow" data-reveal>What "working" looks like for D1</span>
+      <h2 id="d1-success-h" data-reveal data-delay="1">Success criteria — Survey &amp; Dashboard.</h2>
+      <p class="lead" data-reveal data-delay="2">
+        Directional thresholds. Not statistical claims — the lines below
+        which I would accept that this artifact is not doing its job.
+      </p>
+
+      <div class="success" style="margin-top: 28px;">
+        <h3>D1 · Survey + Dashboard</h3>
+        <ol>
+          <li><strong>Capability shift:</strong> measurable reduction in the share of respondents in the "cannot explain" tier between baseline and any follow-up wave.</li>
+          <li><strong>Engagement:</strong> ≥40% of dashboard visitors scroll to the methodology section.</li>
+          <li><strong>Trust:</strong> at least 1 substantive citation or share by an industry peer between 2026-05 and 2026-06.</li>
+          <li><strong>Coverage:</strong> dashboard load time under 3 seconds on cable-grade connection; all charts render with no console errors.</li>
+        </ol>
+        <p class="muted" style="margin-top: 16px; font-size: var(--fs-sm);">
+          Per-artifact criteria for D2–D6 are on the <a href="./methodology.html#success">methodology page</a>.
+        </p>
+      </div>
 
       <div class="citation" style="margin-top: 32px;">
         Suggested citation (APA 7):<br>
-        Okhrimenko, A. (2026). <em>Digital twin awareness in Ontario auto insurance marketing:
-        A two-layer evidence dashboard</em> [Capstone deliverable, University of
-        Niagara Falls Canada]. Retrieved from this site.
+        Okhrimenko, A. (2026). <em>Digital twin awareness in Ontario auto insurance marketing: A two-layer evidence dashboard</em> [Capstone deliverable, University of Niagara Falls Canada]. Retrieved from this site.
       </div>
-    </div>
-  </section>
-
-  <!-- ===== LIMITATIONS ===== -->
-  <section class="section section--alt" aria-labelledby="limits-h">
-    <div class="container container-narrow">
-      <span class="eyebrow">Read this before you cite</span>
-      <h2 id="limits-h">What 15 responses can and cannot tell you</h2>
-      <p>
-        N = 15 is too small to generalize to "Ontario insurance marketing" as a
-        population. The percentages on this page are descriptive of who answered,
-        not predictive of who didn't. Recruitment was multi-channel (warm
-        introductions, LinkedIn DMs, four Facebook groups), so each channel
-        likely brings a different selection bias. The cost-of-implementation
-        finding (60%) is the result that appears most stable at this sample size;
-        the others may shift with a larger sample.
-      </p>
-      <p>
-        See the <a href="./methodology.html">methodology page</a> for sample
-        composition, recruitment detail, and the supervisor-iteration trace that
-        explains why the audience scope was narrowed mid-project.
-      </p>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer footer">
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
   <div class="container">
     <div class="footer__grid">
       <div>
         <p class="footer__brand">Digital Twins in Auto Insurance</p>
-        <p style="color:#BBB; font-size: var(--fs-sm); max-width: 38ch;">Capstone research project, DMGC-699 Spring 2026, University of Niagara Falls Canada.</p>
+        <p style="color:#BBB; font-size: var(--fs-sm); max-width: 38ch;">
+          Capstone research project, DMGC-699 Spring 2026, University of Niagara
+          Falls Canada. Supervised by Dr. Wael Brahim.
+        </p>
+      </div>
+      <div>
+        <h4>Artifacts</h4>
+        <ul>
+          <li><a href="https://jade-salamander-5559d4.netlify.app" target="_blank" rel="noopener">D1 · Survey dashboard ↗</a></li>
+          <li><a href="https://digitaltwinszeen.netlify.app" target="_blank" rel="noopener">D2 · Digital zine ↗</a></li>
+          <li><a href="./simulator.html">D3 · Simulator</a></li>
+          <li><a href="./podcast.html">D4 · Podcast</a></li>
+          <li><a href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener">D6 · LinkedIn ↗</a></li>
+        </ul>
       </div>
       <div>
         <h4>Project</h4>
         <ul>
-          <li><a href="./research.html">Survey + dashboard</a></li>
-          <li><a href="./zine.html">Digital zine</a></li>
-          <li><a href="./simulator.html">Simulator</a></li>
-          <li><a href="./podcast.html">Podcast</a></li>
-          <li><a href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener">LinkedIn page ↗</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>More</h4>
-        <ul>
           <li><a href="./cases.html">Real-world cases</a></li>
           <li><a href="./resources.html">Reading list</a></li>
           <li><a href="./methodology.html">Methodology</a></li>
-          <li><a href="./about.html">About the researcher</a></li>
-          <li><a href="https://github.com/" target="_blank" rel="noopener">Source on GitHub ↗</a></li>
+          <li><a href="./about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Meta</h4>
+        <ul>
+          <li><a href="https://github.com/" target="_blank" rel="noopener">Source ↗</a></li>
+          <li><a href="./about.html#contact">Contact</a></li>
+          <li><a href="./404.html">404</a></li>
         </ul>
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© 2026 Aleksandr Okhrimenko. Last updated <span data-updated="2026-05-06">2026-05-06</span>.</span>
-      <span>Built with HTML/CSS/JS · GitHub Pages</span>
+      <span>© 2026 Aleksandr Okhrimenko · Last updated <span data-updated="2026-05-13">2026-05-13</span></span>
+      <span>HTML · CSS · vanilla JS · GitHub Pages</span>
     </div>
   </div>
 </footer>
@@ -279,7 +520,7 @@
     if (pref === 'accept') {
       if (window.gtag) window.gtag('consent', 'update', { analytics_storage: 'granted' });
     } else if (pref === 'deny') {
-      // stays denied
+      /* stays denied */
     } else if (banner) {
       banner.hidden = false;
     }

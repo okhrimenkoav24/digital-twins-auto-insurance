@@ -6,12 +6,18 @@
   <title>Decision Simulator · Digital Twins in Auto Insurance</title>
   <meta name="description" content="A Unity WebGL prototype: see how a digital twin personalizes an auto insurance offer for one Ontario driver. One scenario, two outcomes, three minutes.">
   <meta name="theme-color" content="#E97137">
+  <meta name="color-scheme" content="light">
+  <meta name="author" content="Aleksandr Okhrimenko">
   <meta property="og:title" content="The Decision Simulator — Digital Twins in Auto Insurance">
   <meta property="og:description" content="Show, don't tell. A Unity WebGL prototype demonstrating digital twin personalization for auto insurance.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="assets/img/og-image.png">
   <link rel="canonical" href="./simulator.html">
   <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/logo_400.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="manifest" href="manifest.json">
   <meta name="twitter:card" content="summary_large_image">
@@ -63,14 +69,20 @@
   </script>
 </head>
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
 
+<!-- ===== HEADER / NAV ===== -->
 <header class="site-header">
   <nav class="nav" aria-label="Primary">
     <a class="nav__brand" href="./index.html">
       <img src="assets/img/logo.svg" alt="" aria-hidden="true">
-      <span class="nav__brand-text">Digital Twins in Auto Insurance<small>Capstone research hub · DMGC-699</small></span>
+      <span class="nav__brand-text">
+        Digital Twins in Auto Insurance
+        <small>Capstone research hub · DMGC-699</small>
+      </span>
     </a>
+
     <ul class="nav__list">
       <li><a class="nav__link" href="./index.html">Home</a></li>
 
@@ -84,10 +96,10 @@
           Artifacts <span class="nav__caret" aria-hidden="true">▾</span>
         </button>
         <ul class="nav__menu" id="artifacts-menu" role="menu">
-          <li role="none"><a role="menuitem" href="./research.html">Survey &amp; Dashboard <small>D1 — primary survey, N = 15</small></a></li>
-          <li role="none"><a role="menuitem" href="./zine.html">Digital Zine <small>D2 — 14-page long-read</small></a></li>
-          <li role="none"><a role="menuitem" href="./simulator.html">Decision Simulator <small>D3 — Unity WebGL prototype</small></a></li>
-          <li role="none"><a role="menuitem" href="./podcast.html">Podcast Episode <small>D4 — ~20 minutes</small></a></li>
+          <li role="none"><a role="menuitem" href="./research.html">Survey &amp; Dashboard <small>D1 — primary survey, N=15 · live</small></a></li>
+          <li role="none"><a role="menuitem" href="./zine.html">Digital Zine <small>D2 — 14-page long-read · live</small></a></li>
+          <li role="none"><a role="menuitem" href="./simulator.html" aria-current="page">Decision Simulator <small>D3 — Unity WebGL · upcoming</small></a></li>
+          <li role="none"><a role="menuitem" href="./podcast.html">Podcast Episode <small>D4 — ~20 min · upcoming</small></a></li>
         </ul>
       </li>
 
@@ -101,15 +113,15 @@
 
 <main id="main">
 
-  <section class="hero" style="padding-bottom: 32px;">
+  <!-- ===== HERO ===== -->
+  <section class="hero">
     <div class="container">
-      <span class="hero__eyebrow">Deliverable 3 · Demonstration</span>
-      <h1 class="hero__title" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">The decision simulator</h1>
+      <span class="hero__eyebrow">D3 · Decision Simulator</span>
+      <h1 class="hero__title">One scenario,<br><span class="accent">two outcomes</span>,<br>three minutes.</h1>
       <p class="hero__lead">
         Eighty per cent of marketing practitioners told the survey they would
-        rather see a digital twin in action than read another whitepaper. This
-        is that. One scenario, two outcomes, three minutes. Built in Unity,
-        deployed as WebGL.
+        rather see a digital twin in action than read another whitepaper.
+        This is that. Built in Unity, deployed as WebGL.
       </p>
       <div class="btn-row">
         <a class="btn btn--primary" href="#play">Launch simulator ↓</a>
@@ -118,92 +130,169 @@
     </div>
   </section>
 
-  <!-- ===== UNITY EMBED ===== -->
-  <section class="section section--alt" id="play" aria-labelledby="play-h">
+  <!-- ===== KPI STRIP ===== -->
+  <section class="section section--deep" aria-labelledby="kpi-h">
     <div class="container">
-      <span class="eyebrow">Play</span>
-      <h2 id="play-h">Launch the simulator</h2>
-      <p style="max-width: 60ch;">
-        Best on desktop. Mobile works but is cropped. The simulator runs entirely
-        in your browser — nothing is sent to a server. It will load roughly
-        15–30 MB of WebGL assets the first time.
+      <span class="eyebrow" data-reveal>D3 · status board</span>
+      <h2 id="kpi-h" data-reveal data-delay="1">Build telemetry.</h2>
+
+      <div class="kpi-grid" role="list" style="margin-top: 32px;">
+        <div class="kpi" role="listitem" data-reveal data-delay="1">
+          <p class="kpi__label"><span class="dot dot--build"></span> build status</p>
+          <p class="kpi__num">PENDING</p>
+          <p class="kpi__desc">WebGL build in progress. Target deploy 2026-05-25.</p>
+          <span class="kpi__bar" style="--w: 60%;"></span>
+        </div>
+        <div class="kpi" role="listitem" data-reveal data-delay="2">
+          <p class="kpi__label"><span class="dot dot--plan"></span> target time</p>
+          <p class="kpi__num kpi__num--orange">3:00</p>
+          <p class="kpi__desc">From launch to first insight, designed for a coffee-break read.</p>
+          <span class="kpi__bar" style="--w: 100%;"></span>
+        </div>
+        <div class="kpi" role="listitem" data-reveal data-delay="3">
+          <p class="kpi__label"><span class="dot dot--plan"></span> input choices</p>
+          <p class="kpi__num kpi__num--orange">2<span class="unit"> paths</span></p>
+          <p class="kpi__desc">Old segment-based offer vs new twin-personalized offer.</p>
+          <span class="kpi__bar" style="--w: 50%;"></span>
+        </div>
+        <div class="kpi" role="listitem" data-reveal data-delay="4">
+          <p class="kpi__label"><span class="dot dot--plan"></span> signals fed back</p>
+          <p class="kpi__num kpi__num--orange">5<span class="unit"> signals</span></p>
+          <p class="kpi__desc">Five telematics inputs drive the personalization model.</p>
+          <span class="kpi__bar" style="--w: 100%;"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT IT IS ===== -->
+  <section class="section" id="how" aria-labelledby="what-h">
+    <div class="container container-narrow">
+      <span class="eyebrow" data-reveal>What it is</span>
+      <h2 id="what-h" data-reveal data-delay="1">A research prototype, not a product.</h2>
+      <p>
+        Meet <strong>"Maria,"</strong> a 34-year-old Ontario driver. Her
+        digital twin ingests three things: telematics from a connected
+        app, two years of claims history, and her stated preferences
+        (deductible, optional coverage, payment cadence). The simulator
+        lets you change one input and watch the offer change.
+      </p>
+      <ul class="list-clean">
+        <li><strong>Pick an input</strong> — driving style, claim history, or a preference shift.</li>
+        <li><strong>Run the twin</strong> — a parameterized model, not magic, runs behind the curtain.</li>
+        <li><strong>See two offers</strong> — old (segment-based) vs new (twin-personalized).</li>
+        <li><strong>Read the why</strong> — plain-language explanation of what changed and why.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== SCENARIO ===== -->
+  <section class="section section--alt" aria-labelledby="scenario-h">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Scenario · state machine</span>
+      <h2 id="scenario-h" data-reveal data-delay="1">How the branching is wired.</h2>
+
+      <ol class="list-clean" data-reveal data-delay="2" style="margin-top: 24px;">
+        <li><strong>S0 — Profile load.</strong> Driver: Maria, 34, Ontario. Two years of claims history, telematics on.</li>
+        <li><strong>S1 — Pick an input.</strong> The visitor chooses one of three dimensions: driving style, claims history, or a preference shift.</li>
+        <li><strong>S2 — Twin run.</strong> The model ingests five signals: hard-braking events, night-driving share, average speed vs limit, phone use, and trip frequency.</li>
+        <li><strong>Branching.</strong> Path A returns a legacy segment-based offer. Path B returns the twin-personalized offer.</li>
+        <li><strong>S3 — Explain.</strong> The simulator renders the change in premium, the change in coverage, and a plain-English reason for both.</li>
+        <li><strong>S4 — Exit.</strong> Total runtime is about three minutes. Replay returns the visitor to S1.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== LAUNCH ===== -->
+  <section class="section" id="play" aria-labelledby="play-h">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Launch</span>
+      <h2 id="play-h" data-reveal data-delay="1">Run the simulator.</h2>
+      <p style="max-width: 60ch;" data-reveal data-delay="2">
+        Best on desktop. Mobile works but is cropped. The simulator runs
+        entirely in your browser — nothing is sent to a server. First load
+        pulls roughly 15–30&nbsp;MB of WebGL assets.
       </p>
 
-      <!-- TODO: replace this iframe src with the published Unity WebGL build URL.
-           Common deploy targets: itch.io, simmer.io, GitHub Pages subfolder, or
-           a /simulator/ folder of static Unity build files in this repo. -->
-      <div class="embed" role="region" aria-label="Decision simulator">
-        <iframe
-          title="Decision simulator (Unity WebGL)"
-          src="about:blank"
-          allow="autoplay; gamepad *; fullscreen *"
-          loading="lazy"
-        ></iframe>
+      <div class="embed embed--placeholder" role="img" aria-label="Decision simulator placeholder">
+        <div>
+          <strong>WebGL build pending</strong>
+          Deploy target 2026-05-25 · Unity WebGL · ~3 min runtime
+        </div>
       </div>
 
       <p class="muted" style="margin-top: 12px; font-size: var(--fs-sm);">
-        Browser does not load WebGL? <a href="#fallback">See the fallback</a>.
+        Browser does not load WebGL? <a href="#fallback">See the plain-text fallback</a>.
       </p>
     </div>
   </section>
 
-  <!-- ===== HOW TO READ ===== -->
-  <section class="section" id="how" aria-labelledby="how-h">
+  <!-- ===== TELEMATICS SIGNALS ===== -->
+  <section class="section section--alt" aria-labelledby="signals-h">
     <div class="container">
-      <span class="eyebrow">A reading guide</span>
-      <h2 id="how-h">What you are looking at</h2>
-      <p>
-        Meet "Maria," a 34-year-old Ontario driver. Her digital twin ingests
-        three things: telematics from a connected app, two years of claims
-        history, and her stated preferences (deductible, optional coverage,
-        payment cadence). The simulator lets you change one input and watch the
-        offer change.
+      <span class="eyebrow" data-reveal>Telematics signals modeled</span>
+      <h2 id="signals-h" data-reveal data-delay="1">Five inputs feed the twin.</h2>
+      <p style="max-width: 60ch;" data-reveal data-delay="2">
+        Severity weights below are scenario dummies, not industry constants.
+        They are calibrated to make the personalization mechanic legible in
+        three minutes, not to represent any insurer's actual pricing model.
       </p>
 
-      <div class="flow" style="margin-top: 24px;">
-        <div class="flow__step">
-          <h4>Pick an input</h4>
-          <p>Driving style, claim history, or preference shift.</p>
+      <div class="bar-row" role="list" style="margin-top: 24px;">
+        <div class="bar" role="listitem" data-reveal data-delay="1">
+          <p class="bar__label">Hard braking events</p>
+          <p class="bar__num">80</p>
+          <span class="bar__track"><span class="bar__fill" style="--w: 80%;"></span></span>
         </div>
-        <div class="flow__step">
-          <h4>Run the twin</h4>
-          <p>Behind the curtain: a parameterized model, not magic.</p>
+        <div class="bar" role="listitem" data-reveal data-delay="2">
+          <p class="bar__label">Phone use while driving</p>
+          <p class="bar__num">70</p>
+          <span class="bar__track"><span class="bar__fill" style="--w: 70%;"></span></span>
         </div>
-        <div class="flow__step">
-          <h4>See two offers</h4>
-          <p>Old (segment-based) vs new (twin-personalized).</p>
+        <div class="bar" role="listitem" data-reveal data-delay="3">
+          <p class="bar__label">Night driving share</p>
+          <p class="bar__num">65</p>
+          <span class="bar__track"><span class="bar__fill" style="--w: 65%;"></span></span>
         </div>
-        <div class="flow__step">
-          <h4>Read the why</h4>
-          <p>The simulator explains, in plain language, what changed and why.</p>
+        <div class="bar" role="listitem" data-reveal data-delay="4">
+          <p class="bar__label">Trip frequency</p>
+          <p class="bar__num">55</p>
+          <span class="bar__track"><span class="bar__fill" style="--w: 55%;"></span></span>
+        </div>
+        <div class="bar" role="listitem" data-reveal data-delay="5">
+          <p class="bar__label">Average speed vs limit</p>
+          <p class="bar__num">45</p>
+          <span class="bar__track"><span class="bar__fill" style="--w: 45%;"></span></span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FALLBACK ===== -->
-  <section class="section section--alt" id="fallback" aria-labelledby="fallback-h">
+  <!-- ===== LIMITATIONS ===== -->
+  <section class="section" id="fallback" aria-labelledby="lim-h">
     <div class="container container-narrow">
-      <span class="eyebrow">For accessibility / no-WebGL</span>
-      <h2 id="fallback-h">Plain-text walkthrough</h2>
-      <p>
-        Not every reader can or wants to load a Unity build. A static walkthrough
-        of the same scenario, with screenshots and the same plain-language
-        explanations, is provided as an accessibility alternative.
+      <span class="eyebrow" data-reveal>Limitations</span>
+      <h2 id="lim-h" data-reveal data-delay="1">What this is not.</h2>
+      <ul class="list-clean">
+        <li><strong>Research prototype, not a product.</strong> No real customer data is used.</li>
+        <li><strong>Single scenario.</strong> One persona (Maria), one input dimension at a time.</li>
+        <li><strong>Parameterized model.</strong> Weights are illustrative, not insurer-grade.</li>
+        <li><strong>WebGL-only.</strong> A plain-text walkthrough is offered as accessibility fallback.</li>
+        <li><strong>No back-end.</strong> The simulator runs entirely in the visitor's browser.</li>
+      </ul>
+      <p style="margin-top: 16px;">
+        <a class="btn btn--ghost" href="#" aria-disabled="true">Plain-text walkthrough (pending)</a>
       </p>
-      <div class="btn-row">
-        <!-- TODO: replace with actual walkthrough page or PDF link -->
-        <a class="btn btn--ghost" href="#" aria-disabled="true">Read the plain-text walkthrough (pending)</a>
-      </div>
     </div>
   </section>
 
   <!-- ===== SUCCESS CRITERIA ===== -->
-  <section class="section" aria-labelledby="success-h">
+  <section class="section section--deep" aria-labelledby="success-h">
     <div class="container container-narrow">
-      <span class="eyebrow">What "working" looks like</span>
-      <h2 id="success-h">Success criteria for the simulator</h2>
-      <div class="success">
+      <span class="eyebrow" data-reveal>What "working" looks like</span>
+      <h2 id="success-h" data-reveal data-delay="1">D3 success criteria.</h2>
+
+      <div class="success" data-reveal data-delay="2">
         <h3>The simulator works if…</h3>
         <ol>
           <li><strong>Completion:</strong> ≥50% of visitors who launch the build complete at least one full scenario run.</li>
@@ -211,43 +300,57 @@
           <li><strong>Comprehension lift (qualitative):</strong> at least 5 of 15 follow-up survey contacts can describe the personalization mechanic in their own words.</li>
           <li><strong>Accessibility:</strong> the plain-text fallback is rated "clear" by at least 80% of fallback users.</li>
         </ol>
+        <p class="muted" style="margin-top: 16px; font-size: var(--fs-sm); font-family: var(--ff-mono);">
+          Hub-level criteria sit in the
+          <a href="./methodology.html#success">methodology</a>.
+        </p>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer footer">
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
   <div class="container">
     <div class="footer__grid">
       <div>
         <p class="footer__brand">Digital Twins in Auto Insurance</p>
-        <p style="color:#BBB; font-size: var(--fs-sm); max-width: 38ch;">Capstone research project, DMGC-699 Spring 2026, University of Niagara Falls Canada.</p>
+        <p style="color:#BBB; font-size: var(--fs-sm); max-width: 38ch;">
+          Capstone research project, DMGC-699 Spring 2026, University of Niagara
+          Falls Canada. Supervised by Dr. Wael Brahim.
+        </p>
+      </div>
+      <div>
+        <h4>Artifacts</h4>
+        <ul>
+          <li><a href="https://jade-salamander-5559d4.netlify.app" target="_blank" rel="noopener">D1 · Survey dashboard ↗</a></li>
+          <li><a href="https://digitaltwinszeen.netlify.app" target="_blank" rel="noopener">D2 · Digital zine ↗</a></li>
+          <li><a href="./simulator.html">D3 · Simulator</a></li>
+          <li><a href="./podcast.html">D4 · Podcast</a></li>
+          <li><a href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener">D6 · LinkedIn ↗</a></li>
+        </ul>
       </div>
       <div>
         <h4>Project</h4>
         <ul>
-          <li><a href="./research.html">Survey + dashboard</a></li>
-          <li><a href="./zine.html">Digital zine</a></li>
-          <li><a href="./simulator.html">Simulator</a></li>
-          <li><a href="./podcast.html">Podcast</a></li>
-          <li><a href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener">LinkedIn page ↗</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>More</h4>
-        <ul>
           <li><a href="./cases.html">Real-world cases</a></li>
           <li><a href="./resources.html">Reading list</a></li>
           <li><a href="./methodology.html">Methodology</a></li>
-          <li><a href="./about.html">About the researcher</a></li>
-          <li><a href="https://github.com/" target="_blank" rel="noopener">Source on GitHub ↗</a></li>
+          <li><a href="./about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Meta</h4>
+        <ul>
+          <li><a href="https://github.com/" target="_blank" rel="noopener">Source ↗</a></li>
+          <li><a href="./about.html#contact">Contact</a></li>
         </ul>
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© 2026 Aleksandr Okhrimenko. Last updated <span data-updated="2026-05-06">2026-05-06</span>.</span>
-      <span>Built with HTML/CSS/JS · GitHub Pages</span>
+      <span>© 2026 Aleksandr Okhrimenko · Last updated <span data-updated="2026-05-13">2026-05-13</span></span>
+      <span>HTML · CSS · vanilla JS · GitHub Pages</span>
     </div>
   </div>
 </footer>
@@ -280,7 +383,7 @@
     if (pref === 'accept') {
       if (window.gtag) window.gtag('consent', 'update', { analytics_storage: 'granted' });
     } else if (pref === 'deny') {
-      // stays denied
+      /* stays denied */
     } else if (banner) {
       banner.hidden = false;
     }

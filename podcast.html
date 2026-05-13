@@ -6,12 +6,18 @@
   <title>Podcast Episode · Digital Twins in Auto Insurance</title>
   <meta name="description" content="A 20-minute episode interpreting the project from problem to takeaway. Listen on Spotify, Apple Podcasts, or directly here.">
   <meta name="theme-color" content="#E97137">
+  <meta name="color-scheme" content="light">
+  <meta name="author" content="Aleksandr Okhrimenko">
   <meta property="og:title" content="The Podcast — Digital Twins in Auto Insurance">
   <meta property="og:description" content="Problem → simulator example → solution → professional takeaway, in 20 minutes.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="assets/img/og-image.png">
   <link rel="canonical" href="./podcast.html">
   <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/logo_400.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="manifest" href="manifest.json">
   <meta name="twitter:card" content="summary_large_image">
@@ -63,14 +69,20 @@
   </script>
 </head>
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
 
+<!-- ===== HEADER / NAV ===== -->
 <header class="site-header">
   <nav class="nav" aria-label="Primary">
     <a class="nav__brand" href="./index.html">
       <img src="assets/img/logo.svg" alt="" aria-hidden="true">
-      <span class="nav__brand-text">Digital Twins in Auto Insurance<small>Capstone research hub · DMGC-699</small></span>
+      <span class="nav__brand-text">
+        Digital Twins in Auto Insurance
+        <small>Capstone research hub · DMGC-699</small>
+      </span>
     </a>
+
     <ul class="nav__list">
       <li><a class="nav__link" href="./index.html">Home</a></li>
 
@@ -84,10 +96,10 @@
           Artifacts <span class="nav__caret" aria-hidden="true">▾</span>
         </button>
         <ul class="nav__menu" id="artifacts-menu" role="menu">
-          <li role="none"><a role="menuitem" href="./research.html">Survey &amp; Dashboard <small>D1 — primary survey, N = 15</small></a></li>
-          <li role="none"><a role="menuitem" href="./zine.html">Digital Zine <small>D2 — 14-page long-read</small></a></li>
-          <li role="none"><a role="menuitem" href="./simulator.html">Decision Simulator <small>D3 — Unity WebGL prototype</small></a></li>
-          <li role="none"><a role="menuitem" href="./podcast.html">Podcast Episode <small>D4 — ~20 minutes</small></a></li>
+          <li role="none"><a role="menuitem" href="./research.html">Survey &amp; Dashboard <small>D1 — primary survey, N=15 · live</small></a></li>
+          <li role="none"><a role="menuitem" href="./zine.html">Digital Zine <small>D2 — 14-page long-read · live</small></a></li>
+          <li role="none"><a role="menuitem" href="./simulator.html">Decision Simulator <small>D3 — Unity WebGL · upcoming</small></a></li>
+          <li role="none"><a role="menuitem" href="./podcast.html" aria-current="page">Podcast Episode <small>D4 — ~20 min · upcoming</small></a></li>
         </ul>
       </li>
 
@@ -101,14 +113,15 @@
 
 <main id="main">
 
-  <section class="hero" style="padding-bottom: 32px;">
+  <!-- ===== HERO ===== -->
+  <section class="hero">
     <div class="container">
-      <span class="hero__eyebrow">Deliverable 4 · Interpretation</span>
-      <h1 class="hero__title" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">The podcast</h1>
+      <span class="hero__eyebrow">D4 · Podcast</span>
+      <h1 class="hero__title">Twenty minutes<br>that <span class="accent">connect the dots</span>.</h1>
       <p class="hero__lead">
-        One episode, ~20 minutes. Walks listeners from the survey finding through
-        the simulator example to a single professional takeaway. For people who
-        prefer to listen on a commute rather than read on a screen.
+        One episode. Walks listeners from the survey finding through the
+        simulator example to a single professional takeaway. For people
+        who prefer a commute over a screen.
       </p>
       <div class="btn-row">
         <a class="btn btn--primary" href="#listen">Listen ↓</a>
@@ -117,127 +130,176 @@
     </div>
   </section>
 
-  <!-- ===== PODCAST PLAYER ===== -->
-  <section class="section section--alt" id="listen" aria-labelledby="listen-h">
+  <!-- ===== KPI STRIP ===== -->
+  <section class="section section--deep" aria-labelledby="kpi-h">
     <div class="container">
-      <span class="eyebrow">Listen</span>
-      <h2 id="listen-h">Pick your platform</h2>
+      <span class="eyebrow" data-reveal>D4 · status board</span>
+      <h2 id="kpi-h" data-reveal data-delay="1">Episode telemetry.</h2>
 
-      <!-- TODO: when episode publishes, replace this with the Spotify/Apple embed
-           Spotify embed example:
-             <iframe src="https://open.spotify.com/embed/episode/EPISODE_ID" ...></iframe>
-           Or self-host: <audio controls><source src="audio/episode.mp3" type="audio/mpeg"></audio>
-      -->
-      <div class="embed embed--placeholder embed--audio" role="img" aria-label="Podcast player placeholder">
-        <div>
-          <strong>Audio player goes here</strong>
-          Due 2026-05-25. Will embed Spotify/Apple Podcasts player + a self-hosted MP3 fallback.
+      <div class="kpi-grid" role="list" style="margin-top: 32px;">
+        <div class="kpi" role="listitem" data-reveal data-delay="1">
+          <p class="kpi__label"><span class="dot dot--plan"></span> runtime</p>
+          <p class="kpi__num kpi__num--orange">~20<span class="unit"> min</span></p>
+          <p class="kpi__desc">Five segments, paced for one commute.</p>
+          <span class="kpi__bar" style="--w: 100%;"></span>
+        </div>
+        <div class="kpi" role="listitem" data-reveal data-delay="2">
+          <p class="kpi__label"><span class="dot dot--plan"></span> hosts</p>
+          <p class="kpi__num">1</p>
+          <p class="kpi__desc">Solo episode, narrator-led.</p>
+          <span class="kpi__bar" style="--w: 100%;"></span>
+        </div>
+        <div class="kpi" role="listitem" data-reveal data-delay="3">
+          <p class="kpi__label"><span class="dot dot--off"></span> guests</p>
+          <p class="kpi__num">0</p>
+          <p class="kpi__desc">No external guests on this episode.</p>
+          <span class="kpi__bar" style="--w: 0%;"></span>
+        </div>
+        <div class="kpi" role="listitem" data-reveal data-delay="4">
+          <p class="kpi__label"><span class="dot dot--build"></span> publish target</p>
+          <p class="kpi__num">2026-05-25</p>
+          <p class="kpi__desc">Aligned with the D3 simulator publish date.</p>
+          <span class="kpi__bar" style="--w: 80%;"></span>
         </div>
       </div>
-
-      <p style="margin-top: 16px;">
-        Subscribe links (added at publication):
-        <a href="#">Spotify</a> ·
-        <a href="#">Apple Podcasts</a> ·
-        <a href="#">RSS</a>
-      </p>
     </div>
   </section>
 
-  <!-- ===== EPISODE OUTLINE ===== -->
+  <!-- ===== WHAT YOU'LL HEAR ===== -->
   <section class="section" aria-labelledby="outline-h">
     <div class="container container-narrow">
-      <span class="eyebrow">Episode outline</span>
-      <h2 id="outline-h">What's in the 20 minutes</h2>
-      <ul style="list-style: none; padding: 0; margin: 0;">
-        <li style="border-left: 3px solid var(--c-orange); padding: 12px 16px; margin-bottom: 8px; background: var(--c-bg-alt);">
-          <strong>00:00 — The framing</strong><br>
-          <span class="muted">Why this project exists, who it's for.</span>
-        </li>
-        <li style="border-left: 3px solid var(--c-orange); padding: 12px 16px; margin-bottom: 8px; background: var(--c-bg-alt);">
-          <strong>02:30 — The survey, briefly</strong><br>
-          <span class="muted">The three numbers and what they imply.</span>
-        </li>
-        <li style="border-left: 3px solid var(--c-orange); padding: 12px 16px; margin-bottom: 8px; background: var(--c-bg-alt);">
-          <strong>06:00 — Maria's twin</strong><br>
-          <span class="muted">The simulator scenario, narrated.</span>
-        </li>
-        <li style="border-left: 3px solid var(--c-orange); padding: 12px 16px; margin-bottom: 8px; background: var(--c-bg-alt);">
-          <strong>11:30 — Cost, ROI, privacy</strong><br>
-          <span class="muted">The barriers — addressed, not dismissed.</span>
-        </li>
-        <li style="border-left: 3px solid var(--c-orange); padding: 12px 16px; margin-bottom: 8px; background: var(--c-bg-alt);">
-          <strong>17:00 — One thing to take away</strong><br>
-          <span class="muted">If you remember nothing else from this episode.</span>
-        </li>
+      <span class="eyebrow" data-reveal>What you'll hear</span>
+      <h2 id="outline-h" data-reveal data-delay="1">Five segments in twenty minutes.</h2>
+      <ul class="list-clean">
+        <li><strong>00:00 — The framing.</strong> Why this project exists, who it's for.</li>
+        <li><strong>02:30 — The survey, briefly.</strong> The three numbers and what they imply.</li>
+        <li><strong>06:00 — Maria's twin.</strong> The simulator scenario, narrated.</li>
+        <li><strong>11:30 — Cost, ROI, privacy.</strong> The barriers — addressed, not dismissed.</li>
+        <li><strong>17:00 — One thing to take away.</strong> If you remember nothing else.</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- ===== LISTEN ===== -->
+  <section class="section section--alt" id="listen" aria-labelledby="listen-h">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Listen</span>
+      <h2 id="listen-h" data-reveal data-delay="1">Pick your platform.</h2>
+
+      <div class="embed embed--placeholder embed--audio" role="img" aria-label="Podcast player placeholder">
+        <div>
+          <strong>Audio player pending</strong>
+          Embeds Spotify / Apple Podcasts + a self-hosted MP3 fallback at publish (2026-05-25).
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top: 16px;">
+        <a class="btn btn--ghost" href="#" aria-disabled="true">Spotify (pending)</a>
+        <a class="btn btn--ghost" href="#" aria-disabled="true">Apple Podcasts (pending)</a>
+        <a class="btn btn--ghost" href="#" aria-disabled="true">RSS (pending)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SHOW NOTES ===== -->
+  <section class="section" aria-labelledby="notes-h">
+    <div class="container container-narrow">
+      <span class="eyebrow" data-reveal>Show notes</span>
+      <h2 id="notes-h" data-reveal data-delay="1">Sources referenced in the episode.</h2>
+      <ol class="cite-list">
+        <li class="citation">
+          <span class="muted">pending — links populate at publish (2026-05-25).</span>
+          Show notes will draw from the project
+          <a href="./resources.html">reading list</a> (21 sources) plus the
+          primary survey instrument summarized in the
+          <a href="./research.html">D1 dashboard</a>.
+        </li>
+      </ol>
     </div>
   </section>
 
   <!-- ===== TRANSCRIPT ===== -->
   <section class="section section--alt" id="transcript" aria-labelledby="transcript-h">
-    <div class="container container-narrow">
-      <span class="eyebrow">Accessibility</span>
-      <h2 id="transcript-h">Full transcript</h2>
-      <p>
-        The full episode transcript will be published here at release. Provided
-        for accessibility and for those who prefer to read.
+    <div class="container">
+      <span class="eyebrow" data-reveal>Transcript</span>
+      <h2 id="transcript-h" data-reveal data-delay="1">Full transcript.</h2>
+      <p style="max-width: 60ch;" data-reveal data-delay="2">
+        Published here at release for accessibility and for those who prefer
+        to read. Time-coded to the segment map above.
       </p>
-      <p>
-        <a class="btn btn--ghost" href="#" aria-disabled="true">Read transcript (pending publication)</a>
-      </p>
+
+      <blockquote class="pullquote" data-reveal data-delay="3">
+        Status: pending. The transcript attaches with the episode publish on
+        2026-05-25. Format: markdown, time-coded, APA 7 footnotes.
+      </blockquote>
     </div>
   </section>
 
   <!-- ===== SUCCESS CRITERIA ===== -->
-  <section class="section" aria-labelledby="success-h">
+  <section class="section section--deep" aria-labelledby="success-h">
     <div class="container container-narrow">
-      <h2 id="success-h">Success criteria for the podcast</h2>
-      <div class="success">
+      <span class="eyebrow" data-reveal>What "working" looks like</span>
+      <h2 id="success-h" data-reveal data-delay="1">D4 success criteria.</h2>
+
+      <div class="success" data-reveal data-delay="2">
         <h3>The podcast works if…</h3>
         <ol>
-          <li><strong>Listen-through:</strong> ≥40% median completion rate on the platform analytics.</li>
-          <li><strong>Reach:</strong> ≥50 unique plays across platforms in 14 days.</li>
+          <li><strong>Listen-through:</strong> ≥40% median completion rate on platform analytics.</li>
+          <li><strong>Reach:</strong> ≥50 unique plays across platforms within 14 days of publish.</li>
           <li><strong>Engagement:</strong> ≥3 substantive comments or DMs from Ontario marketing professionals.</li>
           <li><strong>Accessibility:</strong> transcript published within 48h of episode release.</li>
         </ol>
+        <p class="muted" style="margin-top: 16px; font-size: var(--fs-sm); font-family: var(--ff-mono);">
+          Hub-level criteria sit in the
+          <a href="./methodology.html#success">methodology</a>.
+        </p>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer footer">
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
   <div class="container">
     <div class="footer__grid">
       <div>
         <p class="footer__brand">Digital Twins in Auto Insurance</p>
-        <p style="color:#BBB; font-size: var(--fs-sm); max-width: 38ch;">Capstone research project, DMGC-699 Spring 2026, University of Niagara Falls Canada.</p>
+        <p style="color:#BBB; font-size: var(--fs-sm); max-width: 38ch;">
+          Capstone research project, DMGC-699 Spring 2026, University of Niagara
+          Falls Canada. Supervised by Dr. Wael Brahim.
+        </p>
+      </div>
+      <div>
+        <h4>Artifacts</h4>
+        <ul>
+          <li><a href="https://jade-salamander-5559d4.netlify.app" target="_blank" rel="noopener">D1 · Survey dashboard ↗</a></li>
+          <li><a href="https://digitaltwinszeen.netlify.app" target="_blank" rel="noopener">D2 · Digital zine ↗</a></li>
+          <li><a href="./simulator.html">D3 · Simulator</a></li>
+          <li><a href="./podcast.html">D4 · Podcast</a></li>
+          <li><a href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener">D6 · LinkedIn ↗</a></li>
+        </ul>
       </div>
       <div>
         <h4>Project</h4>
         <ul>
-          <li><a href="./research.html">Survey + dashboard</a></li>
-          <li><a href="./zine.html">Digital zine</a></li>
-          <li><a href="./simulator.html">Simulator</a></li>
-          <li><a href="./podcast.html">Podcast</a></li>
-          <li><a href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener">LinkedIn page ↗</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>More</h4>
-        <ul>
           <li><a href="./cases.html">Real-world cases</a></li>
           <li><a href="./resources.html">Reading list</a></li>
           <li><a href="./methodology.html">Methodology</a></li>
-          <li><a href="./about.html">About the researcher</a></li>
-          <li><a href="https://github.com/" target="_blank" rel="noopener">Source on GitHub ↗</a></li>
+          <li><a href="./about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Meta</h4>
+        <ul>
+          <li><a href="https://github.com/" target="_blank" rel="noopener">Source ↗</a></li>
+          <li><a href="./about.html#contact">Contact</a></li>
         </ul>
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© 2026 Aleksandr Okhrimenko. Last updated <span data-updated="2026-05-06">2026-05-06</span>.</span>
-      <span>Built with HTML/CSS/JS · GitHub Pages</span>
+      <span>© 2026 Aleksandr Okhrimenko · Last updated <span data-updated="2026-05-13">2026-05-13</span></span>
+      <span>HTML · CSS · vanilla JS · GitHub Pages</span>
     </div>
   </div>
 </footer>
@@ -270,7 +332,7 @@
     if (pref === 'accept') {
       if (window.gtag) window.gtag('consent', 'update', { analytics_storage: 'granted' });
     } else if (pref === 'deny') {
-      // stays denied
+      /* stays denied */
     } else if (banner) {
       banner.hidden = false;
     }

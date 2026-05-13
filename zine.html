@@ -4,14 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Digital Zine · Digital Twins in Auto Insurance</title>
-  <meta name="description" content="A 14-page interactive long-read explaining the auto insurance personalization use case for marketing professionals.">
+  <meta name="description" content="A 14-page interactive long-read explaining the auto insurance personalization use case for marketing professionals. Published and live.">
   <meta name="theme-color" content="#E97137">
+  <meta name="color-scheme" content="light">
+  <meta name="author" content="Aleksandr Okhrimenko">
+
+  <!-- Open Graph -->
   <meta property="og:title" content="The Digital Zine — Digital Twins in Auto Insurance">
   <meta property="og:description" content="The use case explained, page by page. With an embedded comprehension check.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="assets/img/og-image.png">
+
   <link rel="canonical" href="./zine.html">
   <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/logo_400.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="manifest" href="manifest.json">
   <meta name="twitter:card" content="summary_large_image">
@@ -30,7 +39,7 @@
       "headline": "The digital zine",
       "url": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/zine.html",
       "datePublished": "2026-05-12",
-      "dateModified": "2026-05-12",
+      "dateModified": "2026-05-13",
       "inLanguage": "en-CA",
       "author": {
         "@type": "Person",
@@ -51,7 +60,6 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     window.gtag = function(){ dataLayer.push(arguments); };
-    // default to denied; the cookie banner flips this if accepted
     gtag('consent', 'default', {
       ad_storage: 'denied',
       ad_user_data: 'denied',
@@ -63,14 +71,20 @@
   </script>
 </head>
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
 
+<!-- ===== HEADER / NAV ===== -->
 <header class="site-header">
   <nav class="nav" aria-label="Primary">
     <a class="nav__brand" href="./index.html">
       <img src="assets/img/logo.svg" alt="" aria-hidden="true">
-      <span class="nav__brand-text">Digital Twins in Auto Insurance<small>Capstone research hub · DMGC-699</small></span>
+      <span class="nav__brand-text">
+        Digital Twins in Auto Insurance
+        <small>Capstone research hub · DMGC-699</small>
+      </span>
     </a>
+
     <ul class="nav__list">
       <li><a class="nav__link" href="./index.html">Home</a></li>
 
@@ -80,14 +94,15 @@
           type="button"
           aria-expanded="false"
           aria-haspopup="menu"
-          aria-controls="artifacts-menu">
+          aria-controls="artifacts-menu"
+          data-active="true">
           Artifacts <span class="nav__caret" aria-hidden="true">▾</span>
         </button>
         <ul class="nav__menu" id="artifacts-menu" role="menu">
-          <li role="none"><a role="menuitem" href="./research.html">Survey &amp; Dashboard <small>D1 — primary survey, N = 15</small></a></li>
-          <li role="none"><a role="menuitem" href="./zine.html">Digital Zine <small>D2 — 14-page long-read</small></a></li>
-          <li role="none"><a role="menuitem" href="./simulator.html">Decision Simulator <small>D3 — Unity WebGL prototype</small></a></li>
-          <li role="none"><a role="menuitem" href="./podcast.html">Podcast Episode <small>D4 — ~20 minutes</small></a></li>
+          <li role="none"><a role="menuitem" href="./research.html">Survey &amp; Dashboard <small>D1 — primary survey, N=15 · live</small></a></li>
+          <li role="none"><a role="menuitem" href="./zine.html" aria-current="page">Digital Zine <small>D2 — 14-page long-read · live</small></a></li>
+          <li role="none"><a role="menuitem" href="./simulator.html">Decision Simulator <small>D3 — Unity WebGL · upcoming</small></a></li>
+          <li role="none"><a role="menuitem" href="./podcast.html">Podcast Episode <small>D4 — ~20 min · upcoming</small></a></li>
         </ul>
       </li>
 
@@ -101,68 +116,179 @@
 
 <main id="main">
 
-  <section class="hero" style="padding-bottom: 32px;">
+  <!-- ===== HERO ===== -->
+  <section class="hero">
     <div class="container">
-      <span class="hero__eyebrow">Deliverable 2 · Explanation</span>
-      <h1 class="hero__title" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">The digital zine</h1>
+      <span class="hero__eyebrow">D2 · Digital Zine · live</span>
+      <h1 class="hero__title">
+        Fourteen pages,<br>
+        three acts,<br>
+        <span class="accent">one driver.</span>
+      </h1>
       <p class="hero__lead">
-        A 14-page long-read, designed to be opened on a phone in five minutes or
-        on a desktop in fifteen. It explains the auto insurance personalization
-        use case for marketing professionals — the same audience the survey
-        targeted. Every section ends with a "what this means for your campaign"
-        line, not a glossary entry.
+        A long-read for marketing professionals — the same audience the survey
+        targeted. Designed to be opened on a phone in five minutes or on a
+        desktop in fifteen. Every section closes with a "what this means for
+        your campaign" line, not a glossary entry. Three short acts:
+        <code>what is this thing</code>, <code>how it works for one driver</code>,
+        <code>what stops it from happening</code>.
       </p>
       <div class="btn-row">
-        <a class="btn btn--primary" href="#read">Read the zine ↓</a>
-        <a class="btn btn--ghost" href="#download">Download the PDF</a>
+        <a class="btn btn--primary" href="https://digitaltwinszeen.netlify.app" target="_blank" rel="noopener">Open the zine in a new tab ↗</a>
+        <a class="btn btn--ghost" href="#read">Read embedded below ↓</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== ZINE EMBED ===== -->
-  <section class="section section--alt" id="read" aria-labelledby="read-h">
+  <!-- ===== KPI STRIP ===== -->
+  <section class="section section--alt" aria-labelledby="kpi-h">
     <div class="container">
-      <span class="eyebrow">Web edition</span>
-      <h2 id="read-h">Read in browser</h2>
-
-      <!-- TODO: when zine ships, swap this for an iframe or PDF.js viewer.
-           Recommended: embed Issuu, Heyzine, or a self-hosted PDF.js viewer. -->
-      <div class="embed embed--placeholder" role="img" aria-label="Zine viewer placeholder">
-        <div>
-          <strong>Zine viewer goes here</strong>
-          Due 2026-05-17. Will embed as a flipbook (Heyzine) or PDF.js viewer.<br>
-          The PDF version will also be downloadable below.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TABLE OF CONTENTS ===== -->
-  <section class="section" aria-labelledby="toc-h">
-    <div class="container container-narrow">
-      <span class="eyebrow">What's inside</span>
-      <h2 id="toc-h">14 pages, three movements</h2>
-      <p>
-        The zine is structured as three short acts. Each act answers a specific
-        question a marketing professional should be asking before they propose a
-        digital twin pilot to their leadership.
+      <span class="eyebrow" data-reveal>Artifact spec · D2</span>
+      <h2 id="kpi-h" data-reveal data-delay="1">What the zine is, in numbers.</h2>
+      <p class="lead" data-reveal data-delay="2">
+        Built to a fixed shape so the production work fits the timeline and so
+        the comprehension check has a defensible structure.
       </p>
 
-      <div class="cards" style="margin-top: 24px;">
-        <div class="card">
-          <span class="card__tag">Act 1 · pp. 1–4</span>
+      <div class="kpi-grid" role="list" style="margin-top: 32px;">
+        <div class="kpi" role="listitem" data-reveal data-delay="1">
+          <p class="kpi__label"><span class="dot dot--live"></span> length</p>
+          <p class="kpi__num kpi__num--orange">14<span class="unit">pp</span></p>
+          <p class="kpi__desc">Pages, designed in three short acts. Each act fits in a single session.</p>
+          <span class="kpi__bar" style="--w: 100%;"></span>
+        </div>
+        <div class="kpi" role="listitem" data-reveal data-delay="2">
+          <p class="kpi__label"><span class="dot dot--live"></span> structure</p>
+          <p class="kpi__num kpi__num--orange">3<span class="unit">/3</span></p>
+          <p class="kpi__desc">Acts — definition, walk-through, barriers. No glossary, no appendix.</p>
+          <span class="kpi__bar" style="--w: 100%;"></span>
+        </div>
+        <div class="kpi" role="listitem" data-reveal data-delay="3">
+          <p class="kpi__label"><span class="dot dot--live"></span> read time</p>
+          <p class="kpi__num kpi__num--orange">~12<span class="unit">min</span></p>
+          <p class="kpi__desc">Median target for desktop reading. Phone read clocks in around five.</p>
+          <span class="kpi__bar" style="--w: 80%;"></span>
+        </div>
+        <div class="kpi" role="listitem" data-reveal data-delay="4">
+          <p class="kpi__label"><span class="dot dot--live"></span> check</p>
+          <p class="kpi__num kpi__num--orange">1<span class="unit">Q</span></p>
+          <p class="kpi__desc">Embedded comprehension check on the closing page. Yes/No format.</p>
+          <span class="kpi__bar" style="--w: 100%;"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACTS ===== -->
+  <section class="section" aria-labelledby="acts-h">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Three acts · pp. 1–14</span>
+      <h2 id="acts-h" data-reveal data-delay="1">What's inside.</h2>
+      <p class="lead" data-reveal data-delay="2">
+        Each act answers a specific question a marketing professional should
+        be asking before they propose a digital twin pilot to their leadership.
+        The acts read in order, but each is self-contained.
+      </p>
+
+      <div class="cards" style="margin-top: 36px;">
+
+        <div class="card" data-status="live" data-reveal data-delay="1">
+          <div class="card__head">
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="7" x2="12" y2="13"/><circle cx="12" cy="16.5" r="1" fill="currentColor"/></svg>
+            </span>
+            <span class="card__id">ACT_01</span>
+          </div>
+          <span class="card__tag">pp. 1–4</span>
           <h3 class="card__title">What is this thing?</h3>
-          <p class="card__desc">A definition that is not the McKinsey definition. Plus three things a digital twin is not, so you stop confusing it with a CRM segment.</p>
+          <p class="card__desc">A working definition that is not the McKinsey definition. Plus three things a digital twin is <em>not</em>, so the reader stops confusing it with a CRM segment, a dashboard, or an A/B test.</p>
+          <div class="card__meta">
+            <span>Definition</span><span>4 pages</span><span>~3 min</span>
+          </div>
         </div>
-        <div class="card">
-          <span class="card__tag">Act 2 · pp. 5–10</span>
+
+        <div class="card" data-status="live" data-reveal data-delay="2">
+          <div class="card__head">
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h2l2-6h8l2 6h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M9 11V7h6v4"/></svg>
+            </span>
+            <span class="card__id">ACT_02</span>
+          </div>
+          <span class="card__tag">pp. 5–10</span>
           <h3 class="card__title">How does it work for one driver?</h3>
-          <p class="card__desc">A walk through one Ontario customer journey: data sources, simulation, the offer they see, and what changed.</p>
+          <p class="card__desc">A walk-through of one Ontario customer journey: data sources, the simulated outcomes, the personalized offer they see, and what specifically changed in pricing, coverage, and marketing message.</p>
+          <div class="card__meta">
+            <span>Walk-through</span><span>6 pages</span><span>~6 min</span>
+          </div>
         </div>
-        <div class="card">
-          <span class="card__tag">Act 3 · pp. 11–14</span>
+
+        <div class="card" data-status="live" data-reveal data-delay="3">
+          <div class="card__head">
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            </span>
+            <span class="card__id">ACT_03</span>
+          </div>
+          <span class="card__tag">pp. 11–14</span>
           <h3 class="card__title">What stops it from happening?</h3>
-          <p class="card__desc">Cost, ROI, privacy — the three barriers the survey surfaced — addressed honestly. Plus the comprehension check on the last page.</p>
+          <p class="card__desc">The three barriers the survey surfaced — <code>cost</code>, <code>ROI</code>, <code>privacy</code> — addressed honestly, without dressing them up. Plus the comprehension check on the last page.</p>
+          <div class="card__meta">
+            <span>Barriers</span><span>4 pages</span><span>~3 min</span>
+          </div>
+        </div>
+
+      </div>
+
+      <blockquote class="pullquote" data-reveal>
+        The job of the zine is not to convince anyone that digital twins are
+        the future. It's to make sure that the next time the phrase comes up
+        in a meeting, one person in the room can describe what it actually does.
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ===== READ ===== -->
+  <section class="section section--accent" id="read" aria-labelledby="read-h">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Web edition · live</span>
+      <h2 id="read-h" data-reveal data-delay="1">Read in browser.</h2>
+      <p class="lead" data-reveal data-delay="2">
+        Published. Read it below or open in a new tab. The zine renders as a
+        flipbook on desktop and a single-column scroll on mobile. The web
+        version is the better reading experience; the PDF is the canonical form
+        for citation.
+      </p>
+
+      <p style="margin-top: 16px;" data-reveal data-delay="3">
+        <a class="btn btn--primary" href="https://digitaltwinszeen.netlify.app" target="_blank" rel="noopener">Open the zine in a new tab ↗</a>
+      </p>
+
+      <div class="embed embed--tall" data-reveal data-delay="4" style="margin-top: 24px;">
+        <iframe src="https://digitaltwinszeen.netlify.app" title="Digital Twins long-read zine — D2" loading="lazy" referrerpolicy="no-referrer"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPREHENSION CHECK ===== -->
+  <section class="section" aria-labelledby="check-h">
+    <div class="container container-narrow">
+      <span class="eyebrow" data-reveal>Closing page · embedded widget</span>
+      <h2 id="check-h" data-reveal data-delay="1">What the comprehension check measures.</h2>
+      <p data-reveal data-delay="2">
+        The last page of the zine carries one Yes/No question. The threshold is
+        set against the D1 baseline — <code>73%</code> of surveyed practitioners
+        currently cannot explain digital twins. The check is anonymous and
+        captured via a lightweight widget embedded on the closing page.
+      </p>
+
+      <div class="terminal">
+        <div class="terminal__head">Comprehension check · zine closing page</div>
+        <div class="terminal__body">
+          <p><strong>Prompt:</strong> "I now understand at least one concrete use case for digital twins in auto insurance."</p>
+          <p><strong>Options:</strong> Yes · No</p>
+          <p><strong>Threshold:</strong> Yes ≥ 70% of respondents.</p>
+          <p><strong>Baseline:</strong> D1 finding — 73% currently cannot explain the concept.</p>
+          <p><strong>Status:</strong> instrument live alongside the zine.</p>
         </div>
       </div>
     </div>
@@ -171,10 +297,16 @@
   <!-- ===== SUCCESS CRITERIA ===== -->
   <section class="section section--alt" aria-labelledby="success-h">
     <div class="container container-narrow">
-      <span class="eyebrow">Locked 2026-05-06</span>
-      <h2 id="success-h">Success criteria for this artifact</h2>
+      <span class="eyebrow" data-reveal>Locked 2026-05-06</span>
+      <h2 id="success-h" data-reveal data-delay="1">Success criteria for the zine.</h2>
+      <p class="lead" data-reveal data-delay="2">
+        Four directional thresholds. Not statistical claims — the lines below
+        which the artifact is not working as intended. Tracked via scroll-depth
+        analytics, GA4 page-time, file-download events, and the embedded
+        comprehension widget.
+      </p>
 
-      <div class="success">
+      <div class="success" style="margin-top: 36px;">
         <h3>The zine works if…</h3>
         <ol>
           <li><strong>Read-through:</strong> ≥60% of web-zine visitors scroll to ≥80% of zine length.</li>
@@ -182,64 +314,98 @@
           <li><strong>PDF downloads:</strong> ≥10 unique downloads in 14 days post-publication.</li>
           <li><strong>Comprehension lift:</strong> ≥70% Yes on the closing question — "I now understand at least one concrete use case for digital twins in auto insurance."</li>
         </ol>
+        <p class="muted" style="margin-top: 16px; font-size: var(--fs-sm);">
+          Anchored against the D1 baseline (73% currently cannot explain digital twins).
+          Cross-referenced in the <a href="./methodology.html#success">methodology</a>.
+        </p>
       </div>
-      <p class="muted" style="margin-top: 16px; font-size: var(--fs-sm);">
-        Anchored against the D1 baseline (73% currently cannot explain digital twins).
-        Implementation: scroll-depth analytics, embedded Yes/No widget at end of zine.
-      </p>
     </div>
   </section>
 
   <!-- ===== DOWNLOAD ===== -->
   <section class="section" id="download" aria-labelledby="dl-h">
     <div class="container container-narrow">
-      <span class="eyebrow">Take it offline</span>
-      <h2 id="dl-h">Download</h2>
-      <p>
-        A static PDF is provided for offline reading and accessibility. The PDF
-        is the canonical form for citation; the web flipbook is the better
-        reading experience.
+      <span class="eyebrow" data-reveal>Take it offline</span>
+      <h2 id="dl-h" data-reveal data-delay="1">Download.</h2>
+      <p data-reveal data-delay="2">
+        A static PDF is provided for offline reading, accessibility, and
+        citation. The live web edition above is the better reading experience;
+        the PDF is the form that gets archived and footnoted.
       </p>
-      <div class="btn-row">
-        <!-- TODO: replace href with actual PDF path once published -->
-        <a class="btn btn--primary" href="#" aria-disabled="true">Download zine.pdf (link pending publication)</a>
+
+      <ul class="list-clean" style="margin-top: 18px;">
+        <li><code>zine.pdf</code> — 14 pages, ~3 MB, tagged for accessibility.</li>
+        <li><code>zine-print.pdf</code> — print-optimized, single-page layout.</li>
+        <li>Both files: APA 7 colophon on the back cover.</li>
+      </ul>
+
+      <div class="btn-row" style="margin-top: 24px;">
+        <a class="btn btn--primary" href="https://digitaltwinszeen.netlify.app" target="_blank" rel="noopener">Open the live zine ↗</a>
+        <a class="btn btn--ghost" href="./methodology.html">Read the methodology</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOURCE / SELF-CITATION ===== -->
+  <section class="section section--alt" aria-labelledby="cite-h">
+    <div class="container container-narrow">
+      <span class="eyebrow" data-reveal>How to cite</span>
+      <h2 id="cite-h" data-reveal data-delay="1">Source.</h2>
+      <p>
+        If you reference the zine in a class, report, or post, please cite the
+        canonical PDF rather than this hub page. The hub link is welcome as a
+        secondary "see also" pointer.
+      </p>
+      <div class="citation">
+        Okhrimenko, A. (2026). <em>Digital twins in auto insurance: a fourteen-page zine for marketing professionals</em> [Capstone artifact D2]. University of Niagara Falls Canada, DMGC-699. Retrieved from https://digitaltwinszeen.netlify.app
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer footer">
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
   <div class="container">
     <div class="footer__grid">
       <div>
         <p class="footer__brand">Digital Twins in Auto Insurance</p>
-        <p style="color:#BBB; font-size: var(--fs-sm); max-width: 38ch;">Capstone research project, DMGC-699 Spring 2026, University of Niagara Falls Canada.</p>
+        <p style="color:#BBB; font-size: var(--fs-sm); max-width: 38ch;">
+          Capstone research project, DMGC-699 Spring 2026, University of Niagara
+          Falls Canada. Supervised by Dr. Wael Brahim.
+        </p>
+      </div>
+      <div>
+        <h4>Artifacts</h4>
+        <ul>
+          <li><a href="https://jade-salamander-5559d4.netlify.app" target="_blank" rel="noopener">D1 · Survey dashboard ↗</a></li>
+          <li><a href="https://digitaltwinszeen.netlify.app" target="_blank" rel="noopener">D2 · Digital zine ↗</a></li>
+          <li><a href="./simulator.html">D3 · Simulator</a></li>
+          <li><a href="./podcast.html">D4 · Podcast</a></li>
+          <li><a href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener">D6 · LinkedIn ↗</a></li>
+        </ul>
       </div>
       <div>
         <h4>Project</h4>
         <ul>
-          <li><a href="./research.html">Survey + dashboard</a></li>
-          <li><a href="./zine.html">Digital zine</a></li>
-          <li><a href="./simulator.html">Simulator</a></li>
-          <li><a href="./podcast.html">Podcast</a></li>
-          <li><a href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener">LinkedIn page ↗</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>More</h4>
-        <ul>
           <li><a href="./cases.html">Real-world cases</a></li>
           <li><a href="./resources.html">Reading list</a></li>
           <li><a href="./methodology.html">Methodology</a></li>
-          <li><a href="./about.html">About the researcher</a></li>
-          <li><a href="https://github.com/" target="_blank" rel="noopener">Source on GitHub ↗</a></li>
+          <li><a href="./about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Meta</h4>
+        <ul>
+          <li><a href="https://github.com/" target="_blank" rel="noopener">Source ↗</a></li>
+          <li><a href="./about.html#contact">Contact</a></li>
+          <li><a href="./404.html">404</a></li>
         </ul>
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© 2026 Aleksandr Okhrimenko. Last updated <span data-updated="2026-05-06">2026-05-06</span>.</span>
-      <span>Built with HTML/CSS/JS · GitHub Pages</span>
+      <span>© 2026 Aleksandr Okhrimenko · Last updated <span data-updated="2026-05-13">2026-05-13</span></span>
+      <span>HTML · CSS · vanilla JS · GitHub Pages</span>
     </div>
   </div>
 </footer>
@@ -272,7 +438,7 @@
     if (pref === 'accept') {
       if (window.gtag) window.gtag('consent', 'update', { analytics_storage: 'granted' });
     } else if (pref === 'deny') {
-      // stays denied
+      /* stays denied */
     } else if (banner) {
       banner.hidden = false;
     }

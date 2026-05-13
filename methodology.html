@@ -3,15 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Methodology · Digital Twins in Auto Insurance</title>
-  <meta name="description" content="Sample, recruitment, supervisor iterations, the limits of N=15, and the success criteria each artifact is held to.">
+  <title>Methodology — Digital Twins in Auto Insurance</title>
+  <meta name="description" content="How this project was built. Research question, sample, recruitment, supervisor iterations, AI use disclosure, per-artifact success criteria, and limitations.">
   <meta name="theme-color" content="#E97137">
+  <meta name="color-scheme" content="light">
+  <meta name="author" content="Aleksandr Okhrimenko">
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Methodology · Digital Twins in Auto Insurance">
-  <meta property="og:description" content="The full methodology behind the capstone — sample, recruitment, iterations, success criteria.">
+  <meta property="og:description" content="Sample, recruitment, supervisor iterations, AI declaration, and the success criteria each artifact is held to.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="assets/img/og-image.png">
+
   <link rel="canonical" href="./methodology.html">
   <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/logo_400.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="manifest" href="manifest.json">
   <meta name="twitter:card" content="summary_large_image">
@@ -30,7 +39,7 @@
       "headline": "Methodology",
       "url": "https://okhrimenkoav24.github.io/digital-twins-auto-insurance/methodology.html",
       "datePublished": "2026-05-12",
-      "dateModified": "2026-05-12",
+      "dateModified": "2026-05-13",
       "inLanguage": "en-CA",
       "author": {
         "@type": "Person",
@@ -51,7 +60,6 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     window.gtag = function(){ dataLayer.push(arguments); };
-    // default to denied; the cookie banner flips this if accepted
     gtag('consent', 'default', {
       ad_storage: 'denied',
       ad_user_data: 'denied',
@@ -63,14 +71,20 @@
   </script>
 </head>
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
 
+<!-- ===== HEADER / NAV ===== -->
 <header class="site-header">
   <nav class="nav" aria-label="Primary">
     <a class="nav__brand" href="./index.html">
       <img src="assets/img/logo.svg" alt="" aria-hidden="true">
-      <span class="nav__brand-text">Digital Twins in Auto Insurance<small>Capstone research hub · DMGC-699</small></span>
+      <span class="nav__brand-text">
+        Digital Twins in Auto Insurance
+        <small>Capstone research hub · DMGC-699</small>
+      </span>
     </a>
+
     <ul class="nav__list">
       <li><a class="nav__link" href="./index.html">Home</a></li>
 
@@ -84,16 +98,16 @@
           Artifacts <span class="nav__caret" aria-hidden="true">▾</span>
         </button>
         <ul class="nav__menu" id="artifacts-menu" role="menu">
-          <li role="none"><a role="menuitem" href="./research.html">Survey &amp; Dashboard <small>D1 — primary survey, N = 15</small></a></li>
-          <li role="none"><a role="menuitem" href="./zine.html">Digital Zine <small>D2 — 14-page long-read</small></a></li>
-          <li role="none"><a role="menuitem" href="./simulator.html">Decision Simulator <small>D3 — Unity WebGL prototype</small></a></li>
-          <li role="none"><a role="menuitem" href="./podcast.html">Podcast Episode <small>D4 — ~20 minutes</small></a></li>
+          <li role="none"><a role="menuitem" href="./research.html">Survey &amp; Dashboard <small>D1 — primary survey, N=15 · live</small></a></li>
+          <li role="none"><a role="menuitem" href="./zine.html">Digital Zine <small>D2 — 14-page long-read · live</small></a></li>
+          <li role="none"><a role="menuitem" href="./simulator.html">Decision Simulator <small>D3 — Unity WebGL · upcoming</small></a></li>
+          <li role="none"><a role="menuitem" href="./podcast.html">Podcast Episode <small>D4 — ~20 min · upcoming</small></a></li>
         </ul>
       </li>
 
       <li><a class="nav__link" href="./cases.html">Cases</a></li>
       <li><a class="nav__link" href="./resources.html">Resources</a></li>
-      <li><a class="nav__link" href="./methodology.html">Methodology</a></li>
+      <li><a class="nav__link" href="./methodology.html" aria-current="page">Methodology</a></li>
       <li><a class="nav__link" href="./about.html">About</a></li>
     </ul>
   </nav>
@@ -101,214 +115,374 @@
 
 <main id="main">
 
-  <section class="hero" style="padding-bottom: 24px;">
-    <div class="container container-narrow">
-      <span class="hero__eyebrow">Project transparency</span>
-      <h1 class="hero__title" style="font-size: clamp(2rem, 5vw, 3.5rem);">Methodology</h1>
+  <!-- ===== HERO ===== -->
+  <section class="hero" style="padding-bottom: clamp(28px, 4vw, 56px);">
+    <div class="container">
+      <span class="hero__eyebrow">D5 · Methodology</span>
+      <h1 class="hero__title" style="font-size: clamp(2.25rem, 5.5vw, 4.25rem);">
+        How this project<br>
+        was <span class="accent">built</span>.
+      </h1>
       <p class="hero__lead">
-        How the project was built, who answered, what changed mid-project, what
-        the data can and cannot tell you. Written in the order a peer reviewer
-        would read it.
+        Research question, sample and recruitment, supervisor iterations,
+        per-artifact success criteria, AI use disclosure, limitations, and
+        the project's citation. Written in the order a peer reviewer would
+        read it.
       </p>
+      <div class="hero__meta">
+        <span>Mixed-methods</span>
+        <span>Convenience sample</span>
+        <span>APA 7</span>
+        <span>REB-exempt</span>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#success">Jump to success criteria →</a>
+        <a class="btn btn--ghost" href="./research.html">See the survey results</a>
+      </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="rq-h">
+  <!-- ===== RESEARCH QUESTION ===== -->
+  <section class="section section--deep" aria-labelledby="rq-h">
     <div class="container container-narrow">
-      <span class="eyebrow">Research question</span>
-      <h2 id="rq-h">What this project asks</h2>
-      <blockquote class="pullquote">
-        How can a multichannel digital media campaign be used to demonstrate the
-        practical application and perceived value of digital twin technology to
-        insurance marketing professionals in Ontario, Canada, based on industry
-        data from 2022 to 2025?
+      <span class="eyebrow" data-reveal>Research question</span>
+      <h2 id="rq-h" data-reveal data-delay="1">What this project asks.</h2>
+      <blockquote class="pullquote" data-reveal data-delay="2">
+        How can a multichannel digital media campaign be used to demonstrate
+        the practical application and perceived value of digital twin
+        technology to insurance marketing professionals in Ontario, Canada,
+        based on industry data from 2022 to 2025?
         <cite>— Locked 2026-04-17, refined from professor-approved version</cite>
       </blockquote>
       <p>
-        The question was narrowed in three iterations. The original framing
-        spoke to "insurance professionals," then "marketing, sales, and
-        underwriting," and finally "marketing professionals only." The final
-        scope was approved by Dr. Wael Brahim on 2026-04-15.
+        The question was narrowed across three iterations. The original
+        framing spoke to "insurance professionals," then "marketing, sales,
+        and underwriting," and finally "marketing professionals only." The
+        final scope was approved by Dr. Wael Brahim on 2026-04-15.
       </p>
     </div>
   </section>
 
+  <!-- ===== RESEARCH DESIGN ===== -->
+  <section class="section" aria-labelledby="design-h">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Research design</span>
+      <h2 id="design-h" data-reveal data-delay="1">Two layers of evidence, one use case.</h2>
+      <p class="lead" data-reveal data-delay="2">
+        The project pairs a secondary literature layer (Ontario industry
+        2022–2025) with a primary survey of practitioners. Together they
+        ground every claim made across the six artifacts. The survey is the
+        original empirical contribution; the industry layer keeps the
+        practitioner findings from floating free of context.
+      </p>
+
+      <table class="meta-table" style="margin-top: 28px;">
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Specification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Instrument</td>
+            <td class="mono">7 questions · single &amp; multi-select · 5-pt scales · 1 open-ended</td>
+          </tr>
+          <tr>
+            <td>Sample</td>
+            <td class="mono">N = 15 · Ontario · marketing role · convenience</td>
+          </tr>
+          <tr>
+            <td>Period</td>
+            <td class="mono">2026-03-25 → 2026-04-22</td>
+          </tr>
+          <tr>
+            <td>Analysis</td>
+            <td class="mono">descriptive statistics + thematic coding of open-ended</td>
+          </tr>
+          <tr>
+            <td>Industry layer</td>
+            <td class="mono">21 sources · 9 peer-reviewed · 5 industry reports · 2 regulatory · 5 professional</td>
+          </tr>
+          <tr>
+            <td>Ethics</td>
+            <td class="mono">REB-exempt class project · no PII collected · anonymised reporting</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== SAMPLE & RECRUITMENT ===== -->
   <section class="section section--alt" aria-labelledby="sample-h">
     <div class="container container-narrow">
-      <span class="eyebrow">Layer 2 — primary survey</span>
-      <h2 id="sample-h">Sample (N = 15)</h2>
+      <span class="eyebrow" data-reveal>Sample · N=15</span>
+      <h2 id="sample-h" data-reveal data-delay="1">Who answered, and how they were reached.</h2>
       <p>
         The survey targeted insurance marketing professionals in Ontario,
         Canada. Recruitment ran from 2026-03-25 to 2026-04-22 across four
-        channels:
+        channels, each with a distinct selection bias.
       </p>
-      <ul>
-        <li>Warm introductions (3 contacts, 6 responses).</li>
-        <li>LinkedIn DMs to first-degree connections in the industry (~20 sent, 4 responses).</li>
-        <li>Four Facebook groups: Insurance Talk Ontario Canada, Marketing for Insurance Agents, Leads Marketing and Automations, Insurance Ontario Canada (40+ direct invites, 5 responses).</li>
-        <li>Open call shared on the project's LinkedIn page (~0 attributable responses).</li>
+      <ul class="list-clean" style="margin-top: 16px;">
+        <li><strong>Warm introductions</strong> — 3 contacts, 6 responses. Skews toward people who already trust the researcher.</li>
+        <li><strong>LinkedIn DMs</strong> to first-degree connections in the industry — ~20 sent, 4 responses.</li>
+        <li><strong>Four Facebook groups</strong> — <em>Insurance Talk Ontario Canada</em>, <em>Marketing for Insurance Agents</em>, <em>Leads Marketing and Automations</em>, <em>Insurance Ontario Canada</em>. 40+ direct invites, 5 responses. Skews toward more publicly active practitioners.</li>
+        <li><strong>Open call</strong> on the project's LinkedIn page — ~0 attributable responses.</li>
       </ul>
-      <p>
-        Each channel introduces a different selection bias — warm introductions
-        skew toward people who already trust the researcher; group recruitment
-        skews toward more publicly active practitioners. The dashboard reports
-        results without channel-stratification because at N = 15 the strata are
-        too small to be informative.
+      <p style="margin-top: 18px;">
+        The dashboard reports results without channel-stratification because
+        at <code>N=15</code> the strata are too small to be informative. The
+        cost-of-implementation finding (60%) is the result that appears most
+        stable across channels; the others may shift with a larger sample.
       </p>
     </div>
   </section>
 
-  <section class="section" id="success" aria-labelledby="success-h">
-    <div class="container">
-      <span class="eyebrow">Closing the Assignment 1 gap</span>
-      <h2 id="success-h">Success criteria — by artifact</h2>
-      <p style="max-width: 60ch;">
-        Assignment 1 feedback identified that the proposal stated effectiveness
-        in conceptual terms, with no measurable thresholds. The criteria below
-        are the lines below which I would accept that the artifact is not
-        working as intended. They are directional, not statistically powered.
+  <!-- ===== WHY THIS SCOPE — PULLQUOTE ===== -->
+  <section class="section" aria-labelledby="scope-h">
+    <div class="container container-narrow">
+      <span class="eyebrow" data-reveal>Why this scope</span>
+      <h2 id="scope-h" data-reveal data-delay="1">Eight artifacts became six.</h2>
+      <blockquote class="pullquote">
+        Consolidating from eight artifacts to six was a research-judgment
+        decision, not a scope cut. An infographic series and a short-form
+        video would have re-stated material already covered by the zine and
+        the LinkedIn campaign — adding production cost without adding
+        evidentiary value.
+        <cite>— Project log, 2026-04-08</cite>
+      </blockquote>
+      <p>
+        The infographic content was absorbed into the zine (D2). The
+        short-form video became the opening posts of the LinkedIn campaign
+        (D6). The remaining six artifacts each handle one stage of a single
+        pipeline:
+        <code>research → explain → demonstrate → interpret → assemble → distribute</code>.
+        Every artifact answers the same research question through a
+        different medium, on the principle that a multichannel campaign is
+        the right test of whether the message lands across formats — not
+        whether the project produced the maximum number of things.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== SUPERVISOR ITERATIONS ===== -->
+  <section class="section section--alt" aria-labelledby="iter-h">
+    <div class="container container-narrow">
+      <span class="eyebrow" data-reveal>Process honesty</span>
+      <h2 id="iter-h" data-reveal data-delay="1">Supervisor iterations.</h2>
+      <p>
+        The project shifted shape four times in response to supervisor
+        feedback. The trace is recorded because the final scope is partly
+        a product of the iterations.
       </p>
 
-      <div class="grid grid--2" style="margin-top: 24px;">
-        <div class="success">
-          <h3>D1 · Survey & dashboard</h3>
+      <table class="meta-table" style="margin-top: 24px;">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">2026-04-08</td>
+            <td><strong>8 → 6 artifacts.</strong> Infographic absorbed into the zine; short-form video became LinkedIn opening posts.</td>
+          </tr>
+          <tr>
+            <td class="mono">2026-04-13</td>
+            <td><strong>Audience narrowed.</strong> "Marketing, sales, and underwriting" reduced to marketing professionals only — too broad for a 10-week capstone.</td>
+          </tr>
+          <tr>
+            <td class="mono">2026-04-17</td>
+            <td><strong>RQ refined.</strong> Final wording explicitly anchors the answer in a multichannel media campaign.</td>
+          </tr>
+          <tr>
+            <td class="mono">2026-04-30</td>
+            <td><strong>Measurable success criteria.</strong> Assignment 1 feedback flagged effectiveness as conceptual, not measurable. Each artifact now has explicit thresholds (see <a href="#success">success</a>).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== SUCCESS CRITERIA — per artifact ===== -->
+  <section class="section section--deep" id="success" aria-labelledby="success-h">
+    <div class="container">
+      <span class="eyebrow" data-reveal>Closing the Assignment 1 gap</span>
+      <h2 id="success-h" data-reveal data-delay="1">Success criteria — by artifact.</h2>
+      <p class="lead" data-reveal data-delay="2">
+        The lines below which I would accept that each artifact is not
+        working as intended. Directional, not statistically powered.
+      </p>
+
+      <div class="cards" style="margin-top: 36px; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
+
+        <div class="success" data-reveal data-delay="1">
+          <h3>D1 · Survey + Dashboard</h3>
           <ol>
-            <li><strong>Capability shift:</strong> a measurable reduction in the share of respondents in the "cannot explain" tier between baseline and any follow-up wave.</li>
+            <li><strong>Capability shift:</strong> measurable reduction in the "cannot explain" tier between baseline and follow-up wave.</li>
             <li><strong>Engagement:</strong> ≥40% of dashboard visitors scroll to the methodology section.</li>
-            <li><strong>Trust:</strong> at least 1 substantive citation or share by a peer in the period 2026-05 to 2026-06.</li>
+            <li><strong>Trust:</strong> ≥1 substantive citation or share by an industry peer, 2026-05 to 2026-06.</li>
+            <li><strong>Coverage:</strong> dashboard load &lt;3s on cable; all charts render with no console errors.</li>
           </ol>
         </div>
-        <div class="success">
-          <h3>D2 · Digital zine</h3>
+
+        <div class="success" data-reveal data-delay="2">
+          <h3>D2 · Digital Zine</h3>
           <ol>
             <li><strong>Read-through:</strong> ≥60% reach 80% of zine length.</li>
-            <li><strong>Time on page:</strong> median ≥2 minutes.</li>
+            <li><strong>Time on page:</strong> median ≥2:00.</li>
             <li><strong>PDF downloads:</strong> ≥10 unique in 14 days.</li>
-            <li><strong>Comprehension:</strong> ≥70% Yes on closing question.</li>
+            <li><strong>Comprehension lift:</strong> ≥70% Yes on embedded mini-survey closing question.</li>
           </ol>
         </div>
-        <div class="success">
-          <h3>D3 · Simulator</h3>
+
+        <div class="success" data-reveal data-delay="3">
+          <h3>D3 · Decision Simulator</h3>
           <ol>
             <li><strong>Completion:</strong> ≥50% complete one full scenario.</li>
-            <li><strong>Time on artifact:</strong> median ≥2 minutes.</li>
-            <li><strong>Comprehension lift:</strong> ≥5 of 15 follow-ups can describe the mechanic.</li>
+            <li><strong>Time on artifact:</strong> median ≥2:00.</li>
+            <li><strong>Comprehension lift:</strong> ≥5 of 15 follow-ups can describe the mechanic in their own words.</li>
+            <li><strong>Stability:</strong> WebGL build runs on Chrome / Safari / Firefox latest, no crash in first 5 sessions.</li>
           </ol>
         </div>
-        <div class="success">
-          <h3>D4 · Podcast</h3>
+
+        <div class="success" data-reveal data-delay="4">
+          <h3>D4 · Podcast Episode</h3>
           <ol>
             <li><strong>Listen-through:</strong> ≥40% completion rate.</li>
             <li><strong>Reach:</strong> ≥50 unique plays in 14 days.</li>
-            <li><strong>Engagement:</strong> ≥3 substantive comments/DMs.</li>
+            <li><strong>Engagement:</strong> ≥3 substantive comments or DMs.</li>
+            <li><strong>Distribution:</strong> published on both Spotify and Apple Podcasts with full show notes.</li>
           </ol>
         </div>
-        <div class="success">
-          <h3>D5 · This hub</h3>
+
+        <div class="success" data-reveal data-delay="5">
+          <h3>D5 · This Hub</h3>
           <ol>
-            <li><strong>Reach:</strong> ≥150 unique visitors in 14 days.</li>
-            <li><strong>Depth:</strong> ≥3 pages per session.</li>
-            <li><strong>Conversion:</strong> ≥35% click-through to an artifact.</li>
-            <li><strong>Time:</strong> median ≥1:30 home, ≥2:30 artifacts.</li>
+            <li><strong>Reach:</strong> ≥150 unique visitors in 14 days post-launch.</li>
+            <li><strong>Depth:</strong> ≥3 pages per session for non-bouncing visitors.</li>
+            <li><strong>Conversion:</strong> ≥35% click-through to at least one artifact page.</li>
+            <li><strong>Time on page:</strong> median ≥1:30 home, ≥2:30 artifact pages.</li>
           </ol>
         </div>
-        <div class="success">
-          <h3>D6 · LinkedIn campaign</h3>
+
+        <div class="success" data-reveal data-delay="6">
+          <h3>D6 · LinkedIn Campaign</h3>
           <ol>
             <li><strong>Impressions:</strong> ≥1,500 across the 5 posts.</li>
             <li><strong>Engagement rate:</strong> ≥3% (likes + comments / impressions).</li>
             <li><strong>Inbound:</strong> ≥3 DMs from Ontario practitioners.</li>
+            <li><strong>Referral:</strong> ≥10% of hub traffic attributable to the LinkedIn campaign in GA4.</li>
           </ol>
         </div>
+
       </div>
-    </div>
-  </section>
 
-  <section class="section section--alt" aria-labelledby="iter-h">
-    <div class="container container-narrow">
-      <span class="eyebrow">Process honesty</span>
-      <h2 id="iter-h">Supervisor iterations</h2>
-      <p>
-        This project shifted shape three times in response to supervisor
-        feedback. Recording the trace because the final scope is partly a
-        product of the iterations.
+      <p class="muted" style="margin-top: 28px; font-size: var(--fs-sm); font-family: var(--ff-mono);">
+        Hub-level criteria (D5) are also stated on the <a href="./index.html#success-h">home page</a>. All thresholds tracked via GA4 with consent gating.
       </p>
-      <ol>
-        <li><strong>2026-04-08 — eight artifacts to six.</strong> The original plan included an infographic series and a short-form video. The infographic content was absorbed into the zine; the short-form video became the LinkedIn campaign opening posts.</li>
-        <li><strong>2026-04-13 — narrowing the audience.</strong> Original RQ addressed "marketing, sales, and underwriting." Feedback flagged this as too broad to investigate within a 10-week capstone. The audience was narrowed to marketing professionals only.</li>
-        <li><strong>2026-04-17 — refining the RQ.</strong> The professor-approved version contained an ambiguity that allowed the question to be answered without specifying the medium. The current version explicitly anchors the answer in a multichannel media campaign.</li>
-        <li><strong>2026-04-30 — measurable success criteria.</strong> Assignment 1 feedback flagged that effectiveness was conceptual, not measurable. Each artifact now has explicit thresholds (above).</li>
-      </ol>
     </div>
   </section>
 
+  <!-- ===== AI USE DISCLOSURE ===== -->
   <section class="section" aria-labelledby="ai-h">
     <div class="container container-narrow">
-      <span class="eyebrow">AI use disclosure</span>
-      <h2 id="ai-h">Where AI was used</h2>
-      <p>
-        AI tools were approved by the supervisor on 2026-04-20 for narrow
-        purposes only: brainstorming literature themes, drafting prose for
-        researcher review and revision, and assistance with HTML/CSS for the
-        dashboard and this hub. All AI-generated content was reviewed,
+      <span class="eyebrow" data-reveal>AI use disclosure</span>
+      <h2 id="ai-h" data-reveal data-delay="1">Where AI was used.</h2>
+      <p data-reveal data-delay="2">
+        AI tools were approved by the supervisor on <strong>2026-04-20</strong>
+        for narrow purposes only. All AI-generated content was reviewed,
         edited, and verified by the researcher before publication. Survey
-        questions, interview prompts, recruitment messages, and methodological
-        decisions were authored by the researcher.
+        questions, interview prompts, recruitment messages, and
+        methodological decisions were authored by the researcher.
       </p>
-      <p>
-        A separate AI scope-extension request was submitted for Assignment 2
-        artifacts (zine, simulator, podcast, this hub, LinkedIn campaign) and
-        is pending response.
-      </p>
+
+      <ul class="list-clean" data-reveal data-delay="3" style="margin-top: 16px;">
+        <li><strong>Approved by:</strong> Dr. Wael Brahim, 2026-04-20.</li>
+        <li><strong>Scope (Assignment 1):</strong> drafting + literature theme brainstorming; HTML/CSS scaffolding for the dashboard and hub; prose drafting for researcher review and revision.</li>
+        <li><strong>Assignment 2 status:</strong> a scope-extension request is pending and covers D2, D3, D4, D5, and D6.</li>
+      </ul>
     </div>
   </section>
 
-  <section class="section section--alt" aria-labelledby="cite-h">
+  <!-- ===== LIMITATIONS ===== -->
+  <section class="section section--alt" aria-labelledby="limit-h">
     <div class="container container-narrow">
-      <span class="eyebrow">Cite this project</span>
-      <h2 id="cite-h">Citation</h2>
+      <span class="eyebrow" data-reveal>Read this before you cite</span>
+      <h2 id="limit-h" data-reveal data-delay="1">Limitations.</h2>
+      <ul class="list-clean">
+        <li><strong>Sample size.</strong> <code>N=15</code> is too small to generalize to "Ontario insurance marketing" as a population. Percentages are descriptive of who answered, not predictive of who didn't.</li>
+        <li><strong>Selection bias.</strong> Each recruitment channel brings a distinct bias profile; warm introductions skew toward people who already trust the researcher.</li>
+        <li><strong>Self-report.</strong> Familiarity, confidence, and format preference are self-reported, not behaviourally observed.</li>
+        <li><strong>Single researcher.</strong> Open-ended coding was done by one person; no second-coder reliability check.</li>
+        <li><strong>Time window.</strong> The data is a snapshot of Spring 2026. Industry framings of digital twins are moving quickly.</li>
+        <li><strong>Audience scope.</strong> Findings speak to marketing professionals only — explicitly not sales, underwriting, or actuarial roles.</li>
+        <li><strong>Industry layer.</strong> Published Canadian deployment numbers are sparse and methodologically uneven; Layer 1 is therefore directional, not quantitative.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== CITATION ===== -->
+  <section class="section" aria-labelledby="cite-h">
+    <div class="container container-narrow">
+      <span class="eyebrow" data-reveal>Cite this project</span>
+      <h2 id="cite-h" data-reveal data-delay="1">Citation.</h2>
       <div class="citation">
         Okhrimenko, A. (2026). <em>Digital twins in auto insurance: A
         multichannel research project for Ontario marketing professionals</em>
         [Capstone deliverable, University of Niagara Falls Canada]. Retrieved
-        from this site.
+        from https://okhrimenkoav24.github.io/digital-twins-auto-insurance/
       </div>
+      <p class="muted" style="margin-top: 18px; font-size: var(--fs-sm); font-family: var(--ff-mono);">
+        For per-artifact citations, see each artifact page. Full reading list on the <a href="./resources.html">resources page</a>.
+      </p>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer footer">
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
   <div class="container">
     <div class="footer__grid">
       <div>
         <p class="footer__brand">Digital Twins in Auto Insurance</p>
-        <p style="color:#BBB; font-size: var(--fs-sm); max-width: 38ch;">Capstone research project, DMGC-699 Spring 2026, University of Niagara Falls Canada.</p>
+        <p style="color:#BBB; font-size: var(--fs-sm); max-width: 38ch;">
+          Capstone research project, DMGC-699 Spring 2026, University of Niagara
+          Falls Canada. Supervised by Dr. Wael Brahim.
+        </p>
+      </div>
+      <div>
+        <h4>Artifacts</h4>
+        <ul>
+          <li><a href="https://jade-salamander-5559d4.netlify.app" target="_blank" rel="noopener">D1 · Survey dashboard ↗</a></li>
+          <li><a href="https://digitaltwinszeen.netlify.app" target="_blank" rel="noopener">D2 · Digital zine ↗</a></li>
+          <li><a href="./simulator.html">D3 · Simulator</a></li>
+          <li><a href="./podcast.html">D4 · Podcast</a></li>
+          <li><a href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener">D6 · LinkedIn ↗</a></li>
+        </ul>
       </div>
       <div>
         <h4>Project</h4>
         <ul>
-          <li><a href="./research.html">Survey + dashboard</a></li>
-          <li><a href="./zine.html">Digital zine</a></li>
-          <li><a href="./simulator.html">Simulator</a></li>
-          <li><a href="./podcast.html">Podcast</a></li>
-          <li><a href="https://www.linkedin.com/company/digital-twins-in-auto-insurance/" target="_blank" rel="noopener">LinkedIn page ↗</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>More</h4>
-        <ul>
           <li><a href="./cases.html">Real-world cases</a></li>
           <li><a href="./resources.html">Reading list</a></li>
           <li><a href="./methodology.html">Methodology</a></li>
-          <li><a href="./about.html">About the researcher</a></li>
-          <li><a href="https://github.com/" target="_blank" rel="noopener">Source on GitHub ↗</a></li>
+          <li><a href="./about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Meta</h4>
+        <ul>
+          <li><a href="https://github.com/" target="_blank" rel="noopener">Source ↗</a></li>
+          <li><a href="./about.html#contact">Contact</a></li>
         </ul>
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© 2026 Aleksandr Okhrimenko. Last updated <span data-updated="2026-05-06">2026-05-06</span>.</span>
-      <span>Built with HTML/CSS/JS · GitHub Pages</span>
+      <span>© 2026 Aleksandr Okhrimenko · Last updated <span data-updated="2026-05-13">2026-05-13</span></span>
+      <span>HTML · CSS · vanilla JS · GitHub Pages</span>
     </div>
   </div>
 </footer>
@@ -341,7 +515,7 @@
     if (pref === 'accept') {
       if (window.gtag) window.gtag('consent', 'update', { analytics_storage: 'granted' });
     } else if (pref === 'deny') {
-      // stays denied
+      /* stays denied */
     } else if (banner) {
       banner.hidden = false;
     }
