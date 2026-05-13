@@ -384,10 +384,9 @@ code {
   height: auto;
   display: block;
   animation: heroFloat 8s ease-in-out infinite alternate;
-  /* soft grounding shadow tinted with brand orange */
-  filter:
-    drop-shadow(0 30px 28px rgba(233, 113, 55, 0.12))
-    drop-shadow(0 12px 18px rgba(0, 0, 0, 0.05));
+  /* single, very subtle shadow — image now has transparent bg
+     so the shadow follows the car silhouette + rings, not a rectangle */
+  filter: drop-shadow(0 14px 14px rgba(0, 0, 0, 0.08));
 }
 @keyframes heroFloat {
   from { transform: translateY(0)    scale(1);     }
