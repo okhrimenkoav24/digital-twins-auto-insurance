@@ -27,3 +27,8 @@ __pycache__/
 # Sed/editor backup files
 *.bak
 *.save
+
+# Original drag-drop image previews (use assets/img/ for canonical copies)
+/Image *.png
+/Image *.jpg
+/Image *.jpeg
