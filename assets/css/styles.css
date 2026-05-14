@@ -1102,6 +1102,7 @@ code {
 }
 
 /* ===== cookie consent banner ===== */
+.cc-banner[hidden] { display: none !important; }
 .cc-banner {
   position: fixed; left: 0; right: 0; bottom: 0;
   z-index: 500;
